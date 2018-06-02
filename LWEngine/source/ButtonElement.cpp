@@ -36,6 +36,7 @@ ButtonElement::~ButtonElement()
 void ButtonElement::Update()
 {
 	m_selected = false;
+	m_activated = false;
 	int x, y;
 	SDL_GetMouseState(&x, &y);
 	SDL_Rect holderA{ m_panel.X(), m_panel.Y(), m_panel.Width(), m_panel.Height() };
@@ -43,67 +44,55 @@ void ButtonElement::Update()
 	if (SDL_HasIntersection(&holderA, &holderB))
 	{
 		m_selected = true;
-		if (!m_activated)
-		{
-			Uint8 r = int(m_colorB.r) + 50;
-			if (r > 255)
-			{
-				r = 255;
-			}
-			Uint8 g = int(m_colorB.g) + 50;
-			if (g > 255)
-			{
-				g = 255;
-			}
-			Uint8 b = int(m_colorB.b) + 50;
-			if (b > 255)
-			{
-				b = 255;
-			}
-			m_panel.MarginColor(SDL_Color{ r, g, b, m_colorB.a });
-		}
-		if (m_eventlistener->LeftClick && m_timer <= 0)
+		if (m_eventlistener->LeftClick)
 		{
 			m_activated = true;
-			m_timer = 5;
-			m_panel.MarginColor(m_colorB);
-			m_panel.BodyColor(m_colorA);
 		}
 	}
 
-	if (m_timer <= 0 && m_activated)
+
+	if (m_activated)
 	{
-		if (!m_selected)
-		{
-			m_panel.MarginColor(m_colorB);
-		}
-		m_panel.BodyColor(m_colorA);
-		m_activated = false;
-	}
-	else if (m_activated)
-	{
-		m_timer--;
 		m_panel.MarginColor(m_colorA);
 		m_panel.BodyColor(m_colorB);
 	}
-	else if(!m_selected)
+	else if(m_selected)
+	{
+		//Adjusts border color if highlighted over. If it surpasses 255 it will be locked to 255, as having any of the colors beyond 255 will make it pure white. SDL is weird?
+		Uint8 r = int(m_colorB.r) + 50;
+		if (r > 255) { r = 255; }
+		Uint8 g = int(m_colorB.g) + 50;
+		if (g > 255) { g = 255; }
+		Uint8 b = int(m_colorB.b) + 50;
+		if (b > 255) { b = 255; }
+		m_panel.BodyColor(m_colorA);
+		m_panel.MarginColor(SDL_Color{ r, g, b, m_colorB.a });
+	}
+	else
 	{
 		m_panel.MarginColor(m_colorB);
 		m_panel.BodyColor(m_colorA);
 		if (m_typeGraphic)
 		{
-			m_graphic.X(m_panel.X());
-			m_graphic.Y(m_panel.Y());
 			m_colorA = m_panel.BodyColor();
 			m_colorB = m_panel.MarginColor();
 		}
 		else
 		{
-			m_textElement.X(m_panel.X() + m_textOffsetX);
-			m_textElement.Y(m_panel.Y() + m_textOffsetY);
 			m_colorA = m_panel.BodyColor();
 			m_colorB = m_panel.MarginColor();
 		}
+	}
+
+	if (m_typeGraphic)
+	{
+		m_graphic.X(m_panel.X());
+		m_graphic.Y(m_panel.Y());
+	}
+	else
+	{
+		m_textElement.X(m_panel.X() + m_textOffsetX);
+		m_textElement.Y(m_panel.Y() + m_textOffsetY);
 	}
 }
 

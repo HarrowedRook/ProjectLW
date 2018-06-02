@@ -29,6 +29,10 @@ int main()
 	{
 		b.Update();
 		inputHandler.InputCheck();
+		if (b.Activated())
+		{
+			b.GetPanel()->X(b.GetPanel()->X() + 1);
+		}
 		SDL_SetRenderDrawColor(gameRenderer, 0, 0, 0, 0);
 		SDL_RenderClear(gameRenderer);
 		//Draw Code Here

@@ -16,6 +16,9 @@ public:
 	void SetGraphic(Graphic g) { m_graphic = g; };
 	Graphic * GetGraphic() { return &m_graphic; };
 
+	void SetPanel(Panel p) { m_panel = p; };
+	Panel * GetPanel() { return &m_panel; };
+
 	void SetTextElement(TextElement t) { m_textElement = t; };
 	TextElement * GetTextElement() { return &m_textElement; };
 	
@@ -27,6 +30,8 @@ public:
 
 	void TextOffsetY(int y) { m_textOffsetY = y; };
 	int TextOffsetY() { return m_textOffsetY; };
+
+	bool Activated() { return m_activated; };
 
 	void Update();
 	void Render(SDL_Renderer & r);
