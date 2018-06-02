@@ -73,6 +73,11 @@ void ButtonElement::Update()
 
 	if (m_timer <= 0 && m_activated)
 	{
+		if (!m_selected)
+		{
+			m_panel.MarginColor(m_colorB);
+		}
+		m_panel.BodyColor(m_colorA);
 		m_activated = false;
 	}
 	else if (m_activated)
