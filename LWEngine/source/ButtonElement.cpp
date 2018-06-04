@@ -68,6 +68,7 @@ void ButtonElement::Update()
 	{
 		m_panel.MarginColor(m_colorA);
 		m_panel.BodyColor(m_colorB);
+		m_graphic.Color(m_colorA);
 	}
 	else if(m_selected)
 	{
@@ -80,9 +81,14 @@ void ButtonElement::Update()
 		if (b > 255) { b = 255; }
 		m_panel.BodyColor(m_colorA);
 		m_panel.MarginColor(SDL_Color{ r, g, b, m_colorB.a });
+		if (m_type == 1)
+		{
+			m_graphic.Color(SDL_Color{ r, g, b, m_colorB.a });
+		}
 	}
 	else
 	{
+		m_graphic.Color(m_colorB);
 		m_panel.MarginColor(m_colorB);
 		m_panel.BodyColor(m_colorA);
 		if (m_type == 1)

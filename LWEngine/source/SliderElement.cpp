@@ -75,7 +75,6 @@ void SliderElement::Update()
 			m_currentTopLine = 0;
 			m_timer = 0;
 		}
-		m_upButton.GetGraphic()->Color(m_panel.BodyColor());
 		m_sliderButton.GetPanel()->Y(holderY + (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height()));
 		std::cout << "Current Line Shown is : " << m_currentTopLine << std::endl;
 	}
@@ -88,18 +87,12 @@ void SliderElement::Update()
 			m_currentTopLine = m_numberOfLines - m_visibleLines;
 			m_timer = 0;
 		}
-		m_downButton.GetGraphic()->Color(m_panel.BodyColor());
 		m_sliderButton.GetPanel()->Y(holderY + (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height()));
 		std::cout << "Current Line Shown is : " << m_currentTopLine << std::endl;
 	}
 	else if(m_timer > 0)
 	{
 		m_timer--;
-	}
-	else
-	{
-		m_downButton.GetGraphic()->Color(m_panel.MarginColor());
-		m_upButton.GetGraphic()->Color(m_panel.MarginColor());
 	}
 
 }
