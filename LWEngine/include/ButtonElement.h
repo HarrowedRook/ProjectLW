@@ -9,6 +9,8 @@
 class ButtonElement : public UIElement
 {
 public:
+	ButtonElement() {};
+	ButtonElement(EventListener * e, Panel p);
 	ButtonElement(EventListener * e, Panel p, Graphic g);
 	ButtonElement(EventListener * e, Panel p, TextElement t, std::string text, int offsetX, int offsetY);
 	~ButtonElement();
@@ -52,7 +54,7 @@ private:
 
 	std::string m_text;
 
-	bool m_typeGraphic;
+	int m_type;
 
 	bool m_activated;
 	bool m_selected;

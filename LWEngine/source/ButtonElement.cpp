@@ -1,9 +1,18 @@
 #include "ButtonElement.h"
 
+ButtonElement::ButtonElement(EventListener * e, Panel p)
+{
+	m_eventlistener = e;
+	m_type = 0;
+	m_panel = p;
+	m_colorA = m_panel.BodyColor();
+	m_colorB = m_panel.MarginColor();
+}
+
 ButtonElement::ButtonElement(EventListener * e, Panel p, Graphic g)
 {
 	m_eventlistener = e;
-	m_typeGraphic = true;
+	m_type = 1;
 	m_graphic = g;
 	m_panel = p;
 	m_graphic.X(m_panel.X());
@@ -16,7 +25,7 @@ ButtonElement::ButtonElement(EventListener * e, Panel p, TextElement t, std::str
 {
 	m_text = text;
 	m_eventlistener = e;
-	m_typeGraphic = false;
+	m_type = 2;
 	m_textElement = t;
 	m_textElement.SetString(m_text);
 	m_textOffsetX = offsetX;
@@ -72,24 +81,24 @@ void ButtonElement::Update()
 	{
 		m_panel.MarginColor(m_colorB);
 		m_panel.BodyColor(m_colorA);
-		if (m_typeGraphic)
+		if (m_type == 1)
 		{
 			m_colorA = m_panel.BodyColor();
 			m_colorB = m_panel.MarginColor();
 		}
-		else
+		else if(m_type == 2)
 		{
 			m_colorA = m_panel.BodyColor();
 			m_colorB = m_panel.MarginColor();
 		}
 	}
 
-	if (m_typeGraphic)
+	if (m_type == 1)
 	{
 		m_graphic.X(m_panel.X());
 		m_graphic.Y(m_panel.Y());
 	}
-	else
+	else if (m_type == 2)
 	{
 		m_textElement.X(m_panel.X() + m_textOffsetX);
 		m_textElement.Y(m_panel.Y() + m_textOffsetY);
@@ -99,11 +108,11 @@ void ButtonElement::Update()
 void ButtonElement::Render(SDL_Renderer & r)
 {
 	m_panel.Render(r);
-	if (m_typeGraphic)
+	if (m_type == 1)
 	{
 		m_graphic.Render(r);
 	}
-	else
+	else if (m_type == 2)
 	{
 		m_textElement.Render(r);
 	}
