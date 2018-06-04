@@ -27,7 +27,7 @@ int main()
 
 	//ButtonElement b = ButtonElement(eventListener, Panel(0, 0, 200, 100, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), TextElement(resources->GetFontPack("SSP"), 34, false, 0, 0, 190, 90, SDL_Color{ 255,255,255,255 }), "Button", 5, 5);
 
-	SliderElement b = SliderElement(eventListener, 100, 30, Panel(0, 0, 50, 200, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"), SDL_Color{ 255,255,255,255 });
+	SliderElement b = SliderElement(eventListener, 100, 30, Panel(0, 0, 25, 400, 3, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"), SDL_Color{ 255,255,255,255 });
 
 	while (running)
 	{

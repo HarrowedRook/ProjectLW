@@ -22,8 +22,8 @@ void SliderElement::Update()
 	m_downButton.Update();
 	m_upButton.Update();
 	m_sliderButton.Update();
-	int holder = (m_panel.Height() - ((m_panel.Width() * 2))) / m_numberOfLines;
-	int holderY = holder * m_currentTopLine;
+	float holder = (m_panel.Height() - (m_downButton.GetPanel()->Height() + m_upButton.GetPanel()->Height())) / (float)m_numberOfLines;
+	float holderY = holder * (float)m_currentTopLine;
 	m_sliderButton.GetPanel()->Height(holder * m_visibleLines);
 	if (m_sliderButton.Activated())
 	{
@@ -34,7 +34,7 @@ void SliderElement::Update()
 			if (y != m_mousePositionY)
 			{
 				m_sliderButton.GetPanel()->Y(y - m_mouseDifference);
-				int temp = (m_sliderButton.GetPanel()->Y() - (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height())) / holder;
+				float temp = (m_sliderButton.GetPanel()->Y() - (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height())) / holder;
 				if (temp < 0)
 				{
 					m_sliderButton.GetPanel()->Y(m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height());
@@ -50,6 +50,7 @@ void SliderElement::Update()
 					m_currentTopLine = temp;
 				}
 				m_mousePositionY = y;
+				std::cout << "Current Line Shown is : " << m_currentTopLine << std::endl;
 			}
 		}
 		else
@@ -58,6 +59,7 @@ void SliderElement::Update()
 			m_mouseDifference = y - m_sliderButton.GetPanel()->Y();
 			m_mousePositionY = y;
 		}
+		m_timer = TIMER * 6;
 	}
 	else
 	{
