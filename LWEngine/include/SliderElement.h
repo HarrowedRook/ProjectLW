@@ -6,7 +6,7 @@
 class SliderElement : public UIElement
 {
 public:
-	SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow, SDL_Color graphicColor);
+	SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow);
 	~SliderElement();
 
 	void Update();

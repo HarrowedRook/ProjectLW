@@ -1,10 +1,10 @@
 #include "SliderElement.h"
 
-SliderElement::SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow, SDL_Color graphicColor)
+SliderElement::SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow)
 {
 	m_panel = background;
-	m_upButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y(), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(upArrow, graphicColor, m_panel.X(), m_panel.Y(), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin() * 2), m_panel.Width() -(m_panel.Margin() * 2)));
-	m_downButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(downArrow, graphicColor, m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin()*2), m_panel.Width() -(m_panel.Margin() * 2)));
+	m_upButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y(), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(upArrow, m_panel.MarginColor(), m_panel.X(), m_panel.Y(), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin() * 2), m_panel.Width() -(m_panel.Margin() * 2)));
+	m_downButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(downArrow, m_panel.MarginColor(), m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin()*2), m_panel.Width() -(m_panel.Margin() * 2)));
 	m_sliderButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + m_panel.Width(), m_panel.Width(), m_panel.Height() - (m_panel.Width() * 2), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()));
 	m_numberOfLines = noOfLines;
 	m_visibleLines = noOfLinesPerPage;
@@ -75,6 +75,7 @@ void SliderElement::Update()
 			m_currentTopLine = 0;
 			m_timer = 0;
 		}
+		m_upButton.GetGraphic()->Color(m_panel.BodyColor());
 		m_sliderButton.GetPanel()->Y(holderY + (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height()));
 		std::cout << "Current Line Shown is : " << m_currentTopLine << std::endl;
 	}
@@ -87,12 +88,18 @@ void SliderElement::Update()
 			m_currentTopLine = m_numberOfLines - m_visibleLines;
 			m_timer = 0;
 		}
+		m_downButton.GetGraphic()->Color(m_panel.BodyColor());
 		m_sliderButton.GetPanel()->Y(holderY + (m_upButton.GetPanel()->Y() + m_upButton.GetPanel()->Height()));
 		std::cout << "Current Line Shown is : " << m_currentTopLine << std::endl;
 	}
 	else if(m_timer > 0)
 	{
 		m_timer--;
+	}
+	else
+	{
+		m_downButton.GetGraphic()->Color(m_panel.MarginColor());
+		m_upButton.GetGraphic()->Color(m_panel.MarginColor());
 	}
 
 }
