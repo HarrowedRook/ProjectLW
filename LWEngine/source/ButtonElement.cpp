@@ -44,6 +44,10 @@ ButtonElement::~ButtonElement()
 
 void ButtonElement::Update()
 {
+	m_graphic.OffsetX(m_panel.Margin());
+	m_graphic.OffsetY(m_panel.Margin());
+	m_graphic.Width(m_panel.Width() - (m_panel.Margin() * 2));
+	m_graphic.Height(m_panel.Height() - (m_panel.Margin() * 2));
 	m_selected = false;
 	m_activated = false;
 	int x, y;

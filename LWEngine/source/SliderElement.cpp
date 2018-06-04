@@ -111,3 +111,55 @@ void SliderElement::Render(SDL_Renderer & r)
 	m_downButton.Render(r);
 	m_sliderButton.Render(r);
 }
+
+void SliderElement::X(int x)
+{
+	m_panel.X(x);
+	m_downButton.GetPanel()->X(x);
+	m_upButton.GetPanel()->X(x);
+	m_sliderButton.GetPanel()->X(x);
+}
+void SliderElement::Y(int x)
+{
+	m_panel.Y(x);
+	m_downButton.GetPanel()->Y(m_panel.Y() + (m_panel.Height() - m_panel.Width()));
+	m_upButton.GetPanel()->Y(x);
+	m_sliderButton.GetPanel()->Y(m_panel.Y() + m_panel.Width());
+	m_currentTopLine = 0;
+}
+
+void SliderElement::Width(int x)
+{
+	m_panel.Width(x);
+	m_downButton.GetPanel()->Width(x);
+	m_downButton.GetPanel()->Height(x);
+	m_upButton.GetPanel()->Width(x);
+	m_upButton.GetPanel()->Height(x);
+	m_sliderButton.GetPanel()->Width(x);
+}
+void SliderElement::Height(int x)
+{
+	m_panel.Height(x);
+	m_currentTopLine = 0;
+}
+void SliderElement::MarginWidth(int x)
+{
+	m_panel.Margin(x);
+	m_downButton.GetPanel()->Margin(x);
+	m_upButton.GetPanel()->Margin(x);
+	m_sliderButton.GetPanel()->Margin(x);
+}
+void SliderElement::BodyColor(SDL_Color c)
+{
+	m_panel.BodyColor(c);
+	m_downButton.GetPanel()->BodyColor(c);
+	m_upButton.GetPanel()->BodyColor(c);
+	m_sliderButton.GetPanel()->BodyColor(c);
+}
+void SliderElement::MarginColor(SDL_Color c)
+{
+	m_panel.MarginColor(c);
+	m_downButton.GetPanel()->MarginColor(c);
+	m_upButton.GetPanel()->MarginColor(c);
+	m_sliderButton.GetPanel()->MarginColor(c);
+}
