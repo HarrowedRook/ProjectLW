@@ -6,6 +6,7 @@
 class SliderElement : public UIElement
 {
 public:
+	SliderElement() {};
 	SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow);
 	~SliderElement();
 
@@ -50,7 +51,7 @@ private:
 	bool m_buttonHeld;
 	int m_mousePositionY, m_mouseDifference;
 	int m_timer;
-	const int TIMER = 5;
+	int TIMER = 5;
 };
 #endif
 

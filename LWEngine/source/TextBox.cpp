@@ -2,11 +2,12 @@
 
 
 
-TextBox::TextBox(FontPack * font, Panel panel)
+TextBox::TextBox(EventListener * e, FontPack * font, Panel panel, SDL_Texture* uptexture, SDL_Texture* downtexture)
 {
 	m_panel = panel;
 	m_color = SDL_Color{ 255,255,255,255 }; 
 	m_textElements.push_back(new TextElement(font, 18, true, 0, 0, 0, 0, m_color));
+	m_slider = SliderElement(e, 1, 1, Panel(m_panel.X() + (panel.Width() * 0.9), 0, panel.Width() / 10, panel.Height(), panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), uptexture, downtexture);
 }
 
 void TextBox::Update()
@@ -15,10 +16,20 @@ void TextBox::Update()
 	{
 		m_textElements.at(i)->Update();
 	}
+	m_slider.Update();
+	if (m_currentLine != m_slider.CurrentLine())
+	{
+		m_currentLine = m_slider.CurrentLine();
+		for (int i = 0; i < m_textElements.size(); i++)
+		{
+			m_textElements.at(i)->SetString(m_lines.at(i + m_currentLine));
+		}
+	}
 }
 void TextBox::Render(SDL_Renderer & r)
 {
 	m_panel.Render(r);
+	m_slider.Render(r);
 	for (int i = 0; i < m_lines.size() && i < m_textElements.size(); i++)
 	{
 		m_textElements.at(i)->Render(r);
@@ -43,6 +54,7 @@ void TextBox::SetFontSize(int x)
 
 void TextBox::SetString(std::string s)
 {
+	m_currentLine = 0;
 	m_text = s;
 	std::string textHolder = s;
 	std::vector<std::string> paragraphs;
@@ -74,7 +86,7 @@ void TextBox::SetString(std::string s)
 	paragraphs.push_back(textHolder);
 
 	SDL_Point holder = StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, m_text);
-	int maxWidth = m_panel.Width() - (m_panel.Margin() * 4);
+	int maxWidth = m_panel.Width() - ((m_panel.Margin() * 4) + (m_panel.Width()/10));
 	int meanCharWidth = holder.x / m_text.length();
 	int maxNoChar = (maxWidth / meanCharWidth)-3;//Max Chars per line
 	m_lineMargin = holder.y / 4;
@@ -147,20 +159,39 @@ void TextBox::SetString(std::string s)
 		}
 		m_lines.push_back(" ");
 	}
-	if (m_textElements.size() < m_lines.size())
+	int numberOfTextElements = 0;
+	float tempSizeHolder = 0;
+	while (tempSizeHolder < (m_panel.Height() * 0.9))
 	{
-		int difference = m_lines.size() - m_textElements.size();
+		tempSizeHolder = (numberOfTextElements * (holder.y + m_lineMargin) + m_panel.Margin());
+		numberOfTextElements++;
+	}
+	if (m_textElements.size() > numberOfTextElements)
+	{
+		int difference = m_textElements.size() - numberOfTextElements;
+		for (int i = 0; i < difference; i++)
+		{
+			delete m_textElements.back();
+			m_textElements.pop_back();
+			m_textElements.shrink_to_fit();
+		}
+	}
+	else if (m_textElements.size() < numberOfTextElements)
+	{
+		int difference = numberOfTextElements - m_textElements.size();
 		for (int i = 0; i < difference; i++)
 		{
 			m_textElements.push_back(new TextElement(*m_textElements.front()));
 		}
 	}
-	for (int i = 0; i < m_lines.size() && i < m_textElements.size(); i++)
+	for (int i = 0; i < m_textElements.size() && i < m_lines.size(); i++)
 	{
 		m_textElements.at(i)->X((m_panel.X() + m_panel.Margin()) + m_lineMargin);
 		m_textElements.at(i)->Y((i * (holder.y + m_lineMargin) + m_panel.Margin()));
 		m_textElements.at(i)->SetString(m_lines.at(i));
 	}
+	m_slider.NumberOfLines(m_lines.size());
+	m_slider.NumberOfVisibleLines(m_textElements.size());
 }
 
 void TextBox::SetTextColor(SDL_Color c)
