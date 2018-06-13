@@ -42,6 +42,9 @@
     <ClCompile Include="source\Graphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Panel.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\FontPack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
