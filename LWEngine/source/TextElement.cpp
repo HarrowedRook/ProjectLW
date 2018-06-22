@@ -46,9 +46,6 @@ void TextElement::Render(SDL_Renderer & r)
 	std::string holder = m_string;
 	std::vector<std::string> strings;
 	std::vector<std::string> stringKey;
-	bool bold = false;
-	bool italic = false;
-	bool boldItalic = false;
 	while (holder.length() > 0)
 	{	
 		int b = holder.find("[b]");
@@ -85,14 +82,19 @@ void TextElement::Render(SDL_Renderer & r)
 			holder.erase(0, 3);
 			strings.push_back(holder);
 			int end = holder.find("[\\b]");
-			if (end == -1)
+			switch (end)
+			{
+			case -1:
 			{
 				holder.erase(0, holder.length());
+				break;
 			}
-			else
+			default:
 			{
 				strings.back().erase(end, strings.back().length());
-				holder.erase(0, end+4);
+				holder.erase(0, end + 4);
+				break;
+			}
 			}
 			stringKey.push_back("bold");
 			
@@ -102,14 +104,19 @@ void TextElement::Render(SDL_Renderer & r)
 			holder.erase(0, 3);
 			strings.push_back(holder);
 			int end = holder.find("[\\i]");
-			if (end == -1)
+			switch (end)
+			{
+			case -1:
 			{
 				holder.erase(0, holder.length());
+				break;
 			}
-			else
+			default:
 			{
 				strings.back().erase(end, strings.back().length());
-				holder.erase(0, end+4);
+				holder.erase(0, end + 4);
+				break;
+			}
 			}
 			stringKey.push_back("italic");
 		}
@@ -118,14 +125,19 @@ void TextElement::Render(SDL_Renderer & r)
 			holder.erase(0, 4);
 			strings.push_back(holder);
 			int end = holder.find("[\\bi]");
-			if (end == -1)
+			switch (end)
+			{
+			case -1:
 			{
 				holder.erase(0, holder.length());
+				break;
 			}
-			else
+			default:
 			{
 				strings.back().erase(end, strings.back().length());
-				holder.erase(0, end+5);
+				holder.erase(0, end + 5);
+				break;
+			}
 			}
 			stringKey.push_back("bolditalic");
 		}

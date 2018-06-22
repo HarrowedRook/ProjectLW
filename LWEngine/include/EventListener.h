@@ -7,6 +7,7 @@ public:
 	EventListener() {};
 	bool LeftClick = false;
 	bool RightClick = false;
+	bool Backspace = false;
 	bool Ctrl = false;
 	bool Shift = false;
 	bool Space = false;
@@ -51,5 +52,7 @@ public:
 	bool Seven = false;
 	bool Eight = false;
 	bool Nine = false;
+	bool Minus = false;
+	bool Equals = false;
 };
 #endif

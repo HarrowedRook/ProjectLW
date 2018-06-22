@@ -91,16 +91,8 @@ void ButtonElement::Update()
 		m_graphic.Color(m_colorB);
 		m_panel.MarginColor(m_colorB);
 		m_panel.BodyColor(m_colorA);
-		if (m_type == 1)
-		{
-			m_colorA = m_panel.BodyColor();
-			m_colorB = m_panel.MarginColor();
-		}
-		else if(m_type == 2)
-		{
-			m_colorA = m_panel.BodyColor();
-			m_colorB = m_panel.MarginColor();
-		}
+		m_colorA = m_panel.BodyColor();
+		m_colorB = m_panel.MarginColor();
 	}
 
 	if (m_type == 1)

@@ -1,9 +1,8 @@
 #ifndef _SLIDERELEMENT_H
 #define _SLIDERELEMENT_H
-
-#include "UIElement.h"
 #include "ButtonElement.h"
-class SliderElement : public UIElement
+
+class SliderElement
 {
 public:
 	SliderElement() {};

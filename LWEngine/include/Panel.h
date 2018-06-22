@@ -2,9 +2,8 @@
 #define _PANEL_H
 
 #include "stdafx.h"
-#include "UIElement.h"
 
-class Panel : public UIElement
+class Panel
 {
 public:
 	Panel(int x, int y, int width, int height, int margin, SDL_Color bodyColor, SDL_Color marginColor);

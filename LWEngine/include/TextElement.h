@@ -1,6 +1,7 @@
 #ifndef _TEXTELEMENT_H
 #define _TEXTELEMENT_H
 
+#include <map>
 #include "stdafx.h"
 #include "ResourceManager.h"
 

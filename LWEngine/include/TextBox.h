@@ -4,11 +4,10 @@
 #include "stdafx.h"
 #include "ResourceManager.h"
 #include "TextElement.h"
-#include "UIElement.h"
 #include "Panel.h"
 #include "SliderElement.h"
 
-class TextBox : public UIElement
+class TextBox
 {
 public:
 	TextBox(EventListener* e, FontPack * font, Panel panel, SDL_Texture* uptexture, SDL_Texture* downtexture);

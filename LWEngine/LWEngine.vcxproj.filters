@@ -68,9 +68,6 @@
     <ClInclude Include="include\InputHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UIElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\SliderElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>

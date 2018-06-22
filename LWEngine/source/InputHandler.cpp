@@ -188,6 +188,15 @@ void InputHandler::InputCheck()
 			case SDLK_9:
 				m_eventListener->Nine = true;
 				break;
+			case SDLK_MINUS:
+				m_eventListener->Minus = true;
+				break;
+			case SDLK_EQUALS:
+				m_eventListener->Equals = true;
+				break;
+			case SDLK_BACKSPACE:
+				m_eventListener->Backspace = true;
+				break;
 			default:
 				break;
 			}
@@ -334,6 +343,15 @@ void InputHandler::InputCheck()
 				break;
 			case SDLK_9:
 				m_eventListener->Nine = false;
+				break;
+			case SDLK_MINUS:
+				m_eventListener->Minus = false;
+				break;
+			case SDLK_EQUALS:
+				m_eventListener->Equals = false;
+				break;
+			case SDLK_BACKSPACE:
+				m_eventListener->Backspace = false;
 				break;
 			default:
 				break;

@@ -1,7 +1,9 @@
 #ifndef _GRAPHIC_H
 #define _GRAPHIC_H
-#include "UIElement.h"
-class Graphic : public UIElement
+
+#include "stdafx.h"
+
+class Graphic
 {
 public:
 	Graphic() {};

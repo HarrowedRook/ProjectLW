@@ -1,12 +1,11 @@
 #ifndef _BUTTONELEMENT_H
 #define _BUTTONELEMENT_H
 
-#include "UIElement.h"
 #include "Panel.h"
 #include "TextElement.h"
 #include "Graphic.h"
 
-class ButtonElement : public UIElement
+class ButtonElement
 {
 public:
 	ButtonElement() {};
