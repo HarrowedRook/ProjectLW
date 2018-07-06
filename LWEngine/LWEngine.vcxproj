@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp" />
+    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\ProgressBarElement.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
     <ClCompile Include="source\main.cpp" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h" />
+    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\ProgressBarElement.h" />
     <ClInclude Include="include\ButtonElement.h" />
     <ClInclude Include="include\EventListener.h" />
     <ClInclude Include="include\FontPack.h" />

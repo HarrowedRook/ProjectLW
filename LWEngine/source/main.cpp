@@ -5,6 +5,7 @@
 #include "TextBox.h"
 #include "SliderElement.h"
 #include "InputBox.h"
+#include "ProgressBarElement.h"
 
 int main()
 {
@@ -28,6 +29,9 @@ int main()
 
 	InputBox b = InputBox(eventListener, Panel(0, 0, 500, 40, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetFontPack("SSP"), 5, 5);
 
+	ProgressBarElement p = ProgressBarElement(Panel(0, 0, 200, 200, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), 100, SDL_Color{ 25, 25, 25 }, RIGHT);
+	p.CurrentValue(76);
+
 	//ButtonElement b = ButtonElement(eventListener, Panel(0, 0, 200, 100, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), TextElement(resources->GetFontPack("SSP"), 34, false, 0, 0, 190, 90, SDL_Color{ 255,255,255,255 }), "Button", 5, 5);
 
 	//SliderElement b = SliderElement(eventListener, 5, 30, Panel(0, 0, 25, 400, 3, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
@@ -41,7 +45,8 @@ int main()
 		SDL_RenderClear(gameRenderer);
 		//Draw Code Here
 		t.Render(*gameRenderer);
-		b.Render(*gameRenderer);
+		//b.Render(*gameRenderer);
+		p.Render(*gameRenderer);
 		//
 		SDL_RenderPresent(gameRenderer);
 	}

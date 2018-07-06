@@ -45,6 +45,9 @@
     <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\ProgressBarElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Panel.h">
@@ -81,6 +84,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\ProgressBarElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
