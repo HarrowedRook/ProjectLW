@@ -42,13 +42,13 @@
     <ClCompile Include="source\Graphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp">
+    <ClCompile Include="source\InputBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\ProgressBarElement.cpp">
+    <ClCompile Include="source\jsoncpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\jsoncpp.cpp">
+    <ClCompile Include="source\ProgressBarElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,16 +86,16 @@
     <ClInclude Include="include\FontPack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h">
+    <ClInclude Include="include\InputBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\ProgressBarElement.h">
+    <ClInclude Include="include\json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json.h">
+    <ClInclude Include="include\json-forwards.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json-forwards.h">
+    <ClInclude Include="include\ProgressBarElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp" />
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\jsoncpp.cpp" />
-    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\ProgressBarElement.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
+    <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
+    <ClCompile Include="source\jsoncpp.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Panel.cpp" />
+    <ClCompile Include="source\ProgressBarElement.cpp" />
     <ClCompile Include="source\ResourceManager.cpp" />
     <ClCompile Include="source\Graphic.cpp" />
     <ClCompile Include="source\SliderElement.cpp" />
@@ -33,15 +33,15 @@
     <ClCompile Include="source\TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h" />
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json-forwards.h" />
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json.h" />
-    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\ProgressBarElement.h" />
     <ClInclude Include="include\ButtonElement.h" />
     <ClInclude Include="include\EventListener.h" />
     <ClInclude Include="include\FontPack.h" />
+    <ClInclude Include="include\InputBox.h" />
     <ClInclude Include="include\InputHandler.h" />
+    <ClInclude Include="include\json-forwards.h" />
+    <ClInclude Include="include\json.h" />
     <ClInclude Include="include\Panel.h" />
+    <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\Graphic.h" />
     <ClInclude Include="include\SliderElement.h" />
