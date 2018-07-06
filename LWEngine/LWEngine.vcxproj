@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Lover%27s World\LWEngine\source\InputBox.cpp" />
+    <ClCompile Include="..\..\Lover%27s World\LWEngine\source\jsoncpp.cpp" />
     <ClCompile Include="..\..\Lover%27s World\LWEngine\source\ProgressBarElement.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
@@ -33,6 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Lover%27s World\LWEngine\include\InputBox.h" />
+    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json-forwards.h" />
+    <ClInclude Include="..\..\Lover%27s World\LWEngine\include\json.h" />
     <ClInclude Include="..\..\Lover%27s World\LWEngine\include\ProgressBarElement.h" />
     <ClInclude Include="include\ButtonElement.h" />
     <ClInclude Include="include\EventListener.h" />
@@ -50,7 +53,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{226CEEFD-CA47-4B8F-ACDC-948D89FCB848}</ProjectGuid>
     <RootNamespace>LWEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
