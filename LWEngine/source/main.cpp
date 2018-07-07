@@ -38,28 +38,14 @@ int main()
 
 	//SliderElement b = SliderElement(eventListener, 5, 30, Panel(0, 0, 25, 400, 3, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
 
-	//JSON TEST
-	////Json::Reader Steve;
-	//////Json::Writer Colin;
-	////Json::Value root;
-	////const std::string readString = "test1.json";
-	////Steve.parse(readString, root, true);	
 
-	////Steve.getFormattedErrorMessages();
-
-
-
-	//Json::Value values;
-	//Json::Reader reader;
-	//reader.parse("test1.json", values);
-
-	//Json::Value s = values.get("state", "default value");
-
-	std::string text = "{\"1\":{\"name\":\"TERRY\",\"surname\":\"CREWS\"},\"2\":{\"name\":\"TOM\",\"surname\":\"JERRY\"}}";
+	std::ifstream myfile("test.json");
+	std::string text((std::istreambuf_iterator<char>(myfile)), (std::istreambuf_iterator<char>()));
+	text.erase(std::remove(text.begin(), text.end(), '\n'), text.end());
 
 	Json::CharReaderBuilder builder;
 	Json::CharReader * reader = builder.newCharReader();
-
+ 
 	Json::Value root;
 	std::string errors;
 
@@ -74,13 +60,13 @@ int main()
 
 	for (Json::Value::const_iterator outer = root.begin(); outer != root.end(); outer++)
 	{
+		std::cout << outer.key() << ": " << *outer << std::endl;
 		for (Json::Value::const_iterator inner = (*outer).begin(); inner != (*outer).end(); inner++)
 		{
 			std::cout << inner.key() << ": " << *inner << std::endl;
 		}
+
 	}
-
-
 
 	while (running)
 	{

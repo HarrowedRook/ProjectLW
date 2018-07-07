@@ -24,6 +24,9 @@
 #include <queue>
 #include <algorithm>
 
+#include <iostream>
+#include <fstream>
+
 #include "InputHandler.h"
 
 #define _USE_MATH_DEFINES
