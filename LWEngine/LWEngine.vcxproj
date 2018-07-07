@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
     <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
-    <ClCompile Include="source\jsoncpp.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Panel.cpp" />
     <ClCompile Include="source\ProgressBarElement.cpp" />
@@ -33,13 +33,13 @@
     <ClCompile Include="source\TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
+    <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
     <ClInclude Include="include\ButtonElement.h" />
     <ClInclude Include="include\EventListener.h" />
     <ClInclude Include="include\FontPack.h" />
     <ClInclude Include="include\InputBox.h" />
     <ClInclude Include="include\InputHandler.h" />
-    <ClInclude Include="include\json-forwards.h" />
-    <ClInclude Include="include\json.h" />
     <ClInclude Include="include\Panel.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
@@ -118,10 +118,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\..\SDL2\include;$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Redistributable\SDL2\include;$(SolutionDir)\include;$(SolutionDir)\..\Redistributable\JSONCPP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)\..\SDL2\lib\x64;$(SolutionDir)\source;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\Redistributable\SDL2\lib\x64;$(SolutionDir)\source;$(SolutionDir)\..\Redistributable\JSONCPP;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

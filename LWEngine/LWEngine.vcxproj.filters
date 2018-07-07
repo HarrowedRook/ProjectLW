@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="JSONCPP">
+      <UniqueIdentifier>{422e65ba-61ff-454d-b2b4-5d0a9575d587}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -45,11 +48,11 @@
     <ClCompile Include="source\InputBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\jsoncpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\ProgressBarElement.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp">
+      <Filter>JSONCPP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,14 +92,14 @@
     <ClInclude Include="include\InputBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\json.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\json-forwards.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\ProgressBarElement.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Redistributable\JSONCPP\json\json.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h">
+      <Filter>JSONCPP</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

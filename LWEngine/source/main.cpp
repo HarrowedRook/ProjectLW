@@ -41,7 +41,6 @@ int main()
 
 	std::ifstream myfile("test.json");
 	std::string text((std::istreambuf_iterator<char>(myfile)), (std::istreambuf_iterator<char>()));
-	text.erase(std::remove(text.begin(), text.end(), '\n'), text.end());
 
 	Json::CharReaderBuilder builder;
 	Json::CharReader * reader = builder.newCharReader();
@@ -58,15 +57,30 @@ int main()
 		std::cout << errors << std::endl;
 	}
 
-	for (Json::Value::const_iterator outer = root.begin(); outer != root.end(); outer++)
-	{
-		std::cout << outer.key() << ": " << *outer << std::endl;
-		for (Json::Value::const_iterator inner = (*outer).begin(); inner != (*outer).end(); inner++)
-		{
-			std::cout << inner.key() << ": " << *inner << std::endl;
-		}
+	//for (Json::Value::const_iterator outer = root.begin(); outer != root.end(); outer++)
+	//{
+	//	std::cout << outer.key() << ": " << *outer << std::endl;
+	//	for (Json::Value::const_iterator inner = (*outer).begin(); inner != (*outer).end(); inner++)
+	//	{
+	//		std::cout << inner.key() << ": " << *inner << std::endl;
+	//	}
+	//
+	//}
+	std::cout << root["Data"]["Name"];
+	myfile.close();
 
-	}
+	std::ofstream outFile("testo.json");
+
+	Json::StreamWriterBuilder styledbuilder;
+	Json::StreamWriter * styledwriter = styledbuilder.newStreamWriter();
+
+	Json::Value writeRoot;
+	Json::Value insides;
+	insides["Name"] = "Gregory";
+	writeRoot["Data"] = insides;
+
+	styledwriter->write(writeRoot, &outFile);
+	outFile.close();
 
 	while (running)
 	{
