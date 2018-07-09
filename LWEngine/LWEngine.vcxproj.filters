@@ -54,6 +54,9 @@
     <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp">
       <Filter>JSONCPP</Filter>
     </ClCompile>
+    <ClCompile Include="source\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Panel.h">
@@ -100,6 +103,15 @@
     </ClInclude>
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h">
       <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Material.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

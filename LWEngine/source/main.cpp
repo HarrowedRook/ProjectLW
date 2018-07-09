@@ -6,7 +6,9 @@
 #include "SliderElement.h"
 #include "InputBox.h"
 #include "ProgressBarElement.h"
-#include "json.h"
+#include "json/json.h"
+
+#include "Metal.h"
 
 
 int main()
@@ -39,16 +41,58 @@ int main()
 	//SliderElement b = SliderElement(eventListener, 5, 30, Panel(0, 0, 25, 400, 3, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
 
 
-	std::ifstream myfile("test.json");
-	std::string text((std::istreambuf_iterator<char>(myfile)), (std::istreambuf_iterator<char>()));
+	//std::ifstream myfile("test.json");
+	//std::string text((std::istreambuf_iterator<char>(myfile)), (std::istreambuf_iterator<char>()));
+	//
+	//Json::CharReaderBuilder builder;
+	//Json::CharReader * reader = builder.newCharReader();
+ 	//
+	//Json::Value root;
+	//std::string errors;
+	//
+	//bool parsingSuccessful = reader->parse(text.c_str(), text.c_str() + text.size(), &root, &errors);
+	//delete reader;
+	//
+	//if (!parsingSuccessful)
+	//{
+	//	std::cout << text << std::endl;
+	//	std::cout << errors << std::endl;
+	//}
+	//
+	////for (Json::Value::const_iterator outer = root.begin(); outer != root.end(); outer++)
+	////{
+	////	std::cout << outer.key() << ": " << *outer << std::endl;
+	////	for (Json::Value::const_iterator inner = (*outer).begin(); inner != (*outer).end(); inner++)
+	////	{
+	////		std::cout << inner.key() << ": " << *inner << std::endl;
+	////	}
+	////
+	////}
+	//std::cout << root["Data"]["Name"];
+	//myfile.close();
+	//
+	//std::ofstream outFile("testo.json");
+	//
+	//Json::StreamWriterBuilder styledbuilder;
+	//Json::StreamWriter * styledwriter = styledbuilder.newStreamWriter();
+	//
+	//Json::Value writeRoot;
+	//writeRoot["Data"]["Name"] = "Gregory";
+	//
+	//styledwriter->write(writeRoot, &outFile);
+	//outFile.close();
+
+	std::ifstream file("data/config_data/Materials/Metals/iron.json");
+	std::string text((std::istreambuf_iterator<char>(file)), (std::istreambuf_iterator<char>()));
+	file.close();
 
 	Json::CharReaderBuilder builder;
 	Json::CharReader * reader = builder.newCharReader();
- 
-	Json::Value root;
+
+	Json::Value value;
 	std::string errors;
 
-	bool parsingSuccessful = reader->parse(text.c_str(), text.c_str() + text.size(), &root, &errors);
+	bool parsingSuccessful = reader->parse(text.c_str(), text.c_str() + text.size(), &value, &errors);
 	delete reader;
 
 	if (!parsingSuccessful)
@@ -56,43 +100,91 @@ int main()
 		std::cout << text << std::endl;
 		std::cout << errors << std::endl;
 	}
+	
+	//Element Grabber
+	std::vector<Element> elementTemp;
+	int noOfElements = value["elements"]["no_of_elements"].asInt();
+	if (noOfElements <= 0)
+	{
+		elementTemp.push_back(ELEMENT_PHYSICAL);
+	}
+	else
+	{
+		for (int i = 0; i < noOfElements; i++)
+		{
+			std::string holder = value["elements"][std::to_string(i)].asString();
+			if (holder == "PHYSICAL")
+				elementTemp.push_back(ELEMENT_PHYSICAL);
+			else if (holder == "EARTH")
+				elementTemp.push_back(ELEMENT_EARTH);
+			else if (holder == "AIR")
+				elementTemp.push_back(ELEMENT_AIR);
+			else if (holder == "FIRE")
+				elementTemp.push_back(ELEMENT_EARTH);
+			else if (holder == "WATER")
+				elementTemp.push_back(ELEMENT_WATER);
+			else if (holder == "LIGHT")
+				elementTemp.push_back(ELEMENT_LIGHT);
+			else if (holder == "DARK")
+				elementTemp.push_back(ELEMENT_DARK);
+			else
+				elementTemp.push_back(ELEMENT_EXOTIC);
+		}
+	}
+	
+	//Damage Type
+	DamType damageTemp = PHYSICAL_DAMAGE;
+	if (value["damage_type"].asString() == "MAGIC")
+	{
+		damageTemp = MAGIC_DAMAGE;
+	}
+	else if (value["damage_type"].asString() == "SPLIT")
+	{
+		damageTemp = SPLIT_DAMAGE;
+	}
+	
+	Metal metal
+	(
+		value["name"].asString(),
+		value["description"].asString(),
+		value["color"]["r"].asInt(),
+		value["color"]["g"].asInt(),
+		value["color"]["b"].asInt(),
+		value["quality"].asDouble(),
+		value["density"].asDouble(),
+		value["conductivity"].asDouble(),
+		elementTemp,
+		damageTemp,
+		value["scaling"]["strength"].asDouble(),
+		value["scaling"]["dexterity"].asDouble(),
+		value["scaling"]["endurance"].asDouble(),
+		value["scaling"]["intelligence"].asDouble(),
+		value["scaling"]["agility"].asDouble(),
+		value["scaling"]["luck"].asDouble(),
+		value["mod"]["strength"].asInt(),
+		value["mod"]["dexterity"].asInt(),
+		value["mod"]["endurance"].asInt(),
+		value["mod"]["intelligence"].asInt(),
+		value["mod"]["agility"].asInt(),
+		value["mod"]["luck"].asInt(),
+		value["mod"]["potion_effectiveness"].asDouble(),
+		value["mod"]["health"].asDouble(),
+		value["mod"]["stamnina"].asDouble(),
+		value["mod"]["arousal"].asDouble(),
+		value["mod"]["willpower"].asDouble(),
+		value["status_affliction"].asString()
+	);
 
-	//for (Json::Value::const_iterator outer = root.begin(); outer != root.end(); outer++)
-	//{
-	//	std::cout << outer.key() << ": " << *outer << std::endl;
-	//	for (Json::Value::const_iterator inner = (*outer).begin(); inner != (*outer).end(); inner++)
-	//	{
-	//		std::cout << inner.key() << ": " << *inner << std::endl;
-	//	}
-	//
-	//}
-	std::cout << root["Data"]["Name"];
-	myfile.close();
-
-	std::ofstream outFile("testo.json");
-
-	Json::StreamWriterBuilder styledbuilder;
-	Json::StreamWriter * styledwriter = styledbuilder.newStreamWriter();
-
-	Json::Value writeRoot;
-	Json::Value insides;
-	insides["Name"] = "Gregory";
-	writeRoot["Data"] = insides;
-
-	styledwriter->write(writeRoot, &outFile);
-	outFile.close();
+	t.SetString(metal.Name() + " : " + metal.Description());
 
 	while (running)
 	{
 		t.Update();
-		b.Update();
 		inputHandler.InputCheck();
 		SDL_SetRenderDrawColor(gameRenderer, 0, 0, 0, 0);
 		SDL_RenderClear(gameRenderer);
 		//Draw Code Here
 		t.Render(*gameRenderer);
-		//b.Render(*gameRenderer);
-		p.Render(*gameRenderer);
 		//
 		SDL_RenderPresent(gameRenderer);
 	}

@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
+    <ClCompile Include="source\Entity.cpp" />
     <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
     <ClCompile Include="source\main.cpp" />
@@ -36,10 +37,13 @@
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
     <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
     <ClInclude Include="include\ButtonElement.h" />
+    <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\EventListener.h" />
     <ClInclude Include="include\FontPack.h" />
     <ClInclude Include="include\InputBox.h" />
     <ClInclude Include="include\InputHandler.h" />
+    <ClInclude Include="include\Material.h" />
+    <ClInclude Include="include\Metal.h" />
     <ClInclude Include="include\Panel.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
