@@ -43,13 +43,14 @@
     <ClInclude Include="include\InputBox.h" />
     <ClInclude Include="include\InputHandler.h" />
     <ClInclude Include="include\Material.h" />
-    <ClInclude Include="include\Metal.h" />
+    <ClInclude Include="include\CraftMaterial.h" />
     <ClInclude Include="include\Panel.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\Graphic.h" />
     <ClInclude Include="include\SliderElement.h" />
     <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\WorldMaterial.h" />
     <ClInclude Include="include\TextElement.h" />
     <ClInclude Include="include\TextBox.h" />
   </ItemGroup>

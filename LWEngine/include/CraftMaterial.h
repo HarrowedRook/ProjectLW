@@ -1,12 +1,12 @@
-#ifndef _Metal_H
-#define _Metal_H
+#ifndef _CRAFTMATERIAL_H
+#define _CRAFTMATERIAL_H
 
 #include "Material.h"
 
-class Metal : public Material
+class CraftMaterial : public Material
 {
 public:
-	Metal(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, DamType type, float strScaling, float dexScaling, float endScaling, float intScaling, float agiScaling, float lukScaling, int strMod, int dexMod, int endMod, int intMod, int agiMod, int lukMod, float potionMod, int healthMod, int staminaMod, int arousalMod, int willpowerMod, std::string statusAffliction)
+	CraftMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, DamType type, int flammability, int tempReduct, float strScaling, float dexScaling, float endScaling, float intScaling, float agiScaling, float lukScaling, int strMod, int dexMod, int endMod, int intMod, int agiMod, int lukMod, float potionMod, int healthMod, int staminaMod, int arousalMod, int willpowerMod, std::string statusAffliction)
 	{
 		m_name = name;
 		m_description = description;
@@ -18,6 +18,8 @@ public:
 		m_conductivity = conductivity;
 		m_elements = elements;
 		m_damageType = type;
+		m_flammability = flammability;
+		m_temperatureReduction = tempReduct;
 		m_strScaling = strScaling;
 		m_dexScaling = dexScaling;
 		m_endScaling = endScaling;
@@ -37,16 +39,10 @@ public:
 		m_willpowerMod = willpowerMod;
 		m_statusAffliction = statusAffliction;
 	}
-	~Metal() {};
+	~CraftMaterial() {};
 
-	//std::string Name() { return m_name; };
-	//std::string Description() { return m_description; };
-	//
-	//SDL_Color Color() { return SDL_Color{ m_colorR, m_colorG, m_colorB }; };
-	//
-	//float Quality() { return m_quality; };
-	//float Desnity() { return m_density; };
-	//float Conductivity() { return m_conductivity; };
+	int Flammability() { return m_flammability; };
+	int Temperature() { return m_temperatureReduction; };
 					
 	float StrengthScaling() { return m_strScaling; };
 	float DexterityScaling() { return m_dexScaling; };
@@ -69,11 +65,12 @@ public:
 	int ArousalMod() { return m_arousalMod; };
 	int willpowerMod() {return m_willpowerMod;};
 
-	//std::string StatusAffliction() { return m_statusAffliction; };
-
 private:
 
-	//Weapon Scaling
+	int m_flammability;
+	int m_temperatureReduction;
+
+	//Weapon/Armor Scaling
 	float m_strScaling;
 	float m_dexScaling;
 	float m_endScaling;

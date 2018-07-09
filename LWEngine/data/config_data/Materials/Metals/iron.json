@@ -15,7 +15,9 @@
 		"no_of_elements":1,
 		"0": "PHYSICAL"
 	},
-	"damage_type":"PHYSICAL",
+  "damage_type": "PHYSICAL",
+  "flammability": 0,
+  "temperature_reduction": 0,
 	"scaling":
 	{
 		"strength":     1.6,

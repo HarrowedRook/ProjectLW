@@ -8,7 +8,7 @@
 #include "ProgressBarElement.h"
 #include "json/json.h"
 
-#include "Metal.h"
+#include "CraftMaterial.h"
 
 
 int main()
@@ -143,7 +143,7 @@ int main()
 		damageTemp = SPLIT_DAMAGE;
 	}
 	
-	Metal metal
+	CraftMaterial metal
 	(
 		value["name"].asString(),
 		value["description"].asString(),
@@ -155,6 +155,8 @@ int main()
 		value["conductivity"].asDouble(),
 		elementTemp,
 		damageTemp,
+		value["flammability"].asInt(),
+		value["temperature_reduction"].asInt(),
 		value["scaling"]["strength"].asDouble(),
 		value["scaling"]["dexterity"].asDouble(),
 		value["scaling"]["endurance"].asDouble(),
