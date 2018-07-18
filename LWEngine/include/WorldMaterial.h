@@ -5,6 +5,7 @@
 
 class WorldMaterial : public Material
 {
+public:
 	WorldMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, DamType type, std::string statusAffliction)
 	{
 		m_name = name;
@@ -19,6 +20,7 @@ class WorldMaterial : public Material
 		m_damageType = type;
 		m_statusAffliction = statusAffliction;
 	};
+	WorldMaterial() {};
 	~WorldMaterial() {};
 };
 #endif

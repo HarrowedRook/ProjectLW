@@ -23,10 +23,18 @@
 #include <list>
 #include <queue>
 #include <algorithm>
+#include <map>
+
+#include "json/json.h"
+
 
 #include <iostream>
 #include <fstream>
 
 #include "InputHandler.h"
+
+#include "Structs.h"
+
+enum Element { ELEMENT_PHYSICAL, ELEMENT_FIRE, ELEMENT_AIR, ELEMENT_EARTH, ELEMENT_WATER, ELEMENT_DARK, ELEMENT_LIGHT, ELEMENT_EXOTIC };
 
 #define _USE_MATH_DEFINES

@@ -6,13 +6,16 @@
 #include "SliderElement.h"
 #include "InputBox.h"
 #include "ProgressBarElement.h"
-#include "json/json.h"
+#include "Equipment.h"
+
+#include "ObjectManager.h"
 
 #include "CraftMaterial.h"
-
+#include "WorldMaterial.h"
 
 int main()
 {
+
 	bool running = true;
 
 	SDL_Window* gameWindow = SDL_CreateWindow("TEST", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);
@@ -39,8 +42,7 @@ int main()
 	//ButtonElement b = ButtonElement(eventListener, Panel(0, 0, 200, 100, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), TextElement(resources->GetFontPack("SSP"), 34, false, 0, 0, 190, 90, SDL_Color{ 255,255,255,255 }), "Button", 5, 5);
 
 	//SliderElement b = SliderElement(eventListener, 5, 30, Panel(0, 0, 25, 400, 3, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
-
-
+	
 	//std::ifstream myfile("test.json");
 	//std::string text((std::istreambuf_iterator<char>(myfile)), (std::istreambuf_iterator<char>()));
 	//
@@ -82,102 +84,23 @@ int main()
 	//styledwriter->write(writeRoot, &outFile);
 	//outFile.close();
 
-	std::ifstream file("data/config_data/Materials/Metals/iron.json");
-	std::string text((std::istreambuf_iterator<char>(file)), (std::istreambuf_iterator<char>()));
-	file.close();
+	ObjectManager m("data/config_data");
 
-	Json::CharReaderBuilder builder;
-	Json::CharReader * reader = builder.newCharReader();
+	//
 
-	Json::Value value;
-	std::string errors;
+	srand(time(NULL));
 
-	bool parsingSuccessful = reader->parse(text.c_str(), text.c_str() + text.size(), &value, &errors);
-	delete reader;
+	CraftMaterial * holder;	
+	holder = m.Metal(rand() % m.NumberOfMetals());
 
-	if (!parsingSuccessful)
-	{
-		std::cout << text << std::endl;
-		std::cout << errors << std::endl;
-	}
-	
-	//Element Grabber
-	std::vector<Element> elementTemp;
-	int noOfElements = value["elements"]["no_of_elements"].asInt();
-	if (noOfElements <= 0)
-	{
-		elementTemp.push_back(ELEMENT_PHYSICAL);
-	}
-	else
-	{
-		for (int i = 0; i < noOfElements; i++)
-		{
-			std::string holder = value["elements"][std::to_string(i)].asString();
-			if (holder == "PHYSICAL")
-				elementTemp.push_back(ELEMENT_PHYSICAL);
-			else if (holder == "EARTH")
-				elementTemp.push_back(ELEMENT_EARTH);
-			else if (holder == "AIR")
-				elementTemp.push_back(ELEMENT_AIR);
-			else if (holder == "FIRE")
-				elementTemp.push_back(ELEMENT_EARTH);
-			else if (holder == "WATER")
-				elementTemp.push_back(ELEMENT_WATER);
-			else if (holder == "LIGHT")
-				elementTemp.push_back(ELEMENT_LIGHT);
-			else if (holder == "DARK")
-				elementTemp.push_back(ELEMENT_DARK);
-			else
-				elementTemp.push_back(ELEMENT_EXOTIC);
-		}
-	}
-	
-	//Damage Type
-	DamType damageTemp = PHYSICAL_DAMAGE;
-	if (value["damage_type"].asString() == "MAGIC")
-	{
-		damageTemp = MAGIC_DAMAGE;
-	}
-	else if (value["damage_type"].asString() == "SPLIT")
-	{
-		damageTemp = SPLIT_DAMAGE;
-	}
-	
-	CraftMaterial metal
-	(
-		value["name"].asString(),
-		value["description"].asString(),
-		value["color"]["r"].asInt(),
-		value["color"]["g"].asInt(),
-		value["color"]["b"].asInt(),
-		value["quality"].asDouble(),
-		value["density"].asDouble(),
-		value["conductivity"].asDouble(),
-		elementTemp,
-		damageTemp,
-		value["flammability"].asInt(),
-		value["temperature_reduction"].asInt(),
-		value["scaling"]["strength"].asDouble(),
-		value["scaling"]["dexterity"].asDouble(),
-		value["scaling"]["endurance"].asDouble(),
-		value["scaling"]["intelligence"].asDouble(),
-		value["scaling"]["agility"].asDouble(),
-		value["scaling"]["luck"].asDouble(),
-		value["mod"]["strength"].asInt(),
-		value["mod"]["dexterity"].asInt(),
-		value["mod"]["endurance"].asInt(),
-		value["mod"]["intelligence"].asInt(),
-		value["mod"]["agility"].asInt(),
-		value["mod"]["luck"].asInt(),
-		value["mod"]["potion_effectiveness"].asDouble(),
-		value["mod"]["health"].asDouble(),
-		value["mod"]["stamnina"].asDouble(),
-		value["mod"]["arousal"].asDouble(),
-		value["mod"]["willpower"].asDouble(),
-		value["status_affliction"].asString()
-	);
+	t.SetString(holder->Name() + " : " + holder->Description());
 
-	t.SetString(metal.Name() + " : " + metal.Description());
+	std::map<std::string, int> maptest;
+	maptest.insert(std::make_pair("earth", 1));
+	maptest.insert(std::make_pair("water", 1));
+	//maptest.erase("water");
+
+	std::cout << maptest["water"] << std::endl;
 
 	while (running)
 	{

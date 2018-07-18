@@ -26,19 +26,21 @@ public:
 		m_intScaling = intScaling;
 		m_agiScaling = agiScaling;
 		m_lukScaling = lukScaling;
-		m_strMod = strMod;
-		m_dexMod = dexMod;
-		m_endMod = endMod;
-		m_intMod = intMod;
-		m_agiMod = agiMod;
-		m_lukMod = lukMod;
-		m_potionMod = potionMod;
-		m_healthMod = healthMod;
-		m_staminaMod = staminaMod;
-		m_arousalMod = arousalMod;
-		m_willpowerMod = willpowerMod;
+		m_statMod.strength = strMod;
+		m_statMod.dexterity = dexMod;
+		m_statMod.endurance = endMod;
+		m_statMod.intelligence = intMod;
+		m_statMod.agility = agiMod;
+		m_statMod.luck = lukMod;
+		m_statMod.potionEffectiveness = potionMod;
+		m_statMod.healthRegeneration = healthMod;
+		m_statMod.staminaRegeneration = staminaMod;
+		m_statMod.arousalRegeneration = arousalMod;
+		m_statMod.willpowerRegeneration = willpowerMod;
 		m_statusAffliction = statusAffliction;
 	}
+	CraftMaterial() {};
+
 	~CraftMaterial() {};
 
 	int Flammability() { return m_flammability; };
@@ -51,19 +53,19 @@ public:
 	float AgilityScaling() { return m_agiScaling; };
 	float LuckScaling() { return m_lukScaling; };
 
-	float StrengthMod() { return m_strMod; };
-	float DexterityMod() { return m_dexMod; };
-	float EnduranceMod() { return m_endMod; };
-	float IntelligenceMod() { return m_intMod; };
-	float AgilityMod() { return m_agiMod; };
-	float LuckMod() { return m_lukMod; };
+	float StrengthMod() { return m_statMod.strength; };
+	float DexterityMod() { return m_statMod.dexterity; };
+	float EnduranceMod() { return m_statMod.endurance; };
+	float IntelligenceMod() { return m_statMod.intelligence; };
+	float AgilityMod() { return m_statMod.agility; };
+	float LuckMod() { return m_statMod.luck; };
 
-	float PotionMod() { return m_potionMod; };
+	float PotionMod() { return m_statMod.potionEffectiveness; };
 
-	int HealthMod() { return m_healthMod;};
-	int StaminaMod() { return m_staminaMod;};
-	int ArousalMod() { return m_arousalMod; };
-	int willpowerMod() {return m_willpowerMod;};
+	int HealthMod() { return m_statMod.healthRegeneration; };
+	int StaminaMod() { return  m_statMod.staminaRegeneration; };
+	int ArousalMod() { return  m_statMod.arousalRegeneration; };
+	int willpowerMod() {return m_statMod.willpowerRegeneration; };
 
 private:
 
@@ -79,18 +81,6 @@ private:
 	float m_lukScaling;
 
 	//Extended Modifiers
-	int m_strMod;
-	int m_dexMod;
-	int m_endMod;
-	int m_intMod;
-	int m_agiMod;
-	int m_lukMod;
-
-	float m_potionMod;
-
-	int m_healthMod;
-	int m_staminaMod;
-	int m_arousalMod;
-	int m_willpowerMod;
+	PrimaryStats m_statMod;
 };
 #endif

@@ -1,0 +1,42 @@
+{
+  "name": "Copper",
+  "description": "It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity. A freshly exposed surface of pure copper has a reddish-orange color.",
+  "color": {
+    "r": 200,
+    "g": 150,
+    "b": 70
+  },
+  "quality": 3,
+  "density": 1.5,
+  "conductivity": 0.45,
+  "elements": {
+    "no_of_elements": 1,
+    "1": "PHYSICAL"
+  },
+  "damage_type": "PHYSICAL",
+  "flammability": 0,
+  "temperature_reduction": 0,
+  "scaling": {
+    "strength": 1.4,
+    "dexterity": 1.0,
+    "endurance": 1.0,
+    "intelligence": 1.0,
+    "agility": 1.0,
+    "luck": 1.0
+  },
+  "mod": {
+    "strength": 0,
+    "dexterity": -1,
+    "endurance": 0,
+    "intelligence": 0,
+    "agility": -2,
+    "luck": 0,
+
+    "potion_effectiveness": 1.0,
+    "health": 1.0,
+    "stamina": 1.0,
+    "arousal": 1.0,
+    "willpower": 1.0
+  },
+  "status_affliction": "NONE"
+}

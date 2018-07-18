@@ -13,7 +13,7 @@
 	"elements":
 	{
 		"no_of_elements":1,
-		"0": "PHYSICAL"
+		"1": "PHYSICAL"
 	},
   "damage_type": "PHYSICAL",
   "flammability": 0,

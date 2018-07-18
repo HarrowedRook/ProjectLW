@@ -25,6 +25,7 @@
     <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\ObjectManager.cpp" />
     <ClCompile Include="source\Panel.cpp" />
     <ClCompile Include="source\ProgressBarElement.cpp" />
     <ClCompile Include="source\ResourceManager.cpp" />
@@ -36,23 +37,30 @@
   <ItemGroup>
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
     <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
+    <ClInclude Include="include\BodyPart.h" />
     <ClInclude Include="include\ButtonElement.h" />
+    <ClInclude Include="include\CraftMaterial.h" />
+    <ClInclude Include="include\Enchantment.h" />
     <ClInclude Include="include\Entity.h" />
+    <ClInclude Include="include\Equipment.h" />
     <ClInclude Include="include\EventListener.h" />
     <ClInclude Include="include\FontPack.h" />
+    <ClInclude Include="include\Graphic.h" />
     <ClInclude Include="include\InputBox.h" />
     <ClInclude Include="include\InputHandler.h" />
     <ClInclude Include="include\Material.h" />
-    <ClInclude Include="include\CraftMaterial.h" />
+    <ClInclude Include="include\ObjectManager.h" />
     <ClInclude Include="include\Panel.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
-    <ClInclude Include="include\Graphic.h" />
     <ClInclude Include="include\SliderElement.h" />
+    <ClInclude Include="include\Status.h" />
     <ClInclude Include="include\stdafx.h" />
-    <ClInclude Include="include\WorldMaterial.h" />
-    <ClInclude Include="include\TextElement.h" />
+    <ClInclude Include="include\Structs.h" />
     <ClInclude Include="include\TextBox.h" />
+    <ClInclude Include="include\TextElement.h" />
+    <ClInclude Include="include\Weapon.h" />
+    <ClInclude Include="include\WorldMaterial.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -124,6 +132,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\..\Redistributable\SDL2\include;$(SolutionDir)\include;$(SolutionDir)\..\Redistributable\JSONCPP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)\..\Redistributable\SDL2\lib\x64;$(SolutionDir)\source;$(SolutionDir)\..\Redistributable\JSONCPP;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
