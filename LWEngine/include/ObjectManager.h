@@ -34,6 +34,8 @@ public:
 
 private:
 
+	CraftMaterial LoadCraftMaterial(const fs::directory_entry loc);
+
 	//Materials
 	std::map<std::string, CraftMaterial> m_metal;
 	std::vector<std::string> m_metalList;

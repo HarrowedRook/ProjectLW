@@ -90,7 +90,7 @@ int main()
 
 	srand(time(NULL));
 
-	CraftMaterial * holder;	
+	CraftMaterial * holder;
 	holder = m.Metal(rand() % m.NumberOfMetals());
 
 	t.SetString(holder->Name() + " : " + holder->Description());
