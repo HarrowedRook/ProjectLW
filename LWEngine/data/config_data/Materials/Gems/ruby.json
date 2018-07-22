@@ -1,0 +1,44 @@
+{
+  "name": "Ruby",
+  "description": "A ruby is a pink to blood-red colored gemstone.",
+  "color": {
+    "r": 200,
+    "g": 10,
+    "b": 10
+  },
+  "quality": 5,
+  "density": 1.1,
+  "conductivity": 1.0,
+  "elements": {
+    "no_of_elements": 1,
+    "1": "PHYSICAL",
+    "2": "FIRE"
+  },
+  "damage_physical": 0.8,
+  "damage_magic": 0.2,
+  "flammability": 0,
+  "temperature_reduction": 0,
+  "scaling": {
+    "strength": 0.5,
+    "dexterity": 0.25,
+    "endurance": 0.0,
+    "intelligence": 0.5,
+    "agility": 0.0,
+    "luck": 0.0
+  },
+  "mod": {
+    "strength": 0,
+    "dexterity": 0,
+    "endurance": 0,
+    "intelligence": 0,
+    "agility": 0,
+    "luck": 1,
+
+    "potion_effectiveness": 1.0,
+    "health": 1.0,
+    "stamina": 1.0,
+    "arousal": 1.0,
+    "willpower": 1.0
+  },
+  "status_affliction": "NONE"
+}

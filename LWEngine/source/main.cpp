@@ -90,17 +90,67 @@ int main()
 
 	srand(time(NULL));
 
-	CraftMaterial * holder;
-	holder = m.Metal(rand() % m.NumberOfMetals());
+	CraftMaterial * matOne;
+	CraftMaterial * matTwo;
+	CraftMaterial * matThree;
 
-	t.SetString(holder->Name() + " : " + holder->Description());
+	int rando = rand() % 2;
+	if (rando == 0)
+	{
+		matOne = m.Metal(rand() % m.NumberOfMetals());
+	}
+	else if (rando == 1)
+	{
+		matOne = m.Wood(rand() % m.NumberOfWood());
+	}
+	else
+	{
+		matOne = m.Gem(rand() % m.NumberOfGems());
+	}
 
-	std::map<std::string, int> maptest;
-	maptest.insert(std::make_pair("earth", 1));
-	maptest.insert(std::make_pair("water", 1));
-	//maptest.erase("water");
+	rando = rand() % 2;
+	if (rando == 0)
+	{
+		matTwo = m.Metal(rand() % m.NumberOfMetals());
+	}
+	else if (rando == 1)
+	{
+		matTwo = m.Wood(rand() % m.NumberOfWood());
+	}
+	else
+	{
+		matTwo = m.Gem(rand() % m.NumberOfGems());
+	}
 
-	std::cout << maptest["water"] << std::endl;
+	matThree = m.Gem(rand() % m.NumberOfGems());
+
+	Weapon * swordHolder = m.Sword(rand() % m.NumberOfSwords());
+
+	int rating = swordHolder->Rating();
+
+	std::vector<Enchantment*> x;
+
+	Weapon sword(
+		swordHolder->Name(),
+		swordHolder->Description(),
+		swordHolder->Type(),
+		swordHolder->Sharpness(),
+		swordHolder->Bluntness(),
+		swordHolder->Rating(),
+		swordHolder->Durability(),
+		swordHolder->Value(),
+		swordHolder->Weight(),
+		matOne,
+		matTwo,
+		matThree,
+		swordHolder->SecondaryMaterialOn(),
+		swordHolder->LesserMaterialOn(),
+		x,
+		swordHolder->NumberOfHands()
+	);
+
+
+	t.SetString(sword.Name() + ": " + sword.Description());
 
 	while (running)
 	{

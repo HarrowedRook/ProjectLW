@@ -6,7 +6,7 @@
 class WorldMaterial : public Material
 {
 public:
-	WorldMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, DamType type, std::string statusAffliction)
+	WorldMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, float physical, float magic, std::string statusAffliction)
 	{
 		m_name = name;
 		m_description = description;
@@ -17,7 +17,8 @@ public:
 		m_density = density;
 		m_conductivity = conductivity;
 		m_elements = elements;
-		m_damageType = type;
+		m_physical = physical;
+		m_magic = magic;
 		m_statusAffliction = statusAffliction;
 	};
 	WorldMaterial() {};

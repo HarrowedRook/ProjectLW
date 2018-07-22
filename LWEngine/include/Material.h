@@ -3,8 +3,6 @@
 
 #include "stdafx.h"
 
-enum DamType { PHYSICAL_DAMAGE, MAGIC_DAMAGE, SPLIT_DAMAGE};
-
 class Material
 {
 public:
@@ -18,7 +16,8 @@ public:
 	float Conductivity() { return m_conductivity; };
 
 	std::vector<Element> Elements() { return m_elements; };
-	DamType DamageType() { return m_damageType; };
+	float PhysicalDamage() { return m_physical; };
+	float MagicalDamage() { return m_magic; };
 
 	std::string StatusAffliction() { return m_statusAffliction; };
 
@@ -33,7 +32,8 @@ protected:
 	float m_conductivity;//Level of enchants
 
 	std::vector<Element> m_elements;
-	DamType m_damageType;
+	float m_physical;
+	float m_magic;
 
 	std::string m_statusAffliction;
 };

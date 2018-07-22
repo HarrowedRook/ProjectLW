@@ -1,40 +1,41 @@
 {
-	"name":"Iron",
-	"description":"A heavy metal with a lustrous silvery-grey surface!",
+	"name":"Emerald",
+	"description":"A precious green gemstone.",
 	"color":
 	{
 		"r":70,
-		"g":70,
+		"g":255,
 		"b":70
 	},
-	"quality":5,
-	"density":2.5,
+	"quality":4,
+	"density":3.5,
 	"conductivity":0.25,
 	"elements":
 	{
 		"no_of_elements":1,
 		"1": "PHYSICAL"
 	},
-  "damage_type": "PHYSICAL",
+  "damage_physical": 0.9,
+  "damage_magic":  0.1,
   "flammability": 0,
   "temperature_reduction": 0,
 	"scaling":
 	{
-		"strength":     1.6,
-		"dexterity":    1.0,
-		"endurance":    1.0,
-		"intelligence": 1.0,
-		"agility":      1.0,
+		"strength":     0.6,
+		"dexterity":    0.0,
+		"endurance":    0.0,
+		"intelligence": 0.0,
+		"agility":      0.0,
 		"luck":         1.0
 	},
 	"mod":
 	{
 		"strength":     0,
-		"dexterity":    -1,
+		"dexterity":    0,
 		"endurance":    0,
 		"intelligence": 0,
-		"agility":      -2,
-		"luck":         0,
+		"agility":      0,
+		"luck":         1,
 		
 		"potion_effectiveness": 1.0,
 		"health": 1.0,

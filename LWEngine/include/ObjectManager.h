@@ -31,10 +31,16 @@ public:
 	CraftMaterial * Cloth(int index);
 	int NumberOfCloths() { return m_clothList.size(); };
 
+	Weapon * Sword(std::string id);
+	Weapon * Sword(int index);
+	int NumberOfSwords() { return m_swordList.size(); };
+
 
 private:
 
 	CraftMaterial LoadCraftMaterial(const fs::directory_entry loc);
+
+	Weapon LoadWeapon(const fs::directory_entry loc);
 
 	//Materials
 	std::map<std::string, CraftMaterial> m_metal;
@@ -59,6 +65,9 @@ private:
 	std::vector<std::string> m_enchantmentList;
 	std::map<std::string, Status> m_status;
 	std::vector<std::string> m_statusList;
+
+	std::map<std::string, Weapon> m_sword;
+	std::vector<std::string> m_swordList;
 
 };
 #endif

@@ -6,7 +6,7 @@
 class CraftMaterial : public Material
 {
 public:
-	CraftMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, DamType type, int flammability, int tempReduct, float strScaling, float dexScaling, float endScaling, float intScaling, float agiScaling, float lukScaling, int strMod, int dexMod, int endMod, int intMod, int agiMod, int lukMod, float potionMod, int healthMod, int staminaMod, int arousalMod, int willpowerMod, std::string statusAffliction)
+	CraftMaterial(std::string name, std::string description, int colorR, int colorG, int colorB, float quality, float density, float conductivity, std::vector<Element> elements, float physical, float magic, int flammability, int tempReduct, float strScaling, float dexScaling, float endScaling, float intScaling, float agiScaling, float lukScaling, int strMod, int dexMod, int endMod, int intMod, int agiMod, int lukMod, float potionMod, int healthMod, int staminaMod, int arousalMod, int willpowerMod, std::string statusAffliction)
 	{
 		m_name = name;
 		m_description = description;
@@ -17,7 +17,8 @@ public:
 		m_density = density;
 		m_conductivity = conductivity;
 		m_elements = elements;
-		m_damageType = type;
+		m_physical = physical;
+		m_magic = magic;
 		m_flammability = flammability;
 		m_temperatureReduction = tempReduct;
 		m_strScaling = strScaling;

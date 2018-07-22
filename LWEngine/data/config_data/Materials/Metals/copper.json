@@ -13,16 +13,18 @@
     "no_of_elements": 1,
     "1": "PHYSICAL"
   },
-  "damage_type": "PHYSICAL",
+  "damage_physical": 1.0,
+  "damage_magic": 0.0,
   "flammability": 0,
   "temperature_reduction": 0,
-  "scaling": {
-    "strength": 1.4,
-    "dexterity": 1.0,
-    "endurance": 1.0,
-    "intelligence": 1.0,
-    "agility": 1.0,
-    "luck": 1.0
+  "scaling": 
+  {
+    "strength": 0.4,
+    "dexterity": 0.1,
+    "endurance": 0.0,
+    "intelligence": 0.0,
+    "agility": 0.0,
+    "luck": 0.0
   },
   "mod": {
     "strength": 0,
