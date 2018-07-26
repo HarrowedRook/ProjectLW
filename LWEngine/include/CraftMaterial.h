@@ -68,6 +68,8 @@ public:
 	int ArousalMod() { return  m_statMod.arousalRegeneration; };
 	int willpowerMod() {return m_statMod.willpowerRegeneration; };
 
+	PrimaryStats StatMods() { return m_statMod; };
+
 private:
 
 	int m_flammability;

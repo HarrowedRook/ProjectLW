@@ -11,7 +11,7 @@ public:
 
 	Weapon() {};
 
-	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands)
+	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands, float size)
 	{
 		m_name = name;
 		m_description = descriptor;
@@ -28,8 +28,14 @@ public:
 		m_numberOfHandsRequired = numberOfHands;
 		m_secondaryMat = sec;
 		m_lesserMat = less;
+		m_size = size;
+		m_sharpness = sharpness;
+		m_bluntness = bluntness;
+		CalculateBasicStats();
+		DamageRatio();
+		StatModCalculation();
 	};
-	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, bool sec, bool less, int numberOfHands)
+	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, bool sec, bool less, int numberOfHands, float size)
 	{
 		m_name = name;
 		m_description = descriptor;
@@ -42,6 +48,9 @@ public:
 		m_numberOfHandsRequired = numberOfHands;
 		m_secondaryMat = sec;
 		m_lesserMat = less;
+		m_size = size;
+		m_sharpness = sharpness;
+		m_bluntness = bluntness;
 	};
 	~Weapon() {};
 
@@ -51,284 +60,290 @@ public:
 	void Type(WeaponType type) { m_type = type; };
 	WeaponType Type() { return m_type; };
 
-	float StrengthMod()
+	float StrengthScale()
 	{
-		float mod = StatMod(STRENGTH);
+		float Scale = StatMod(STRENGTH);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.5;
+			Scale += 0.5;
 			break;
 		case SPEAR:
-			mod += 0.25;
+			Scale += 0.25;
 			break;
 		case AXE:
-			mod += 0.75;
+			Scale += 0.75;
 			break;
 		case HAMMER:
-			mod += 1.0;
+			Scale += 1.0;
 			break;
 		case BOW:
-			mod += 0.1;
+			Scale += 0.1;
 			break;
 		case CROSSBOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case WHIP:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case FIST:
-			mod += 0.75;
+			Scale += 0.75;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
-	float DexterityMod()
+	float DexterityScale()
 	{
-		float mod = StatMod(DEXTERITY);
+		float Scale = StatMod(DEXTERITY);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.5;
+			Scale += 0.5;
 			break;
 		case SPEAR:
-			mod += 0.75;
+			Scale += 0.75;
 			break;
 		case AXE:
-			mod += 0.25;
+			Scale += 0.25;
 			break;
 		case HAMMER:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case BOW:
-			mod += 0.75;
+			Scale += 0.75;
 			break;
 		case CROSSBOW:
-			mod += 0.25;
+			Scale += 0.25;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case WHIP:
-			mod += 1.0;
+			Scale += 1.0;
 			break;
 		case FIST:
-			mod += 0.5;
+			Scale += 0.5;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
-	float EnduranceMod()
+	float EnduranceScale()
 	{
-		float mod = StatMod(ENDURANCE);
+		float Scale = StatMod(ENDURANCE);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case SPEAR:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case AXE:
-			mod += 0.1;
+			Scale += 0.1;
 			break;
 		case HAMMER:
-			mod += 0.5;
+			Scale += 0.5;
 			break;
 		case BOW:
-			mod += 0.1;
+			Scale += 0.1;
 			break;
 		case CROSSBOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case WHIP:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case FIST:
-			mod += 0.1;
+			Scale += 0.1;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
-	float IntelligenceMod()
+	float IntelligenceScale()
 	{
-		float mod = StatMod(INTELLIGENCE);
+		float Scale = StatMod(INTELLIGENCE);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case SPEAR:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case AXE:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case HAMMER:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case BOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case CROSSBOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 1.0;
+			Scale += 1.0;
 			break;
 		case WHIP:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case FIST:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
-	float AgilityMod()
+	float AgilityScale()
 	{
-		float mod = StatMod(AGILITY);
+		float Scale = StatMod(AGILITY);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case SPEAR:
-			mod += 0.05;
+			Scale += 0.05;
 			break;
 		case AXE:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case HAMMER:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case BOW:
-			mod += 0.25;
+			Scale += 0.25;
 			break;
 		case CROSSBOW:
-			mod += 0.25;
+			Scale += 0.25;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case WHIP:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case FIST:
-			mod += 0.05;
+			Scale += 0.05;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
-	float LuckMod()
+	float LuckScale()
 	{
-		float mod = StatMod(LUCK);
+		float Scale = StatMod(LUCK);
 		switch (m_type)
 		{
 		case SWORD:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case SPEAR:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case AXE:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case HAMMER:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case BOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case CROSSBOW:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case GUN:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case STAFF:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case WHIP:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		case FIST:
-			mod += 0.0;
+			Scale += 0.0;
 			break;
 		default:
 			break;
 		}
-		mod /= 2;
-		return mod;
+		Scale /= 2;
+		return Scale;
 	}
 
-	std::vector<Element> Elements()
-	{
-		std::vector<Element> holder;
-		for (int i = 0; i < m_primaryMaterial->Elements().size(); i++)
-		{
-			holder.push_back(m_primaryMaterial->Elements().at(i));
-		}
-		if (m_secondaryMat)
-		{
-			for (int i = 0; i < m_secondaryMaterial->Elements().size(); i++)
-			{
-				holder.push_back(m_secondaryMaterial->Elements().at(i));
-			}
-		}
-		if (m_lesserMat)
-		{
-			for (int i = 0; i < m_lesserMaterial->Elements().size(); i++)
-			{
-				holder.push_back(m_lesserMaterial->Elements().at(i));
-			}
-		}
-		return holder;
-	};
-
-	float Sharpness() { return m_sharpness; };
+	float Sharpness() {  return m_sharpness; };
 	float Bluntness() { return m_bluntness; };
+	float Magic() { return m_magic; };
 
 private:
+	void DamageRatio()
+	{
+		float holderMagic;
+		float holderPhys;
+		int div;
+
+		div = 0;
+		holderMagic = m_primaryMaterial->MagicalDamage() * m_weight; div++;
+		if (m_secondaryMat) { holderMagic += m_secondaryMaterial->MagicalDamage() * m_weight; div++; };
+		if (m_lesserMat) { holderMagic += m_lesserMaterial->MagicalDamage() * m_weight; div++; };
+		holderMagic /= div;
+
+		div = 0;
+		holderPhys = m_primaryMaterial->PhysicalDamage() * m_weight; div++;
+		if (m_secondaryMat) { holderPhys += m_secondaryMaterial->PhysicalDamage() * m_weight; div++; };
+		if (m_lesserMat) { holderPhys += m_lesserMaterial->PhysicalDamage() * m_weight; div++; };
+		holderPhys /= div;
+
+		float holderRatio = (holderMagic + holderPhys) / 100;
+		holderPhys = holderPhys / holderRatio;
+		holderMagic = holderMagic / holderRatio;
+
+		m_magic = Round(holderMagic);
+
+		float holder = m_sharpness + m_bluntness;
+		holder /= holderPhys;
+		m_sharpness = Round(m_sharpness / holder);
+		m_bluntness = Round(m_bluntness / holder);
+	}
 
 	int m_numberOfHandsRequired;
-	float m_sharpness, m_bluntness;
+	float m_sharpness, m_bluntness, m_magic;
 	WeaponType m_type;
 };
 

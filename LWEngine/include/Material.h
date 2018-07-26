@@ -12,7 +12,7 @@ public:
 	SDL_Color Color() { return SDL_Color{ m_colorR, m_colorG, m_colorB }; };
 
 	float Quality() { return m_quality; };
-	float Desnity() { return m_density; };
+	float Density() { return m_density; };
 	float Conductivity() { return m_conductivity; };
 
 	std::vector<Element> Elements() { return m_elements; };

@@ -32,7 +32,7 @@ int main()
 
 	TextBox t = TextBox(eventListener, resources->GetFontPack("SSP"), Panel(0, 0, 400, 550, 5, SDL_Color{ 75, 50 ,75 }, SDL_Color{ 50, 25 ,50 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
 	t.SetTextColor(SDL_Color{ 255,255,255,255 });
-	t.SetString("[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.");
+	//t.SetString("[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.[i]Saya... If he- if Onkko- if I could have shown her how catalogues of possible futures found out from the moment[\\i] I could choose, could have chosen, to stay, none of them end, ended, well. [n] None, save one: this one. The one where I left. (sigh) [b]This future ends so well for her, for Konzu, for Cetus.[\\b] As evicerating a choice as it was, it was the only one I could live with. [n] Some day, I swear, this is- but- this was... this will be borne out. [bi]Speak of this no more. To be crushed by the singular excruciates[\\bi]. (sigh) What's done is done. Enough.");
 
 	InputBox b = InputBox(eventListener, Panel(0, 0, 500, 40, 5, SDL_Color{ 200,50,50 }, SDL_Color{ 150,25,25 }), resources->GetFontPack("SSP"), 5, 5);
 
@@ -94,7 +94,7 @@ int main()
 	CraftMaterial * matTwo;
 	CraftMaterial * matThree;
 
-	int rando = rand() % 2;
+	int rando = rand() % 3;
 	if (rando == 0)
 	{
 		matOne = m.Metal(rand() % m.NumberOfMetals());
@@ -108,7 +108,7 @@ int main()
 		matOne = m.Gem(rand() % m.NumberOfGems());
 	}
 
-	rando = rand() % 2;
+	rando = rand() % 3;
 	if (rando == 0)
 	{
 		matTwo = m.Metal(rand() % m.NumberOfMetals());
@@ -146,11 +146,112 @@ int main()
 		swordHolder->SecondaryMaterialOn(),
 		swordHolder->LesserMaterialOn(),
 		x,
-		swordHolder->NumberOfHands()
+		swordHolder->NumberOfHands(),
+		swordHolder->Size()
 	);
 
+	std::string damage;
+	std::string weight;
+	std::string durability;
+	std::string value;
 
-	t.SetString(sword.Name() + ": " + sword.Description());
+	std::stringstream stream;
+	stream << std::fixed << std::setprecision(2) << sword.Rating();
+	damage = stream.str();
+	stream.str("");
+
+	stream << std::fixed << std::setprecision(2) << sword.Weight();
+	weight = stream.str();
+	stream.str("");
+
+	stream << std::fixed << std::setprecision(2) << sword.Durability();
+	durability = stream.str();
+	stream.str("");
+
+	stream << std::fixed << std::setprecision(2) << sword.Value();
+	value = stream.str();
+	stream.str("");
+
+	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + damage + "[n]Weight: " + weight + " kg[n]Durability: " + durability + "[n]Value: " + value + " Gold";
+
+	stream << std::fixed << std::setprecision(2) << sword.Sharpness();
+	output += "[n]Sharp/Blunt/Magic: " + stream.str();
+	stream.str("");
+	stream << std::fixed << std::setprecision(2) << sword.Bluntness();
+	output += "/" + stream.str();
+	stream.str("");
+	stream << std::fixed << std::setprecision(2) << sword.Magic();
+	output += "/" + stream.str();
+	stream.str("");
+
+	output += "[n]Elements: ";
+
+	Element element = sword.Elements().at(0);
+	switch (element)
+	{
+	case ELEMENT_PHYSICAL:
+		output += "Physical";
+		break;
+	case ELEMENT_FIRE:
+		output += "Fire";
+		break;
+	case ELEMENT_AIR:
+		output += "Air";
+		break;
+	case ELEMENT_EARTH:
+		output += "Earth";
+		break;
+	case ELEMENT_WATER:
+		output += "Water";
+		break;
+	case ELEMENT_DARK:
+		output += "Dark";
+		break;
+	case ELEMENT_LIGHT:
+		output += "Light";
+		break;
+	case ELEMENT_EXOTIC:
+		output += "Exotic";
+		break;
+	default:
+		break;
+	}
+
+	for (int i = 1; i < sword.Elements().size(); i++)
+	{
+		element = sword.Elements().at(i);
+		switch (element)
+		{
+		case ELEMENT_PHYSICAL:
+			output += ", Physical";
+			break;
+		case ELEMENT_FIRE:
+			output += ", Fire";
+			break;
+		case ELEMENT_AIR:
+			output += ", Air";
+			break;
+		case ELEMENT_EARTH:
+			output += ", Earth";
+			break;
+		case ELEMENT_WATER:
+			output += ", Water";
+			break;
+		case ELEMENT_DARK:
+			output += ", Dark";
+			break;
+		case ELEMENT_LIGHT:
+			output += ", Light";
+			break;
+		case ELEMENT_EXOTIC:
+			output += ", Exotic";
+			break;
+		default:
+			break;
+		}
+	}
+
+	t.SetString(output);
 
 	while (running)
 	{

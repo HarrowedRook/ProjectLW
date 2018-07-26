@@ -10,7 +10,7 @@
   "density": 1.1,
   "conductivity": 1.0,
   "elements": {
-    "no_of_elements": 1,
+    "no_of_elements": 2,
     "1": "PHYSICAL",
     "2": "FIRE"
   },

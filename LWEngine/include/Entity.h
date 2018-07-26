@@ -21,7 +21,7 @@ protected:
 	//Primary Stats
 	PrimaryStats m_stats;
 	//Stat Mods
-	PrimaryStats m_statMods; //Modified Stats
+	PrimaryStats m_statMods; //Stat mods
 	PrimaryStats m_modifiedStats; //Modified Stats
 
 	//Secondary Stats

@@ -4,23 +4,28 @@
 #include "BodyPart.h"
 #include "Enchantment.h"
 
-enum StatModifier{STRENGTH, DEXTERITY, ENDURANCE, INTELLIGENCE, AGILITY, LUCK};
+enum StatScaler{STRENGTH, DEXTERITY, ENDURANCE, INTELLIGENCE, AGILITY, LUCK};
 
 class Equipment
 {
 public:
-	float Rating() { return m_value; };
+	float Rating() { return m_rating; };
 	void Rating(float x) { m_rating = x; };
 	int Durability() { return m_durability; }
 	void Durability(int x) { m_durability = x; };
 	float MaxDurability() { return m_maxDurability; }
 	void MaxDurability(float x) { m_maxDurability = x; };
+	float Size() { return m_size; }
+	void Size(float x) { m_size = x; };
 
 	float Value() { return m_value; };
 	void Value(float x) { m_value = x; };
 
 	float Weight() { return m_weight; };
 	void Weight(float x) { m_weight = x; };
+
+	bool Equipped() { return m_equipped; };
+	void Equipped(bool x) { m_equipped = x; };
 
 	CraftMaterial* PrimaryMaterial() { return m_primaryMaterial; };
 	void PrimaryMaterial(CraftMaterial * x) { m_primaryMaterial = x; };
@@ -135,13 +140,41 @@ public:
 		{
 			holder.push_back(m_primaryMaterial->Elements().at(i));
 		}
-		for (int i = 0; i < m_secondaryMaterial->Elements().size(); i++)
+		if (m_secondaryMat)
 		{
-			holder.push_back(m_secondaryMaterial->Elements().at(i));
+			for (int i = 0; i < m_secondaryMaterial->Elements().size(); i++)
+			{
+				bool progress = true;
+				for (int j = 0; j < holder.size() && progress; j++)
+				{
+					if (m_secondaryMaterial->Elements().at(i) == holder.at(j))
+					{
+						progress = false;
+					}
+				}
+				if (progress)
+				{
+					holder.push_back(m_secondaryMaterial->Elements().at(i));
+				}
+			}
 		}
-		for (int i = 0; i < m_lesserMaterial->Elements().size(); i++)
+		if (m_lesserMat)
 		{
-			holder.push_back(m_lesserMaterial->Elements().at(i));
+			for (int i = 0; i < m_lesserMaterial->Elements().size(); i++)
+			{
+				bool progress = true;
+				for (int j = 0; j < holder.size() && progress; j++)
+				{
+					if (m_lesserMaterial->Elements().at(i) == holder.at(j))
+					{
+						progress = false;
+					}
+				}
+				if (progress)
+				{
+					holder.push_back(m_lesserMaterial->Elements().at(i));
+				}
+			}
 		}
 		return holder;
 	}
@@ -152,9 +185,88 @@ public:
 	void LesserMaterialOn(bool x) { m_lesserMat = x; };
 	bool LesserMaterialOn() { return m_lesserMat; };
 
+	PrimaryStats PrimaryStatModifications() { return m_statMods; };
+
+
 protected:
 
-	float StatMod(StatModifier m)
+	void StatModCalculation()
+	{
+		PrimaryStats holder;
+
+		holder = m_primaryMaterial->StatMods();
+		if (m_secondaryMat) { holder.strength += (m_secondaryMaterial->StatMods().strength / 2);  };
+		if (m_lesserMat) { holder.strength += (m_lesserMaterial->StatMods().strength / 3);  };
+
+		if (m_secondaryMat) { holder.dexterity += (m_secondaryMaterial->StatMods().dexterity / 2);  };
+		if (m_lesserMat) { holder.dexterity += (m_lesserMaterial->StatMods().dexterity / 3);  };
+
+		if (m_secondaryMat) { holder.endurance += (m_secondaryMaterial->StatMods().endurance / 2);  };
+		if (m_lesserMat) { holder.endurance += (m_lesserMaterial->StatMods().endurance / 3);  };
+
+		if (m_secondaryMat) { holder.intelligence += (m_secondaryMaterial->StatMods().intelligence / 2);  };
+		if (m_lesserMat) { holder.intelligence += (m_lesserMaterial->StatMods().intelligence / 3);  };
+
+		if (m_secondaryMat) { holder.agility += (m_secondaryMaterial->StatMods().agility / 2);  };
+		if (m_lesserMat) { holder.agility += (m_lesserMaterial->StatMods().agility / 3);  };
+
+		if (m_secondaryMat) { holder.luck += (m_secondaryMaterial->StatMods().luck / 2);  };
+		if (m_lesserMat) { holder.luck += (m_lesserMaterial->StatMods().luck / 3);  };
+
+		if (m_secondaryMat) { holder.healthRegeneration += (m_secondaryMaterial->StatMods().healthRegeneration / 2);  };
+		if (m_lesserMat) { holder.healthRegeneration += (m_lesserMaterial->StatMods().healthRegeneration / 3);  };
+
+		if (m_secondaryMat) { holder.staminaRegeneration += (m_secondaryMaterial->StatMods().staminaRegeneration / 2);  };
+		if (m_lesserMat) { holder.staminaRegeneration += (m_lesserMaterial->StatMods().staminaRegeneration / 3);  };
+
+		if (m_secondaryMat) { holder.arousalRegeneration += (m_secondaryMaterial->StatMods().arousalRegeneration / 2);  };
+		if (m_lesserMat) { holder.arousalRegeneration += (m_lesserMaterial->StatMods().arousalRegeneration / 3);  };
+
+		if (m_secondaryMat) { holder.willpowerRegeneration += (m_secondaryMaterial->StatMods().willpowerRegeneration / 2);  };
+		if (m_lesserMat) { holder.willpowerRegeneration += (m_lesserMaterial->StatMods().willpowerRegeneration / 3);  };
+
+		if (m_secondaryMat) { holder.potionEffectiveness += (m_secondaryMaterial->StatMods().potionEffectiveness / 2);  };
+		if (m_lesserMat) { holder.potionEffectiveness += (m_lesserMaterial->StatMods().potionEffectiveness / 3);  };
+
+		m_statMods = holder;
+	};
+
+	void CalculateBasicStats()
+	{
+		float holder;
+		int div;
+
+		//Weight
+		div = 0;
+		holder = m_primaryMaterial->Density() * m_weight; div++;
+		if (m_secondaryMat) { holder += m_secondaryMaterial->Density() * m_weight; div++;};
+		if (m_lesserMat) { holder += m_lesserMaterial->Density() * m_weight; div++;};
+		holder = holder / div;
+		m_weight = holder * (m_size * 4);
+
+		//Durability
+		div = 0;
+		holder = m_weight * m_durability;
+		m_durability = holder * 100;
+
+		//Value
+		div = 0;
+		holder = m_primaryMaterial->Quality() * (m_weight); div++;
+		if (m_secondaryMat) { holder += m_secondaryMaterial->Quality() * (m_weight); div++; };
+		if (m_lesserMat) { holder += m_lesserMaterial->Quality() * (m_weight); div++; };
+		holder = holder / 3;
+		m_value = holder * 10;
+
+		//Rating 
+		m_rating = holder / 2;
+
+		m_weight = Round(m_weight);
+		m_durability = Round(m_durability);
+		m_value = Round(m_value);
+		m_rating = Round(m_rating);
+	};
+
+	float StatMod(StatScaler m)
 	{
 		float holder = 0;
 		int divider = 0;
@@ -205,7 +317,7 @@ protected:
 		default:
 			break;
 		}
-		holder = roundf(holder * 100) / 100;
+		holder = Round(holder);
 		return holder;
 	}
 
@@ -216,6 +328,8 @@ protected:
 	int m_durability;
 	int m_maxDurability;
 
+	float m_size;//Meters
+
 	float m_value;
 
 	float m_weight;
@@ -223,7 +337,17 @@ protected:
 	bool m_secondaryMat;
 	bool m_lesserMat;
 
+	bool m_equipped;
+
+	PrimaryStats m_statMods;
+
 	CraftMaterial *m_primaryMaterial, *m_secondaryMaterial, *m_lesserMaterial;
 	std::vector<Enchantment*> m_enchantments;
+
+	float Round(float x)
+	{
+		float value = (int)(x * 100 + .5);
+		return (float)value / 100;
+	}
 };
 #endif

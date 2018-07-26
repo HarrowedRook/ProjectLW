@@ -99,35 +99,28 @@ void TextBox::SetString(std::string s)
 		{
 			bool finished = false;
 			std::string line = textHolder.substr(0, maxNoChar);
-			int capPush = maxNoChar - 1;
 			int eraseHolder = 0;
+			if (line.size() <= maxNoChar - 1)
+			{
+				finished = true;
+				line = textHolder.substr(0, maxNoChar);
+				eraseHolder = line.length();
+				if (m_lines.size() > 0)
+				{
+					int b = m_lines.back().rfind("[b]");
+					int it = m_lines.back().rfind("[i]");
+					int bi = m_lines.back().rfind("[bi]");
+					int bend = m_lines.back().rfind("[\\b]");
+					int itend = m_lines.back().rfind("[\\i]");
+					int biend = m_lines.back().rfind("[\\bi]");
+					if (b == -1) { b = -inf; }; if (it == -1) { it = -inf; }; if (bi == -1) { bi = -inf; };
+					if (bend == -1) { bend = -inf; }; if (itend == -1) { itend = -inf; }; if (biend == -1) { biend = -inf; };
+					if (bend < b) { line = "[b]" + line; } if (itend < it) { line = "[i]" + line; } if (biend < bi) { line = "[bi]" + line; }
+				}
+			}
 			while (!finished)
 			{
-				if (line.at(line.length() - 1) == ' ' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
-				 || line.at(line.length() - 1) == '.' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
-			 	 || line.at(line.length() - 1) == '!' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
-		  		 || line.at(line.length() - 1) == '?' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth)
-				{
-					eraseHolder = line.length();
-					if (m_lines.size() > 0)
-					{
-						int b = m_lines.back().rfind("[b]");
-						int it = m_lines.back().rfind("[i]");
-						int bi = m_lines.back().rfind("[bi]");
-						int bend = m_lines.back().rfind("[\\b]");
-						int itend = m_lines.back().rfind("[\\i]");
-						int biend = m_lines.back().rfind("[\\bi]");
-						if (b == -1) { b = -inf; }; if (it == -1) { it = -inf; }; if (bi == -1) { bi = -inf; };
-						if (bend == -1) { bend = -inf; }; if (itend == -1) { itend = -inf; }; if (biend == -1) { biend = -inf; }; 
-						if (bend < b) { line = "[b]" + line; } if (itend < it) { line = "[i]" + line; } if (biend < bi) { line = "[bi]" + line; }
-					}
-					finished = true;
-				}
-				else
-				{
-					line.erase(line.length() - 1);
-				}
-				if (capPush == 0)
+				if (line.size() <= 0)
 				{
 					finished = true;
 					line = textHolder.substr(0, maxNoChar);
@@ -142,11 +135,37 @@ void TextBox::SetString(std::string s)
 						int itend = m_lines.back().rfind("[\\i]");
 						int biend = m_lines.back().rfind("[\\bi]");
 						if (b == -1) { b = -inf; }; if (it == -1) { it = -inf; }; if (bi == -1) { bi = -inf; };
-						if (bend == -1) { bend = -inf; }; if (itend == -1) { itend = -inf; }; if (biend == -1) { biend = -inf; }; 
+						if (bend == -1) { bend = -inf; }; if (itend == -1) { itend = -inf; }; if (biend == -1) { biend = -inf; };
 						if (bend < b) { line = "[b]" + line; } if (itend < it) { line = "[i]" + line; } if (biend < bi) { line = "[bi]" + line; }
 					}
 				}
-				capPush--;
+				if (!finished)
+				{
+					if (line.at(line.length() - 1) == ' ' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
+						|| line.at(line.length() - 1) == '.' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
+						|| line.at(line.length() - 1) == '!' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth
+						|| line.at(line.length() - 1) == '?' && StringSize(m_textElements.front()->GetFontPack()->fonts.at(m_textElements.front()->GetFontSize())->Normal, line).x < maxWidth)
+					{
+						eraseHolder = line.length();
+						if (m_lines.size() > 0)
+						{
+							int b = m_lines.back().rfind("[b]");
+							int it = m_lines.back().rfind("[i]");
+							int bi = m_lines.back().rfind("[bi]");
+							int bend = m_lines.back().rfind("[\\b]");
+							int itend = m_lines.back().rfind("[\\i]");
+							int biend = m_lines.back().rfind("[\\bi]");
+							if (b == -1) { b = -inf; }; if (it == -1) { it = -inf; }; if (bi == -1) { bi = -inf; };
+							if (bend == -1) { bend = -inf; }; if (itend == -1) { itend = -inf; }; if (biend == -1) { biend = -inf; };
+							if (bend < b) { line = "[b]" + line; } if (itend < it) { line = "[i]" + line; } if (biend < bi) { line = "[bi]" + line; }
+						}
+						finished = true;
+					}
+					else
+					{
+						line.erase(line.length() - 1);
+					}
+				}
 			}
 			m_lines.push_back(line);
 

@@ -120,7 +120,7 @@ CraftMaterial ObjectManager::LoadCraftMaterial(const fs::directory_entry loc)
 				else if (holder == "AIR")
 					elementTemp.push_back(ELEMENT_AIR);
 				else if (holder == "FIRE")
-					elementTemp.push_back(ELEMENT_EARTH);
+					elementTemp.push_back(ELEMENT_FIRE);
 				else if (holder == "WATER")
 					elementTemp.push_back(ELEMENT_WATER);
 				else if (holder == "LIGHT")
@@ -244,7 +244,8 @@ Weapon ObjectManager::LoadWeapon(const fs::directory_entry loc)
 			value["weight_multiplier"].asDouble(),
 			value["secondary_material"].asBool(),
 			value["lesser_material"].asBool(),
-			value["number_of_hands"].asInt()
+			value["number_of_hands"].asInt(),
+			value["size"].asDouble()
 		);
 		return wep;
 	}
