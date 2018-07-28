@@ -37,7 +37,7 @@
   <ItemGroup>
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
     <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
-    <ClInclude Include="Armor.h" />
+    <ClInclude Include="include\Armor.h" />
     <ClInclude Include="include\BodyPart.h" />
     <ClInclude Include="include\ButtonElement.h" />
     <ClInclude Include="include\CraftMaterial.h" />

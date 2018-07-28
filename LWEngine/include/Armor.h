@@ -3,13 +3,13 @@
 
 #include "Equipment.h"
 
-enum ArmorType { SHIELD, HELMET, CHESTPLATE, GAUNTLET, GREAVES, BOOTS, OUTFIT, UPPER_UNDER, LOWER_UNDER, RING, EAR_PIERCING, TONGUE_PIERCING, NOSE_PIERCING, NIPPLE_PIERCING, VAGINA_PIERCING, PENIS_PIERCING, ANUS_PIERCING};
+enum ArmorType { SHIELD, HELMET, CHESTPLATE, GAUNTLET, GREAVES, BOOTS, OUTFIT, UPPER_UNDER, LOWER_UNDER, NECK, RING, EAR_PIERCING, TONGUE_PIERCING, NOSE_PIERCING, NIPPLE_PIERCING, VAGINA_PIERCING, PENIS_PIERCING, ANUS_PIERCING};
 
 class Armor : public Equipment
 {
 public:
 	Armor() {};
-	Armor(std::string name, std::string descriptor, ArmorType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands, float size)
+	Armor(std::string name, std::string descriptor, int quality, ArmorType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands, float size)
 	{
 		m_name = name;
 		m_description = descriptor;
@@ -26,6 +26,7 @@ public:
 		m_secondaryMat = sec;
 		m_lesserMat = less;
 		m_size = size;
+		m_quality = quality;
 		CalculateBasicStats();
 		CalculateResistance();
 		StatModCalculation();

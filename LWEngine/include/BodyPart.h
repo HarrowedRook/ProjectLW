@@ -4,7 +4,7 @@
 #include "CraftMaterial.h"
 #include "WorldMaterial.h"
 
-enum LimbType{HEAD, UPPER_TORSO, LOWER_TORSO, ARM, LEG, HAND, FOOT, TAIL, BREAST, DICK, TESTICAL, EYE, NOSE, EAR, MOUTH, BRAIN, HAIR, WING, HORN, ARM_WING};
+enum LimbType{HEAD, UPPER_TORSO, LOWER_TORSO, ARM, LEG, HAND, FOOT, TAIL, BREAST, DICK, TESTICLE, CUNT, ANUS, EYE, NOSE, EAR, MOUTH, BRAIN, HAIR, WING, HORN, ARM_WING};
 
 class BodyPart
 {
@@ -19,6 +19,7 @@ private:
 	int m_health;
 	int m_size;
 	int m_naturalDamageReduction;
+	int m_fat;
 	bool m_amputated;
 	bool m_amputatable;
 	bool m_equipable;

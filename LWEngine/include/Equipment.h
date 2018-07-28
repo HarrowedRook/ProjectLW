@@ -9,16 +9,16 @@ enum StatScaler{STRENGTH, DEXTERITY, ENDURANCE, INTELLIGENCE, AGILITY, LUCK};
 class Equipment
 {
 public:
-	float Rating() { return m_rating; };
+	int Rating() { return m_rating; };
 	void Rating(float x) { m_rating = x; };
 	int Durability() { return m_durability; }
 	void Durability(int x) { m_durability = x; };
-	float MaxDurability() { return m_maxDurability; }
+	int MaxDurability() { return m_maxDurability; }
 	void MaxDurability(float x) { m_maxDurability = x; };
 	float Size() { return m_size; }
 	void Size(float x) { m_size = x; };
 
-	float Value() { return m_value; };
+	int Value() { return m_value; };
 	void Value(float x) { m_value = x; };
 
 	float Weight() { return m_weight; };
@@ -187,6 +187,43 @@ public:
 
 	PrimaryStats PrimaryStatModifications() { return m_statMods; };
 
+	std::string Quality()
+	{
+		std::string holder = "none";
+		switch (m_quality)
+		{
+		case 0:
+			holder = "Poor";
+			break;
+		case 1:
+			holder = "Average";
+			break;
+		case 2:
+			holder = "Fine";
+			break;
+		case 3:
+			holder = "Good";
+			break;
+		case 4:
+			holder = "Exquisite";
+			break;
+		case 5:
+			holder = "Masterworks";
+			break;
+		default:
+			if (m_quality < 0)
+			{
+				holder = "Miserable";
+			}
+			else
+			{
+				holder = "Artifact";
+			}
+			break;
+		}
+		return holder;
+	}
+
 
 protected:
 
@@ -248,6 +285,7 @@ protected:
 		div = 0;
 		holder = m_weight * m_durability;
 		m_durability = holder * 100;
+		m_durability *= (1 + (m_quality / 5));
 
 		//Value
 		div = 0;
@@ -256,9 +294,11 @@ protected:
 		if (m_lesserMat) { holder += m_lesserMaterial->Quality() * (m_weight); div++; };
 		holder = holder / 3;
 		m_value = holder * 10;
+		m_value *= (1 + (m_quality / 5));
 
 		//Rating 
 		m_rating = holder / 2;
+		m_rating *= (1 + (m_quality / 5));
 
 		m_weight = Round(m_weight);
 		m_durability = Round(m_durability);
@@ -323,6 +363,8 @@ protected:
 
 	std::string m_name;
 	std::string m_description;
+
+	int m_quality;
 
 	float m_rating;//Value for damage or armor
 	int m_durability;

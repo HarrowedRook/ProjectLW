@@ -11,7 +11,7 @@ public:
 
 	Weapon() {};
 
-	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands, float size)
+	Weapon(std::string name, std::string descriptor, int quality, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, CraftMaterial * primary, CraftMaterial * secondary, CraftMaterial * lesser, bool sec, bool less, std::vector<Enchantment*> enchantments, int numberOfHands, float size)
 	{
 		m_name = name;
 		m_description = descriptor;
@@ -31,6 +31,7 @@ public:
 		m_size = size;
 		m_sharpness = sharpness;
 		m_bluntness = bluntness;
+		m_quality = quality;
 		CalculateBasicStats();
 		DamageRatio();
 		StatModCalculation();

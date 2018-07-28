@@ -140,7 +140,7 @@
     <ClInclude Include="include\ObjectManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Armor.h">
+    <ClInclude Include="include\Armor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

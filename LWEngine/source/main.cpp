@@ -133,6 +133,7 @@ int main()
 	Weapon sword(
 		swordHolder->Name(),
 		swordHolder->Description(),
+		rand() % 7,
 		swordHolder->Type(),
 		swordHolder->Sharpness(),
 		swordHolder->Bluntness(),
@@ -150,29 +151,15 @@ int main()
 		swordHolder->Size()
 	);
 
-	std::string damage;
 	std::string weight;
-	std::string durability;
-	std::string value;
 
 	std::stringstream stream;
-	stream << std::fixed << std::setprecision(2) << sword.Rating();
-	damage = stream.str();
-	stream.str("");
-
 	stream << std::fixed << std::setprecision(2) << sword.Weight();
 	weight = stream.str();
 	stream.str("");
 
-	stream << std::fixed << std::setprecision(2) << sword.Durability();
-	durability = stream.str();
-	stream.str("");
 
-	stream << std::fixed << std::setprecision(2) << sword.Value();
-	value = stream.str();
-	stream.str("");
-
-	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + damage + "[n]Weight: " + weight + " kg[n]Durability: " + durability + "[n]Value: " + value + " Gold";
+	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + std::to_string(sword.Rating()) + "[n]Weight: " + weight + " kg[n]Durability: " + std::to_string(sword.Durability()) + "[n]Value: " + std::to_string(sword.Value()) + " Gold" + "[n]Quality: " + sword.Quality();
 
 	stream << std::fixed << std::setprecision(2) << sword.Sharpness();
 	output += "[n]Sharp/Blunt/Magic: " + stream.str();
