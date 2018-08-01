@@ -32,9 +32,16 @@ public:
 		m_sharpness = sharpness;
 		m_bluntness = bluntness;
 		m_quality = quality;
+
+		m_originalweight = m_weight;
+		m_originalmaxDurability = m_durability;
+		m_originalvalue = m_value;
+		m_originalrating = m_rating;
+
 		CalculateBasicStats();
 		DamageRatio();
 		StatModCalculation();
+
 	};
 	Weapon(std::string name, std::string descriptor, WeaponType type, float sharpness, float bluntness, float rating, int durability, float value, float weight, bool sec, bool less, int numberOfHands, float size)
 	{
@@ -52,6 +59,12 @@ public:
 		m_size = size;
 		m_sharpness = sharpness;
 		m_bluntness = bluntness;
+
+		m_originalweight = m_weight;
+		m_originalmaxDurability = m_durability;
+		m_originalvalue = m_value;
+		m_originalrating = m_rating;
+
 	};
 	~Weapon() {};
 
@@ -99,7 +112,6 @@ public:
 		default:
 			break;
 		}
-		Scale /= 2;
 		return Scale;
 	}
 	float DexterityScale()
@@ -312,6 +324,41 @@ public:
 	float Bluntness() { return m_bluntness; };
 	float Magic() { return m_magic; };
 
+	Damage DamageCalculation(PrimaryStats x)
+	{
+		Damage holder;
+		CalculateBasicStats();
+		DamageRatio();
+		StatModCalculation();
+
+		float damHolder = 0;
+		damHolder += (x.strength * StrengthScale());
+		damHolder += (x.dexterity * DexterityScale());
+		damHolder += (x.endurance * EnduranceScale());
+		damHolder += (x.intelligence * IntelligenceScale());
+		damHolder += (x.agility * AgilityScale());
+		damHolder += (x.luck * LuckScale());
+
+		damHolder /= 2;
+		damHolder += m_rating;
+
+		damHolder += ((rand() % 6) - 3);
+		if (damHolder < 1)
+		{
+			damHolder = 1;
+		}
+
+		holder.sharp = damHolder * (m_sharpness/100);
+		holder.blunt = damHolder * (m_bluntness/100);
+		holder.magic = damHolder * (m_magic/100);
+
+		//std::cout << StrengthScale() << "/" << DexterityScale() << "/" << EnduranceScale() << "/" << IntelligenceScale() << "/" << AgilityScale() << "/" << LuckScale() << "/" << std::endl;
+
+		//std::cout << holder.sharp << "/" << holder.blunt << "/" << holder.magic << std::endl;
+
+		return holder;
+	}
+
 private:
 	void DamageRatio()
 	{
@@ -342,6 +389,8 @@ private:
 		m_sharpness = Round(m_sharpness / holder);
 		m_bluntness = Round(m_bluntness / holder);
 	}
+
+	
 
 	int m_numberOfHandsRequired;
 	float m_sharpness, m_bluntness, m_magic;

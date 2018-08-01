@@ -1,5 +1,5 @@
-#ifndef _Material_H
-#define _Material_H
+#ifndef _MATERIAL_H
+#define _MATERIAL_H
 
 #include "stdafx.h"
 

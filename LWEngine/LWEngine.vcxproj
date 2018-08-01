@@ -22,6 +22,7 @@
     <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
     <ClCompile Include="source\Entity.cpp" />
+    <ClCompile Include="source\Equipment.cpp" />
     <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
     <ClCompile Include="source\main.cpp" />
@@ -62,6 +63,7 @@
     <ClInclude Include="include\TextElement.h" />
     <ClInclude Include="include\Weapon.h" />
     <ClInclude Include="include\WorldMaterial.h" />
+    <ClInclude Include="Skill.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

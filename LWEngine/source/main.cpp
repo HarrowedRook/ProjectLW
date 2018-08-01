@@ -158,7 +158,6 @@ int main()
 	weight = stream.str();
 	stream.str("");
 
-
 	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + std::to_string(sword.Rating()) + "[n]Weight: " + weight + " kg[n]Durability: " + std::to_string(sword.Durability()) + "[n]Value: " + std::to_string(sword.Value()) + " Gold" + "[n]Quality: " + sword.Quality();
 
 	stream << std::fixed << std::setprecision(2) << sword.Sharpness();
@@ -239,6 +238,10 @@ int main()
 	}
 
 	t.SetString(output);
+
+	PrimaryStats jingo{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+	sword.DamageCalculation(jingo);
+
 
 	while (running)
 	{

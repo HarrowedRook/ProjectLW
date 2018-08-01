@@ -29,3 +29,10 @@ struct PrimaryStats
 
 	float potionEffectiveness;
 };
+
+struct Damage
+{
+	int sharp;
+	int blunt;
+	int magic;
+};

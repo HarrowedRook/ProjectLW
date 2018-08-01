@@ -1,8 +1,7 @@
 #ifndef _STATUS_H
 #define _STATUS_H
 
-#include "CraftMaterial.h"
-#include "WorldMaterial.h"
+#include "stdafx.h"
 
 enum StatusEffect{ DOT, TOT, DEBUFF, RESTRICTION, WEAKNESS, WERESTATE };
 enum ActionType{ MOVEMENT, ATTACK, SKILL, MAGIC, SEX_ACT, SPEECH };
@@ -21,6 +20,9 @@ private:
 	std::vector<StatusEffect> m_effects;
 	int m_duration;
 	bool m_beneficial;
+
+	//Thorns
+	int m_thornsPercentage;
 
 	//DOT
 	int m_damage;
