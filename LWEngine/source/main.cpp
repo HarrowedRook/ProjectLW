@@ -9,7 +9,7 @@
 #include "Equipment.h"
 
 #include "ObjectManager.h"
-
+#include "Character.h"
 #include "CraftMaterial.h"
 #include "WorldMaterial.h"
 
@@ -90,157 +90,230 @@ int main()
 
 	srand(time(NULL));
 
-	CraftMaterial * matOne;
-	CraftMaterial * matTwo;
-	CraftMaterial * matThree;
+	//begin weapon test
+
+	//CraftMaterial * matOne;
+	//CraftMaterial * matTwo;
+	//CraftMaterial * matThree;
+
+	//int rando = rand() % 3;
+	//if (rando == 0)
+	//{
+	//	matOne = m.Metal(rand() % m.NumberOfMetals());
+	//}
+	//else if (rando == 1)
+	//{
+	//	matOne = m.Wood(rand() % m.NumberOfWood());
+	//}
+	//else
+	//{
+	//	matOne = m.Gem(rand() % m.NumberOfGems());
+	//}
+
+	//rando = rand() % 3;
+	//if (rando == 0)
+	//{
+	//	matTwo = m.Metal(rand() % m.NumberOfMetals());
+	//}
+	//else if (rando == 1)
+	//{
+	//	matTwo = m.Wood(rand() % m.NumberOfWood());
+	//}
+	//else
+	//{
+	//	matTwo = m.Gem(rand() % m.NumberOfGems());
+	//}
+
+	//matThree = m.Gem(rand() % m.NumberOfGems());
+
+	//Weapon * swordHolder = m.Sword(rand() % m.NumberOfSwords());
+
+	//int rating = swordHolder->Rating();
+
+	//std::vector<Enchantment*> x;
+
+	//Weapon sword(
+	//	swordHolder->Name(),
+	//	swordHolder->Description(),
+	//	rand() % 7,
+	//	swordHolder->Type(),
+	//	swordHolder->Sharpness(),
+	//	swordHolder->Bluntness(),
+	//	swordHolder->Rating(),
+	//	swordHolder->Durability(),
+	//	swordHolder->Value(),
+	//	swordHolder->Weight(),
+	//	matOne,
+	//	matTwo,
+	//	matThree,
+	//	swordHolder->SecondaryMaterialOn(),
+	//	swordHolder->LesserMaterialOn(),
+	//	x,
+	//	swordHolder->NumberOfHands(),
+	//	swordHolder->Size()
+	//);
+
+	//std::string weight;
+
+	//std::stringstream stream;
+	//stream << std::fixed << std::setprecision(2) << sword.Weight();
+	//weight = stream.str();
+	//stream.str("");
+
+	//std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + std::to_string(sword.Rating()) + "[n]Weight: " + weight + " kg[n]Durability: " + std::to_string(sword.Durability()) + "[n]Value: " + std::to_string(sword.Value()) + " Gold" + "[n]Quality: " + sword.Quality();
+
+	//stream << std::fixed << std::setprecision(2) << sword.Sharpness();
+	//output += "[n]Sharp/Blunt/Magic: " + stream.str();
+	//stream.str("");
+	//stream << std::fixed << std::setprecision(2) << sword.Bluntness();
+	//output += "/" + stream.str();
+	//stream.str("");
+	//stream << std::fixed << std::setprecision(2) << sword.Magic();
+	//output += "/" + stream.str();
+	//stream.str("");
+	//
+	//output += "[n]Elements: ";
+
+	//Element element = sword.Elements().at(0);
+	//switch (element)
+	//{
+	//case ELEMENT_PHYSICAL:
+	//	output += "Physical";
+	//	break;
+	//case ELEMENT_FIRE:
+	//	output += "Fire";
+	//	break;
+	//case ELEMENT_AIR:
+	//	output += "Air";
+	//	break;
+	//case ELEMENT_EARTH:
+	//	output += "Earth";
+	//	break;
+	//case ELEMENT_WATER:
+	//	output += "Water";
+	//	break;
+	//case ELEMENT_DARK:
+	//	output += "Dark";
+	//	break;
+	//case ELEMENT_LIGHT:
+	//	output += "Light";
+	//	break;
+	//case ELEMENT_EXOTIC:
+	//	output += "Exotic";
+	//	break;
+	//default:
+	//	break;
+	//}
+
+	//for (int i = 1; i < sword.Elements().size(); i++)
+	//{
+	//	element = sword.Elements().at(i);
+	//	switch (element)
+	//	{
+	//	case ELEMENT_PHYSICAL:
+	//		output += ", Physical";
+	//		break;
+	//	case ELEMENT_FIRE:
+	//		output += ", Fire";
+	//		break;
+	//	case ELEMENT_AIR:
+	//		output += ", Air";
+	//		break;
+	//	case ELEMENT_EARTH:
+	//		output += ", Earth";
+	//		break;
+	//	case ELEMENT_WATER:
+	//		output += ", Water";
+	//		break;
+	//	case ELEMENT_DARK:
+	//		output += ", Dark";
+	//		break;
+	//	case ELEMENT_LIGHT:
+	//		output += ", Light";
+	//		break;
+	//	case ELEMENT_EXOTIC:
+	//		output += ", Exotic";
+	//		break;
+	//	default:
+	//		break;
+	//	}
+	//}
+
+	//t.SetString(output);
+
+	//PrimaryStats jingo{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+	//sword.DamageCalculation(jingo);
+
+
+
+	//////////////End Weapon test
+
+	//////////////Begin Character test
+
+//	std::string name, std::string descriptor, std::vector<BodyPart> bodyParts, Size size, Gender gender, PrimaryRace primaryRace, Weight weight)
+
+	PlayerCharacter * characterHolder = new PlayerCharacter;
+
+
+	Gender* pGender = &characterHolder->m_gender;
 
 	int rando = rand() % 3;
 	if (rando == 0)
 	{
-		matOne = m.Metal(rand() % m.NumberOfMetals());
+		*pGender = cgAMBIGUOUS;
 	}
 	else if (rando == 1)
 	{
-		matOne = m.Wood(rand() % m.NumberOfWood());
+		*pGender = cgMASCULINE;
 	}
 	else
 	{
-		matOne = m.Gem(rand() % m.NumberOfGems());
+		*pGender = cgFEMININE;
 	}
 
-	rando = rand() % 3;
+	PrimaryRace* pRace = &characterHolder->m_race;
+
+	rando = rand() % 4;
 	if (rando == 0)
 	{
-		matTwo = m.Metal(rand() % m.NumberOfMetals());
+		*pRace = crHUMAN;
 	}
 	else if (rando == 1)
 	{
-		matTwo = m.Wood(rand() % m.NumberOfWood());
+		*pRace = crSHARK;
+	}
+	else if (rando == 2)
+	{
+		*pRace = crRABBIT;
 	}
 	else
 	{
-		matTwo = m.Gem(rand() % m.NumberOfGems());
+		*pRace = crDEMON;
 	}
 
-	matThree = m.Gem(rand() % m.NumberOfGems());
 
-	Weapon * swordHolder = m.Sword(rand() % m.NumberOfSwords());
+	std::vector<BodyPart*> bodyParts = characterHolder->BodyParts();
 
-	int rating = swordHolder->Rating();
+	//std::vector<Enchantment*> x;
 
-	std::vector<Enchantment*> x;
-
-	Weapon sword(
-		swordHolder->Name(),
-		swordHolder->Description(),
-		rand() % 7,
-		swordHolder->Type(),
-		swordHolder->Sharpness(),
-		swordHolder->Bluntness(),
-		swordHolder->Rating(),
-		swordHolder->Durability(),
-		swordHolder->Value(),
-		swordHolder->Weight(),
-		matOne,
-		matTwo,
-		matThree,
-		swordHolder->SecondaryMaterialOn(),
-		swordHolder->LesserMaterialOn(),
-		x,
-		swordHolder->NumberOfHands(),
-		swordHolder->Size()
-	);
+	//PlayerCharacter Jimmy();
+	
 
 	std::string weight;
 
-	std::stringstream stream;
-	stream << std::fixed << std::setprecision(2) << sword.Weight();
+	/*std::stringstream stream;
+	stream
 	weight = stream.str();
 	stream.str("");
+	
+	
+*/
+	std::string output = characterHolder->m_characterName + ": " + characterHolder->m_description + "[n]Desc: " + std::to_string(characterHolder->m_gender) + "[n]race: " + std::to_string(characterHolder->m_race) + "[n]size: " + std::to_string(characterHolder->m_size) + "[n]weight: " + std::to_string(characterHolder->m_weight);
 
-	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + std::to_string(sword.Rating()) + "[n]Weight: " + weight + " kg[n]Durability: " + std::to_string(sword.Durability()) + "[n]Value: " + std::to_string(sword.Value()) + " Gold" + "[n]Quality: " + sword.Quality();
-
-	stream << std::fixed << std::setprecision(2) << sword.Sharpness();
-	output += "[n]Sharp/Blunt/Magic: " + stream.str();
-	stream.str("");
-	stream << std::fixed << std::setprecision(2) << sword.Bluntness();
-	output += "/" + stream.str();
-	stream.str("");
-	stream << std::fixed << std::setprecision(2) << sword.Magic();
-	output += "/" + stream.str();
-	stream.str("");
-
-	output += "[n]Elements: ";
-
-	Element element = sword.Elements().at(0);
-	switch (element)
-	{
-	case ELEMENT_PHYSICAL:
-		output += "Physical";
-		break;
-	case ELEMENT_FIRE:
-		output += "Fire";
-		break;
-	case ELEMENT_AIR:
-		output += "Air";
-		break;
-	case ELEMENT_EARTH:
-		output += "Earth";
-		break;
-	case ELEMENT_WATER:
-		output += "Water";
-		break;
-	case ELEMENT_DARK:
-		output += "Dark";
-		break;
-	case ELEMENT_LIGHT:
-		output += "Light";
-		break;
-	case ELEMENT_EXOTIC:
-		output += "Exotic";
-		break;
-	default:
-		break;
-	}
-
-	for (int i = 1; i < sword.Elements().size(); i++)
-	{
-		element = sword.Elements().at(i);
-		switch (element)
-		{
-		case ELEMENT_PHYSICAL:
-			output += ", Physical";
-			break;
-		case ELEMENT_FIRE:
-			output += ", Fire";
-			break;
-		case ELEMENT_AIR:
-			output += ", Air";
-			break;
-		case ELEMENT_EARTH:
-			output += ", Earth";
-			break;
-		case ELEMENT_WATER:
-			output += ", Water";
-			break;
-		case ELEMENT_DARK:
-			output += ", Dark";
-			break;
-		case ELEMENT_LIGHT:
-			output += ", Light";
-			break;
-		case ELEMENT_EXOTIC:
-			output += ", Exotic";
-			break;
-		default:
-			break;
-		}
-	}
+	
 
 	t.SetString(output);
 
-	PrimaryStats jingo{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
-	sword.DamageCalculation(jingo);
 
 
 	while (running)

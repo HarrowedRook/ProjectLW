@@ -33,6 +33,7 @@ ObjectManager::ObjectManager(std::string filelocation)
 		m_wood.insert(std::make_pair(holder.Name(), holder));
 		m_woodList.push_back(holder.Name());
 	}
+	
 
 	path = filelocation + "/Objects/Weapons/";
 	for (auto & p : fs::directory_iterator(path))

@@ -8,7 +8,7 @@ public:
 	
 	PlayerCharacter() {};
 
-	PlayerCharacter(std::string name, std::string descriptor, std::vector<BodyPart> bodyParts, Size size,  Gender gender, PrimaryRace primaryRace, Weight weight)
+	PlayerCharacter(std::string name, std::string descriptor, std::vector<BodyPart*> bodyParts, Size size,  Gender gender, PrimaryRace primaryRace, Weight weight)
 	{
 		m_characterName = name;
 		m_description = descriptor;

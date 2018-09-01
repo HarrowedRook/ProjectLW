@@ -38,12 +38,12 @@
   <ItemGroup>
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
     <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
-    <ClInclude Include="AICharacter.h" />
-    <ClInclude Include="AttributeDescriptions.h" />
-    <ClInclude Include="Character.h" />
+    <ClInclude Include="include\AICharacter.h" />
     <ClInclude Include="include\Armor.h" />
+    <ClInclude Include="include\AttributeDescriptions.h" />
     <ClInclude Include="include\BodyPart.h" />
     <ClInclude Include="include\ButtonElement.h" />
+    <ClInclude Include="include\Character.h" />
     <ClInclude Include="include\CraftMaterial.h" />
     <ClInclude Include="include\Enchantment.h" />
     <ClInclude Include="include\Entity.h" />
@@ -56,6 +56,7 @@
     <ClInclude Include="include\Material.h" />
     <ClInclude Include="include\ObjectManager.h" />
     <ClInclude Include="include\Panel.h" />
+    <ClInclude Include="include\PlayerCharacter.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\SliderElement.h" />
@@ -66,7 +67,6 @@
     <ClInclude Include="include\TextElement.h" />
     <ClInclude Include="include\Weapon.h" />
     <ClInclude Include="include\WorldMaterial.h" />
-    <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="Skill.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

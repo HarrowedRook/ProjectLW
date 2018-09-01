@@ -5,7 +5,8 @@
 #include "WorldMaterial.h"
 
 #include "Weapon.h"
-
+#include "Character.h"
+#include "PlayerCharacter.h"
 #include "Enchantment.h"
 #include "Status.h"
 #include <filesystem>
@@ -30,6 +31,12 @@ public:
 	CraftMaterial * Cloth(std::string id);
 	CraftMaterial * Cloth(int index);
 	int NumberOfCloths() { return m_clothList.size(); };
+
+	PlayerCharacter * PC(std::string id);
+	PlayerCharacter * PC(int index);
+
+	Character * NPC(std::string id);
+	Character * NPC(int index);
 
 	Weapon * Sword(std::string id);
 	Weapon * Sword(int index);
@@ -69,5 +76,11 @@ private:
 	std::map<std::string, Weapon> m_sword;
 	std::vector<std::string> m_swordList;
 
+	//Characters
+	std::map<std::string, PlayerCharacter> m_PC;
+	std::vector<std::string> m_PC_List;
+
+	//std::map<std::string, Character> m_NPC;
+	//std::vector<std::string> m_NPC_List;
 };
 #endif

@@ -4,10 +4,10 @@
 
 #include "BodyPart.h"
 ;
-enum Gender { FEMININE, MASCULINE, AMBIGUOUS };
-enum PrimaryRace { HUMAN, DEMON, RABBIT, SHARK};
-enum Size {Miniscule, Small, Average, Tall, Massive};
-enum Weight {Featherweight, Light, Average, Heavy, Elephantine};
+enum Gender { cgFEMININE, cgMASCULINE, cgAMBIGUOUS };
+enum PrimaryRace { crHUMAN, crDEMON, crRABBIT, crSHARK};
+enum Size {csMiniscule, csSmall, csAverage, csTall, csMassive};
+enum Weight {cwFeatherweight, cwLight, cwAverage, cwHeavy, cwElephantine};
 // add stats etc
 //is leveling a thing or just stats?
 class Character
@@ -17,9 +17,9 @@ public:
 	virtual ~Character() {}
 	virtual void update() = 0;
 
-	std::vector<BodyPart> m_BodyParts;
-	std::vector<BodyPart> BodyParts() { return m_BodyParts; }; //get a character's body parts
-	void Rating(BodyPart incomingPart, int index) { m_BodyParts.at(index) = incomingPart; }; //change an indexed body part of a character
+	std::vector<BodyPart*> m_BodyParts;
+	std::vector<BodyPart*> BodyParts() { return m_BodyParts; }; //get a character's body parts
+	void Rating(BodyPart* incomingPart, int index) { m_BodyParts.at(index) = incomingPart; }; //change an indexed body part of a character
 
 
 	PrimaryRace m_race;
@@ -44,8 +44,8 @@ public:
 
 
 	std::string m_description;
-	void Name(std::string description) { m_description = description; }; //set a character's description
-	std::string Name() { return m_description; }; //get a character's description
+	void Description(std::string description) { m_description = description; }; //set a character's description
+	std::string Description() { return m_description; }; //get a character's description
 
 
 	   /* You have a <gender_attribute> physique, with <size> <hair_type> hair accentuating your <gender_attribute> <skin_colour> <race_type> face. 
