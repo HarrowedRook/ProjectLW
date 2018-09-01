@@ -1,0 +1,17 @@
+{
+	"Spell" : 
+	{
+		"Attribute" : 
+		{
+			"damage" : 
+			[
+				57
+			],
+			"name" : "Super Ultra Sex Breath"
+		},
+		"TrainedBy" : 
+		{
+			"name" : "Madame Floogle"
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"Category" : 
+	{
+		"Attribute" : 
+		{
+			"Damage" : []
+		},
+		"Damage" : 
+		{
+			"Attribute" : "Fire"
+		}
+	},
+	"Damage" : 
+	{
+		"Attribute" : 
+		{
+			"Category" : "Spell"
+		}
+	}
+}

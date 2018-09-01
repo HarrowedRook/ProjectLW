@@ -1,0 +1,21 @@
+{
+	"Data" : 
+	{
+		"Category" : "Spell"
+	}
+}{
+	"Data" : 
+	{
+		"Element" : "Fire"
+	}
+}{
+	"Data" : 
+	{
+		"AttackType" : "Breath"
+	}
+}{
+	"Data" : 
+	{
+		"DamageValue" : "5"
+	}
+}

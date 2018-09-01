@@ -9,7 +9,7 @@ enum LimbType{HEAD, UPPER_TORSO, LOWER_TORSO, ARM, LEG, HAND, FOOT, TAIL, BREAST
 enum AttackType{NORMAL, BEAST, INSECT, CRUSTACEAN, TENTACLE};
 enum SkinType{SKIN, FUR, CARAPICE, SCALES, FEATHERS};
 enum LimbGender{FEMININE, MASCULINE, AMBIGUOUS};
-
+//consider limbrace possibility?
 class BodyPart
 {
 public:
