@@ -20,9 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp" />
+    <ClCompile Include="source\Body_Part.cpp" />
     <ClCompile Include="source\ButtonElement.cpp" />
+    <ClCompile Include="source\Effect.cpp" />
     <ClCompile Include="source\Entity.cpp" />
-    <ClCompile Include="source\Equipment.cpp" />
     <ClCompile Include="source\InputBox.cpp" />
     <ClCompile Include="source\InputHandler.cpp" />
     <ClCompile Include="source\main.cpp" />
@@ -38,11 +39,9 @@
   <ItemGroup>
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h" />
     <ClInclude Include="..\Redistributable\JSONCPP\json\json.h" />
-    <ClInclude Include="include\Armor.h" />
-    <ClInclude Include="include\BodyPart.h" />
+    <ClInclude Include="include\Body_Part.h" />
     <ClInclude Include="include\ButtonElement.h" />
-    <ClInclude Include="include\CraftMaterial.h" />
-    <ClInclude Include="include\Enchantment.h" />
+    <ClInclude Include="include\Effect.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Equipment.h" />
     <ClInclude Include="include\EventListener.h" />
@@ -55,21 +54,18 @@
     <ClInclude Include="include\Panel.h" />
     <ClInclude Include="include\ProgressBarElement.h" />
     <ClInclude Include="include\ResourceManager.h" />
+    <ClInclude Include="include\Skill.h" />
     <ClInclude Include="include\SliderElement.h" />
-    <ClInclude Include="include\Status.h" />
     <ClInclude Include="include\stdafx.h" />
     <ClInclude Include="include\Structs.h" />
     <ClInclude Include="include\TextBox.h" />
     <ClInclude Include="include\TextElement.h" />
-    <ClInclude Include="include\Weapon.h" />
-    <ClInclude Include="include\WorldMaterial.h" />
-    <ClInclude Include="Skill.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{226CEEFD-CA47-4B8F-ACDC-948D89FCB848}</ProjectGuid>
     <RootNamespace>LWEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

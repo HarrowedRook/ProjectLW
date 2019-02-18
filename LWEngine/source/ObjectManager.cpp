@@ -8,78 +8,13 @@ ObjectManager::ObjectManager(std::string filelocation)
 	path = filelocation + "/Materials/Metals/";
 	for (auto & p : fs::directory_iterator(path))
 	{
-		CraftMaterial holder = LoadCraftMaterial(p);
+		Material holder = LoadMaterial(p);
 		m_metal.insert(std::make_pair(holder.Name(), holder));
 		m_metalList.push_back(holder.Name());
 	}
-	path = filelocation + "/Materials/Gems/";
-	for (auto & p : fs::directory_iterator(path))
-	{
-		CraftMaterial holder = LoadCraftMaterial(p);
-		m_gem.insert(std::make_pair(holder.Name(), holder));
-		m_gemList.push_back(holder.Name());
-	}
-	path = filelocation + "/Materials/Cloths/";
-	for (auto & p : fs::directory_iterator(path))
-	{
-		CraftMaterial holder = LoadCraftMaterial(p);
-		m_cloth.insert(std::make_pair(holder.Name(), holder));
-		m_clothList.push_back(holder.Name());
-	}
-	path = filelocation + "/Materials/Woods/";
-	for (auto & p : fs::directory_iterator(path))
-	{
-		CraftMaterial holder = LoadCraftMaterial(p);
-		m_wood.insert(std::make_pair(holder.Name(), holder));
-		m_woodList.push_back(holder.Name());
-	}
-
-	path = filelocation + "/Objects/Weapons/";
-	for (auto & p : fs::directory_iterator(path))
-	{
-		Weapon holder = LoadWeapon(p);
-		switch (holder.Type())
-		{
-		case SWORD:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case SPEAR:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case HAMMER:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case BOW:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case CROSSBOW:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case GUN:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case STAFF:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		case FIST:
-			m_sword.insert(std::make_pair(holder.Name(), holder));
-			m_swordList.push_back(holder.Name());
-			break;
-		default:
-			break;
-		}
-	}
-
 }
 
-CraftMaterial ObjectManager::LoadCraftMaterial(const fs::directory_entry loc)
+Material ObjectManager::LoadMaterial(const fs::directory_entry loc)
 {
 	Json::CharReaderBuilder builder;
 	std::ifstream file(loc);
@@ -102,196 +37,66 @@ CraftMaterial ObjectManager::LoadCraftMaterial(const fs::directory_entry loc)
 	else
 	{
 		//Element Grabber
-		std::vector<Element> elementTemp;
-		int noOfElements = value["elements"]["no_of_elements"].asInt();
-		if (noOfElements <= 0)
-		{
-			elementTemp.push_back(ELEMENT_PHYSICAL);
-		}
-		else
-		{
-			for (int i = 1; i < noOfElements + 1; i++)
-			{
-				std::string holder = value["elements"][std::to_string(i)].asString();
-				if (holder == "PHYSICAL")
-					elementTemp.push_back(ELEMENT_PHYSICAL);
-				else if (holder == "EARTH")
-					elementTemp.push_back(ELEMENT_EARTH);
-				else if (holder == "AIR")
-					elementTemp.push_back(ELEMENT_AIR);
-				else if (holder == "FIRE")
-					elementTemp.push_back(ELEMENT_FIRE);
-				else if (holder == "WATER")
-					elementTemp.push_back(ELEMENT_WATER);
-				else if (holder == "LIGHT")
-					elementTemp.push_back(ELEMENT_LIGHT);
-				else if (holder == "DARK")
-					elementTemp.push_back(ELEMENT_DARK);
-				else
-					elementTemp.push_back(ELEMENT_EXOTIC);
-			}
-		}
+		Element elementTemp;
 
-		CraftMaterial material
+		std::string holder = value["element"].asString();
+		if (holder == "AIR")
+			elementTemp = ELEMENT_AIR;
+		else if (holder == "FIRE")
+			elementTemp = ELEMENT_FIRE;
+		else if (holder == "WATER")
+			elementTemp = ELEMENT_WATER;
+		else if (holder == "LIGHT")
+			elementTemp = ELEMENT_LIGHT;
+		else
+			elementTemp = ELEMENT_PHYSICAL;
+		//SURFACE, SURFACE_WATER, UNDERGROUND, UNDERGROUND_WATER, ANYWHERE, VOID
+		MaterialLocation locationTemp;
+		holder = value["location"].asString();
+		if (holder == "SURFACE")
+			locationTemp = LOC_SURFACE;
+		else if (holder == "SURFACE_WATER")
+			locationTemp = LOC_SURFACE_WATER;
+		else if (holder == "UNDERGROUND")
+			locationTemp = LOC_UNDERGROUND;
+		else if (holder == "UNDERGROUND_WATER")
+			locationTemp = LOC_UNDERGROUND_WATER;
+		else if (holder == "ANYWHERE")
+			locationTemp = LOC_ANYWHERE;
+		else
+			locationTemp = LOC_VOID;
+		Uint8 r = Uint8(value["color"]["r"].asInt());
+		Uint8 g = Uint8(value["color"]["g"].asInt());
+		Uint8 b = Uint8(value["color"]["b"].asInt());
+		//std::string name, std::string desc, MaterialType type, SDL_Color color, float potential, float absorption, 
+		//float affinity, float density, float weight, float temp_Resistance, int rarity, bool naturallyOccuring, Element element, MaterialLocation location
+		//	SDL_Color
+		Material material
 		(
 			value["name"].asString(),
 			value["description"].asString(),
-			value["color"]["r"].asInt(),
-			value["color"]["g"].asInt(),
-			value["color"]["b"].asInt(),
-			value["quality"].asDouble(),
+			MATERIAL_METAL,
+			SDL_Color{ r, g, b },
+			value["potential"].asDouble(),
+			value["absorption"].asDouble(),
+			value["affinity"].asDouble(),
 			value["density"].asDouble(),
-			value["conductivity"].asDouble(),
+			value["weight"].asDouble(),
+			value["temperature_reduction"].asDouble(),
+			value["rarity"].asDouble(),
+			value["naturally_occuring"].asBool(),
 			elementTemp,
-			value["damage_physical"].asDouble(),
-			value["damage_magic"].asDouble(),
-			value["flammability"].asInt(),
-			value["temperature_reduction"].asInt(),
-			value["scaling"]["strength"].asDouble(),
-			value["scaling"]["dexterity"].asDouble(),
-			value["scaling"]["endurance"].asDouble(),
-			value["scaling"]["intelligence"].asDouble(),
-			value["scaling"]["agility"].asDouble(),
-			value["scaling"]["luck"].asDouble(),
-			value["mod"]["strength"].asInt(),
-			value["mod"]["dexterity"].asInt(),
-			value["mod"]["endurance"].asInt(),
-			value["mod"]["intelligence"].asInt(),
-			value["mod"]["agility"].asInt(),
-			value["mod"]["luck"].asInt(),
-			value["mod"]["potion_effectiveness"].asDouble(),
-			value["mod"]["health"].asDouble(),
-			value["mod"]["stamnina"].asDouble(),
-			value["mod"]["arousal"].asDouble(),
-			value["mod"]["willpower"].asDouble(),
-			value["status_affliction"].asString()
-
+			locationTemp
 		);
 		return material;
 	}
 }
-Weapon ObjectManager::LoadWeapon(const fs::directory_entry loc)
-{
-	Json::CharReaderBuilder builder;
-	std::ifstream file(loc);
-	std::string text((std::istreambuf_iterator<char>(file)), (std::istreambuf_iterator<char>()));
-	file.close();
 
-	Json::CharReader * reader = builder.newCharReader();
-
-	Json::Value value;
-	std::string errors;
-
-	bool parsingSuccessful = reader->parse(text.c_str(), text.c_str() + text.size(), &value, &errors);
-	delete reader;
-
-	if (!parsingSuccessful)
-	{
-		std::cout << text << std::endl;
-		std::cout << errors << std::endl;
-	}
-	else
-	{
-		//Damage Type
-		WeaponType wepType = SWORD;
-		if (value["type"].asString() == "SPEAR")
-		{
-			wepType = SPEAR;
-		}
-		else if (value["type"].asString() == "AXE")
-		{
-			wepType = AXE;
-		}
-		else if (value["type"].asString() == "HAMMER")
-		{
-			wepType = HAMMER;
-		}
-		else if (value["type"].asString() == "BOW")
-		{
-			wepType = BOW;
-		}
-		else if (value["type"].asString() == "CROSSBOW")
-		{
-			wepType = CROSSBOW;
-		}
-		else if (value["type"].asString() == "GUN")
-		{
-			wepType = GUN;
-		}
-		else if (value["type"].asString() == "WHIP")
-		{
-			wepType = WHIP;
-		}
-		else if (value["type"].asString() == "STAFF")
-		{
-			wepType = STAFF;
-		}
-		else if (value["type"].asString() == "FIST")
-		{
-			wepType = FIST;
-		}
-
-		Weapon wep
-		(
-			value["name"].asString(),
-			value["description"].asString(),
-			wepType,
-			value["sharpness"].asDouble(),
-			value["bluntness"].asDouble(),
-			value["rating_multiplier"].asDouble(),
-			value["durability_multiplier"].asDouble(),
-			value["value_multiplier"].asDouble(),
-			value["weight_multiplier"].asDouble(),
-			value["secondary_material"].asBool(),
-			value["lesser_material"].asBool(),
-			value["number_of_hands"].asInt(),
-			value["size"].asDouble()
-		);
-		return wep;
-	}
-}
-
-CraftMaterial * ObjectManager::Metal(std::string id)
+Material * ObjectManager::Metal(std::string id)
 {
 	return &m_metal[id];
 }
-CraftMaterial * ObjectManager::Metal(int index)
+Material * ObjectManager::Metal(int x)
 {
-	return &m_metal[m_metalList.at(index)];
-}
-
-CraftMaterial * ObjectManager::Gem(std::string id)
-{
-	return &m_gem[id];
-}
-CraftMaterial * ObjectManager::Gem(int index)
-{
-	return &m_gem[m_gemList.at(index)];
-}
-
-CraftMaterial * ObjectManager::Wood(std::string id)
-{
-	return &m_wood[id];
-}
-CraftMaterial * ObjectManager::Wood(int index)
-{
-	return &m_wood[m_woodList.at(index)];
-}
-
-CraftMaterial * ObjectManager::Cloth(std::string id)
-{
-	return &m_cloth[id];
-}
-CraftMaterial * ObjectManager::Cloth(int index)
-{
-	return &m_cloth[m_clothList.at(index)];
-}
-
-Weapon * ObjectManager::Sword(std::string id)
-{
-	return &m_sword[id];
-}
-Weapon * ObjectManager::Sword(int index)
-{
-	return &m_sword[m_swordList.at(index)];
+	return &m_metal[m_metalList.at(x)];
 }

@@ -1,155 +1,179 @@
 #ifndef _EQUIPMENT_H
 #define _EQUIPMENT_H
 
-#include "BodyPart.h"
-#include "Enchantment.h"
+#include "stdafx.h"
+#include "Material.h"
+#include "Effect.h"
 
-enum StatScaler{STRENGTH, DEXTERITY, ENDURANCE, INTELLIGENCE, AGILITY, LUCK};
+enum EQUIP_TYPE {WEAPON, ARMOR, ACCESSORY};
+enum EQUIP_LOCATION {HELMET, FACE, FULL_HELMET, CHEST, GAUNTLETS, GREAVES, BOOTS, SHIELD, ONE_HANDED, TWO_HANDED, DUAL_HANDED, NECK, RING, WRIST, ANKLE};
 
 class Equipment
 {
 public:
-	int Rating() { return m_rating; };
-	void Rating(float x) { m_rating = x; };
-	int Durability() { return m_durability; }
-	void Durability(int x) { m_durability = x; };
-	int MaxDurability() { return m_maxDurability; }
-	void MaxDurability(float x) { m_maxDurability = x; };
-	float Size() { return m_size; }
-	void Size(float x) { m_size = x; };
-
-	int Value() { return m_value; };
-	void Value(float x) { m_value = x; };
-
-	float Weight() { return m_weight; };
-	void Weight(float x) { m_weight = x; };
-
-	bool Equipped() { return m_equipped; };
-	void Equipped(bool x) { m_equipped = x; };
-
-	CraftMaterial* PrimaryMaterial() { return m_primaryMaterial; };
-	void PrimaryMaterial(CraftMaterial * x) { m_primaryMaterial = x; };
-	CraftMaterial* SecondaryMaterial() { return m_secondaryMaterial; };
-	void SecondaryMaterial(CraftMaterial * x) { m_secondaryMaterial = x; };
-	CraftMaterial* LesserMaterial() { return m_lesserMaterial; };
-	void LesserMaterial(CraftMaterial * x) { m_lesserMaterial = x; };
-
-	std::vector<Enchantment*>* Enchantments() { return &m_enchantments; };
-	void AddEnchantment(Enchantment * x) { m_enchantments.push_back(x); };
-	void RemoveEnchantment(Enchantment * x) 
+	Equipment(EQUIP_TYPE type, EQUIP_LOCATION location, std::string name, std::string description, Material* pm, Material* sm, Material* em, float weight, float rating, float value, float affinity, float quality) 
 	{
-		for (int i = 0; i < m_enchantments.size(); i++)
-		{
-			if (m_enchantments.at(i) == x)
-			{
-				m_enchantments.erase(m_enchantments.begin() + (i - 1));
-			}
-		}
-	}
-
-	std::string Name()
-	{
-		return Parser(m_name);
-	}
-
-	std::string Description()
-	{
-		return Parser(m_description);
+		m_type = type;
+		m_location_type = location;
+		m_name = name;
+		m_description = description;
+		m_primaryMaterial = pm;
+		m_secondaryMaterial = sm;
+		m_embeddedMaterial = em;
+		m_weight = weight;
+		m_rating = rating;
+		m_value = value;
+		m_affinity = affinity;
+		m_quality = quality;
+		CalculateBasicStats();
 	};
-
-	std::vector<Element> Elements();
-
-	void SecondaryMaterialOn(bool x) { m_secondaryMat = x; };
-	bool SecondaryMaterialOn() { return m_secondaryMat; };
-
-	void LesserMaterialOn(bool x) { m_lesserMat = x; };
-	bool LesserMaterialOn() { return m_lesserMat; };
-
-	PrimaryStats PrimaryStatModifications() { return m_statMods; };
-
-	std::string Quality()
-	{
-		std::string holder = "none";
-		switch (m_quality)
-		{
-		case 0:
-			holder = "Poor";
-			break;
-		case 1:
-			holder = "Average";
-			break;
-		case 2:
-			holder = "Fine";
-			break;
-		case 3:
-			holder = "Good";
-			break;
-		case 4:
-			holder = "Exquisite";
-			break;
-		case 5:
-			holder = "Masterworks";
-			break;
-		default:
-			if (m_quality < 0)
-			{
-				holder = "Miserable";
-			}
-			else
-			{
-				holder = "Artifact";
-			}
-			break;
-		}
-		return holder;
-	}
-
+	~Equipment() {};
 
 protected:
 
-	void StatModCalculation();
+	void CalculateBasicStats()
+	{
+		//
+		m_weight *= m_primaryMaterial->Weight();
+		if (m_secondaryMaterial != NULL)
+		{
+			m_weight *= 0.75;
+			m_weight += (m_secondaryMaterial->Weight() * 0.25);
+		}
+		if (m_embeddedMaterial != NULL)
+		{
+			m_weight *= 0.9;
+			m_weight += (m_embeddedMaterial->Weight() * 0.1);
+		}
 
-	void CalculateBasicStats();
+		//
+		if (m_embeddedMaterial != NULL)
+		{
+			m_element = m_embeddedMaterial->GetElement();
+		}
+		else
+		{
+			m_element = m_primaryMaterial->GetElement();
+		}
 
-	float StatMod(StatScaler m);
+		//
+		m_affinity *= m_primaryMaterial->Affinity();
+		if (m_secondaryMaterial != NULL)
+		{
+			m_affinity *= 0.75;
+			m_affinity += (m_secondaryMaterial->Affinity() * 0.25);
+		}
+		if (m_embeddedMaterial != NULL)
+		{
+			m_affinity += (m_embeddedMaterial->Affinity() * 1.5);
+			m_affinity /= 2;
+		}
+		m_affinity *= (m_quality / 100);
 
-	std::string Parser(std::string x);
+		//
+		int holder = m_primaryMaterial->Rarity();
+		if (holder > 10)
+		{
+			holder = 10;
+		}
+		else if (holder < 0)
+		{
+			holder = 0;
+		}
+		m_value = (holder * m_weight);
+		m_value *= (m_quality / 100);
+
+		//
+		if (m_type == WEAPON)
+		{
+			m_rating *= m_primaryMaterial->Potential();
+			if (m_secondaryMaterial != NULL)
+			{
+				m_rating *= 0.75;
+				m_rating += (m_secondaryMaterial->Potential() * 0.25);
+			}
+			if (m_embeddedMaterial != NULL)
+			{
+				m_rating += (m_embeddedMaterial->Potential() * 1.2);
+				m_rating /= 2;
+			}
+			m_rating *= (m_quality / 100);
+		}
+		else
+		{
+			m_rating *= m_primaryMaterial->Absorption();
+			if (m_secondaryMaterial != NULL)
+			{
+				m_rating *= 0.75;
+				m_rating += (m_secondaryMaterial->Absorption() * 0.25);
+			}
+			if (m_embeddedMaterial != NULL)
+			{
+				m_rating += (m_embeddedMaterial->Absorption() * 1.2);
+				m_rating /= 2;
+			}
+			m_rating *= (m_quality / 100);
+		}
+
+		holder = m_name.find("%PM%");
+		while (holder != std::string::npos)
+		{
+			m_name.replace(holder, 4, m_primaryMaterial->Name());
+			m_description.replace(holder, 4, m_primaryMaterial->Name());
+			holder = m_name.find("%PM%");
+		}
+		holder = m_description.find("%PM%");
+		while (holder != std::string::npos)
+		{
+			m_description.replace(holder, 4, m_primaryMaterial->Name());
+			holder = m_description.find("%PM%");
+		}
+
+		holder = m_name.find("%SM%");
+		while (holder != std::string::npos)
+		{
+			m_name.replace(holder, 4, m_secondaryMaterial->Name());
+			m_description.replace(holder, 4, m_secondaryMaterial->Name());
+			holder = m_name.find("%SM%");
+		}
+		holder = m_description.find("%SM%");
+		while (holder != std::string::npos)
+		{
+			m_description.replace(holder, 4, m_secondaryMaterial->Name());
+			holder = m_description.find("%SM%");
+		}
+
+		holder = m_name.find("%EM%");
+		while (holder != std::string::npos)
+		{
+			m_name.replace(holder, 4, m_embeddedMaterial->Name());
+			m_description.replace(holder, 4, m_embeddedMaterial->Name());
+			holder = m_name.find("%EM%");
+		}
+		holder = m_description.find("%EM%");
+		while (holder != std::string::npos)
+		{
+			m_description.replace(holder, 4, m_embeddedMaterial->Name());
+			holder = m_description.find("%EM%");
+		}
+	}
 
 	std::string m_name;
 	std::string m_description;
-
-	int m_quality;
-
-	float m_rating;//Value for damage or armor
-	int m_durability;
-	int m_maxDurability;
-
-	float m_size;//Meters
-
-	float m_value;
+	
+	Material* m_primaryMaterial;
+	Material* m_secondaryMaterial;
+	Material* m_embeddedMaterial;
 
 	float m_weight;
+	float m_rating;
+	float m_value;
+	float m_affinity;
+	float m_quality;
+	Element m_element;
 
-	bool m_secondaryMat;
-	bool m_lesserMat;
-
-	bool m_equipped;
-
-	PrimaryStats m_statMods;
-
-	CraftMaterial *m_primaryMaterial, *m_secondaryMaterial, *m_lesserMaterial;
-	std::vector<Enchantment*> m_enchantments;
-
-	float Round(float x)
-	{
-		float value = (int)(x * 100 + .5);
-		return (float)value / 100;
-	};
-
-	float m_originalrating;//Value for damage or armor
-	float m_originalvalue;
-	float m_originalweight;
-	int   m_originalmaxDurability;
-
+	EQUIP_TYPE m_type;
+	EQUIP_LOCATION m_location_type;
 };
 #endif
+

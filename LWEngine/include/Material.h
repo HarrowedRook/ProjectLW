@@ -2,39 +2,103 @@
 #define _MATERIAL_H
 
 #include "stdafx.h"
+#include "Effect.h"
+
+enum MaterialLocation {LOC_SURFACE, LOC_SURFACE_WATER, LOC_UNDERGROUND, LOC_UNDERGROUND_WATER, LOC_ANYWHERE, LOC_VOID};
+enum MaterialType {MATERIAL_STONE, MATERIAL_METAL, MATERIAL_GEM, MATERIAL_CLOTH, MATERIAL_WOOD, MATERIAL_GAS, MATERIAL_LIQUID};
 
 class Material
 {
 public:
+	Material()
+	{
+		m_name = "WIP";
+		m_description = "WIP";
+		m_type = MATERIAL_STONE;
+		m_color = SDL_Color{0,0,0};
+		m_potential = 1;
+		m_absorption = 1;
+		m_affinity = 1;
+		m_density = 1;
+		m_weight = 1;
+		m_temperature_resistance = 0;
+		m_rarity = 1;
+		m_naturallyOccuring = false;
+		m_element = ELEMENT_PHYSICAL;
+		m_location = LOC_VOID;
+	}
+	Material(std::string name, std::string desc, MaterialType type, SDL_Color color, float potential, float absorption, float affinity, float density, float weight, float temp_Resistance, int rarity, bool naturallyOccuring, Element element, MaterialLocation location)
+	{
+		m_name = name;
+		m_description = desc;
+		m_type = type;
+		m_color = color;
+		m_potential = potential;
+		m_absorption = absorption;
+		m_affinity = affinity;
+		m_density = density;
+		m_weight = weight;
+		m_temperature_resistance = temp_Resistance;
+		m_rarity = rarity;
+		m_naturallyOccuring = naturallyOccuring;
+		m_element = element;
+		m_location = location;
+	};
+	~Material() {};
+
 	std::string Name() { return m_name; };
 	std::string Description() { return m_description; };
+	SDL_Color Color() { return m_color; };
+	
+	int Rarity() { return m_rarity; };
 
-	SDL_Color Color() { return SDL_Color{ m_colorR, m_colorG, m_colorB }; };
-
-	float Quality() { return m_quality; };
+	float Potential() { return m_potential; };
+	float Absorption() { return m_absorption; };
+	float Affinity() { return m_affinity; };
 	float Density() { return m_density; };
-	float Conductivity() { return m_conductivity; };
+	float Weight() { return m_weight; };
+	float Temperature_Resistance() { return m_temperature_resistance; };
 
-	std::vector<Element> Elements() { return m_elements; };
-	float PhysicalDamage() { return m_physical; };
-	float MagicalDamage() { return m_magic; };
+	Element GetElement() { return m_element; };
+	MaterialLocation Location() { return m_location; };
 
-	std::string StatusAffliction() { return m_statusAffliction; };
+	MaterialType Type() { return m_type; };
+	
+	void AddEffect(Effect * effect)
+	{
+		m_effects.push_back(effect);
+	};
+	Effect * GetEffect(int index) 
+	{ 
+		return m_effects.at(index); 
+	};
+	int NumberOfEffects()
+	{
+		return m_effects.size();
+	};
 
-protected:
-	std::string m_name;
+private:
+	MaterialType m_type;
+
+	bool m_naturallyOccuring;
+
+	SDL_Color m_color;
+	Element m_element;
+	MaterialLocation m_location;
+
+	float m_potential;
+	float m_absorption;
+	float m_affinity;
+	float m_density;
+	float m_weight;
+
+	float m_temperature_resistance;
+
+	int m_rarity;
+
 	std::string m_description;
+	std::string m_name;
 
-	Uint8 m_colorR, m_colorG, m_colorB;
-
-	float m_quality;//Damage/Armor/Potency 
-	float m_density;//Weight
-	float m_conductivity;//Level of enchants
-
-	std::vector<Element> m_elements;
-	float m_physical;
-	float m_magic;
-
-	std::string m_statusAffliction;
+	std::vector<Effect*> m_effects;
 };
 #endif

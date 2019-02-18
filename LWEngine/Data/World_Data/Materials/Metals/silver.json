@@ -1,0 +1,20 @@
+{
+  "name": "Silver",
+  "description": "A heavy metal with a rich silver surface!",
+  "color": {
+    "r": 70,
+    "g": 70,
+    "b": 70
+  },
+  "potential": 2,
+  "absorption": 2,
+  "affinity": 1.7,
+  "element": "NONE",
+  "density": 2.5,
+  "weight": 1.5,
+  "rarity": 2,
+  "location": "UNDERGROUND",
+  "naturally_occuring": 1,
+  "temperature_reduction": 0,
+  "effect": "PHYSICAL"
+}

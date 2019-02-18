@@ -62,25 +62,35 @@ void TextBox::SetString(std::string s)
 	bool paraComplete = false;
 	while(!paraComplete)
 	{
-		if (textHolder.at(0) == ' ')
+		if (textHolder.size() > 0)
 		{
-			textHolder.erase(textHolder.begin());
-		}
-		int x = textHolder.find("[n]");
-		if (x != -1)
-		{
-			paragraphs.push_back(textHolder);
-			paragraphs.back().erase(x, paragraphs.back().length());
-			textHolder.erase(0, x + 3);
+			if (textHolder.at(0) == ' ')
+			{
+				textHolder.erase(textHolder.begin());
+			}
+			int x = textHolder.find("[n]");
+			if (x != -1)
+			{
+				paragraphs.push_back(textHolder);
+				paragraphs.back().erase(x, paragraphs.back().length());
+				textHolder.erase(0, x + 3);
+			}
+			else
+			{
+				paraComplete = true;
+			}
 		}
 		else
 		{
 			paraComplete = true;
 		}
 	}
-	if (textHolder.at(0) == ' ')
+	if (textHolder.size() > 0)
 	{
-		textHolder.erase(textHolder.begin());
+		if (textHolder.at(0) == ' ')
+		{
+			textHolder.erase(textHolder.begin());
+		}
 	}
 
 	paragraphs.push_back(textHolder);

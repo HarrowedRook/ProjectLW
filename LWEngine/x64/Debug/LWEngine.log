@@ -1,0 +1,69 @@
+﻿  Body_Part.cpp
+  ButtonElement.cpp
+  Entity.cpp
+  Graphic.cpp
+  InputBox.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\inputbox.cpp(99): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  ObjectManager.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\include\material.h(77): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\include\objectmanager.h(18): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(86): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Panel.cpp
+  ProgressBarElement.cpp
+  ResourceManager.cpp
+  SliderElement.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\sliderelement.cpp(36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\sliderelement.cpp(40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\sliderelement.cpp(63): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\sliderelement.cpp(91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\sliderelement.cpp(98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  TextBox.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(10): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(61): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(71): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(100): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(117): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(120): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(121): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(122): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(123): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(124): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(125): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(137): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(141): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(142): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(143): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(144): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(145): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(146): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(159): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(162): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(163): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(164): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(165): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(166): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(167): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(195): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(200): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(210): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(222): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textbox.cpp(223): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  TextElement.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(51): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(52): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(53): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(84): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(106): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\textelement.cpp(127): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+c:\users\pixir\desktop\lwsingleplayer\lwengine\include\material.h(77): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\pixir\desktop\lwsingleplayer\lwengine\include\objectmanager.h(18): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+c:\users\pixir\desktop\lwsingleplayer\lwengine\source\objectmanager.cpp(93): warning C4715: 'ObjectManager::LoadMaterial': not all control paths return a value
+  LWEngine.vcxproj -> C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe

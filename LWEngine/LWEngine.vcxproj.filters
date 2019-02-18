@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="JSONCPP">
       <UniqueIdentifier>{422e65ba-61ff-454d-b2b4-5d0a9575d587}</UniqueIdentifier>
     </Filter>
@@ -60,7 +56,10 @@
     <ClCompile Include="source\ObjectManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Equipment.cpp">
+    <ClCompile Include="source\Body_Part.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Effect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,16 +70,7 @@
     <ClInclude Include="..\Redistributable\JSONCPP\json\json-forwards.h">
       <Filter>JSONCPP</Filter>
     </ClInclude>
-    <ClInclude Include="include\BodyPart.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\ButtonElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\CraftMaterial.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Enchantment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Entity.h">
@@ -101,9 +91,6 @@
     <ClInclude Include="include\InputHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Material.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -116,9 +103,6 @@
     <ClInclude Include="include\SliderElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Status.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -128,25 +112,25 @@
     <ClInclude Include="include\TextElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\WorldMaterial.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Equipment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\ObjectManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Armor.h">
+    <ClInclude Include="include\Body_Part.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Skill.h">
+    <ClInclude Include="include\Effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Skill.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

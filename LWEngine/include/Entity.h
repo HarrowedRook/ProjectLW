@@ -2,7 +2,6 @@
 #define _GRAPHIC_H
 
 #include "stdafx.h"
-#include "Status.h"
 
 class Entity
 {

@@ -6,12 +6,8 @@
 #include "SliderElement.h"
 #include "InputBox.h"
 #include "ProgressBarElement.h"
-#include "Equipment.h"
 
 #include "ObjectManager.h"
-
-#include "CraftMaterial.h"
-#include "WorldMaterial.h"
 
 int main()
 {
@@ -84,164 +80,20 @@ int main()
 	//styledwriter->write(writeRoot, &outFile);
 	//outFile.close();
 
-	ObjectManager m("data/config_data");
+	ObjectManager m("Data/World_Data");
+
+	std::string holderString;
+
+	Material* holder;
+	for (int i = 0; i < m.NumberOfMetals(); i++)
+	{
+		holder = m.Metal(i);
+		holderString += "[b]" + holder->Name() + "[\\b] [n]" + holder->Description() + "[n]";
+	}
+
+	t.SetString(holderString);
 
 	//
-
-	srand(time(NULL));
-
-	CraftMaterial * matOne;
-	CraftMaterial * matTwo;
-	CraftMaterial * matThree;
-
-	int rando = rand() % 3;
-	if (rando == 0)
-	{
-		matOne = m.Metal(rand() % m.NumberOfMetals());
-	}
-	else if (rando == 1)
-	{
-		matOne = m.Wood(rand() % m.NumberOfWood());
-	}
-	else
-	{
-		matOne = m.Gem(rand() % m.NumberOfGems());
-	}
-
-	rando = rand() % 3;
-	if (rando == 0)
-	{
-		matTwo = m.Metal(rand() % m.NumberOfMetals());
-	}
-	else if (rando == 1)
-	{
-		matTwo = m.Wood(rand() % m.NumberOfWood());
-	}
-	else
-	{
-		matTwo = m.Gem(rand() % m.NumberOfGems());
-	}
-
-	matThree = m.Gem(rand() % m.NumberOfGems());
-
-	Weapon * swordHolder = m.Sword(rand() % m.NumberOfSwords());
-
-	int rating = swordHolder->Rating();
-
-	std::vector<Enchantment*> x;
-
-	Weapon sword(
-		swordHolder->Name(),
-		swordHolder->Description(),
-		rand() % 7,
-		swordHolder->Type(),
-		swordHolder->Sharpness(),
-		swordHolder->Bluntness(),
-		swordHolder->Rating(),
-		swordHolder->Durability(),
-		swordHolder->Value(),
-		swordHolder->Weight(),
-		matOne,
-		matTwo,
-		matThree,
-		swordHolder->SecondaryMaterialOn(),
-		swordHolder->LesserMaterialOn(),
-		x,
-		swordHolder->NumberOfHands(),
-		swordHolder->Size()
-	);
-
-	std::string weight;
-
-	std::stringstream stream;
-	stream << std::fixed << std::setprecision(2) << sword.Weight();
-	weight = stream.str();
-	stream.str("");
-
-	std::string output = sword.Name() + ": " + sword.Description() + "[n]Damage: " + std::to_string(sword.Rating()) + "[n]Weight: " + weight + " kg[n]Durability: " + std::to_string(sword.Durability()) + "[n]Value: " + std::to_string(sword.Value()) + " Gold" + "[n]Quality: " + sword.Quality();
-
-	stream << std::fixed << std::setprecision(2) << sword.Sharpness();
-	output += "[n]Sharp/Blunt/Magic: " + stream.str();
-	stream.str("");
-	stream << std::fixed << std::setprecision(2) << sword.Bluntness();
-	output += "/" + stream.str();
-	stream.str("");
-	stream << std::fixed << std::setprecision(2) << sword.Magic();
-	output += "/" + stream.str();
-	stream.str("");
-
-	output += "[n]Elements: ";
-
-	Element element = sword.Elements().at(0);
-	switch (element)
-	{
-	case ELEMENT_PHYSICAL:
-		output += "Physical";
-		break;
-	case ELEMENT_FIRE:
-		output += "Fire";
-		break;
-	case ELEMENT_AIR:
-		output += "Air";
-		break;
-	case ELEMENT_EARTH:
-		output += "Earth";
-		break;
-	case ELEMENT_WATER:
-		output += "Water";
-		break;
-	case ELEMENT_DARK:
-		output += "Dark";
-		break;
-	case ELEMENT_LIGHT:
-		output += "Light";
-		break;
-	case ELEMENT_EXOTIC:
-		output += "Exotic";
-		break;
-	default:
-		break;
-	}
-
-	for (int i = 1; i < sword.Elements().size(); i++)
-	{
-		element = sword.Elements().at(i);
-		switch (element)
-		{
-		case ELEMENT_PHYSICAL:
-			output += ", Physical";
-			break;
-		case ELEMENT_FIRE:
-			output += ", Fire";
-			break;
-		case ELEMENT_AIR:
-			output += ", Air";
-			break;
-		case ELEMENT_EARTH:
-			output += ", Earth";
-			break;
-		case ELEMENT_WATER:
-			output += ", Water";
-			break;
-		case ELEMENT_DARK:
-			output += ", Dark";
-			break;
-		case ELEMENT_LIGHT:
-			output += ", Light";
-			break;
-		case ELEMENT_EXOTIC:
-			output += ", Exotic";
-			break;
-		default:
-			break;
-		}
-	}
-
-	t.SetString(output);
-
-	PrimaryStats jingo{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
-	sword.DamageCalculation(jingo);
-
 
 	while (running)
 	{
