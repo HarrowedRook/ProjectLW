@@ -45,9 +45,9 @@ private:
 	int m_timer;
 	int m_timerMax = 20;
 	int m_inputTimer;
-	int m_inputTimerMax = 10;
 	int m_maxNumberOfLetters;
 	bool m_lineAppear;
+	std::string m_last_letter;
 
 	SDL_Point StringSize(TTF_Font * font, std::string text)
 	{

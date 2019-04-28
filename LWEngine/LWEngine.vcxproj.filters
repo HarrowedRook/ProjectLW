@@ -50,16 +50,7 @@
     <ClCompile Include="..\Redistributable\JSONCPP\jsoncpp.cpp">
       <Filter>JSONCPP</Filter>
     </ClCompile>
-    <ClCompile Include="source\Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\ObjectManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Body_Part.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Effect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,9 +62,6 @@
       <Filter>JSONCPP</Filter>
     </ClInclude>
     <ClInclude Include="include\ButtonElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\EventListener.h">
@@ -116,21 +104,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\ObjectManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Body_Part.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Effect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Material.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Skill.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Equipment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

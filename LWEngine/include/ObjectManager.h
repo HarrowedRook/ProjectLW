@@ -1,4 +1,4 @@
-#ifndef _OBJECTMANAGER_H
+/*#ifndef _OBJECTMANAGER_H
 #define _OBJECTMANAGER_H
 
 #include "Material.h"
@@ -27,4 +27,4 @@ private:
 	std::vector<std::string> m_metalList;
 
 };
-#endif
+#endif*/

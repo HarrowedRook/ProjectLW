@@ -1,4 +1,4 @@
-#include "ObjectManager.h"
+/*#include "ObjectManager.h"
 
 
 
@@ -99,4 +99,4 @@ Material * ObjectManager::Metal(std::string id)
 Material * ObjectManager::Metal(int x)
 {
 	return &m_metal[m_metalList.at(x)];
-}
+}*/

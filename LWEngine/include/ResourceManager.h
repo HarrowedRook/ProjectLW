@@ -1,5 +1,4 @@
-#ifndef _RESOURCEMANAGER_H
-#define _RESOURCEMANAGER_H
+#pragma once
 
 #include "stdafx.h"
 #include "FontPack.h"
@@ -48,4 +47,3 @@ private:
 	std::vector<FontPack*> m_fontPacks;
 
 };
-#endif
