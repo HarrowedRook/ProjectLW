@@ -1,6 +1,6 @@
 #include "Panel.h"
 
-Panel::Panel(int x, int y, int width, int height, int margin, SDL_Color bodyColor, SDL_Color marginColor)
+Panel::Panel(int x, int y, int width, int height, int margin, SDL_Color bodyColor, SDL_Color * marginColor)
 {
 	m_x = x;
 	m_y = y;

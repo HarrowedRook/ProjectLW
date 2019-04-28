@@ -22,10 +22,9 @@ int main()
 
 	ResourceManager* resources = new ResourceManager(gameRenderer, "../Resources");
 	resources->AddFontPack("SSP", "SSP_NORMAL", "SSP/SourceSansPro-Regular.ttf", "SSP_B", "SSP/SourceSansPro-Bold.ttf", "SSP_I", "SSP/SourceSansPro-Italic.ttf", "SSP_BI", "SSP/SourceSansPro-BoldItalic.ttf");
-	resources->AddTexture("DownArrow", "arrow_down.png");
-	resources->AddTexture("UpArrow", "arrow_up.png");
+	resources->AddTexture("UI", "UI.png");
 
-	TextBox t = TextBox(eventListener, resources->GetFontPack("SSP"), Panel(0, 0, 500, 450, 5, SDL_Color{ 75, 50 ,75 }, SDL_Color{ 50, 25 ,50 }), resources->GetTexture("DownArrow"), resources->GetTexture("UpArrow"));
+	TextBox t = TextBox(eventListener, resources->GetFontPack("SSP"), Panel(0, 0, 500, 450, 5, SDL_Color{ 75, 50 ,75 }, SDL_Color{ 50, 25 ,50 }), resources->GetTexture("UI"));
 	t.SetTextColor(SDL_Color{ 255,255,255,255 });
 
 	InputBox b = InputBox(eventListener, Panel(0, 450, 400, 40, 5, SDL_Color{ 75, 50 ,75 }, SDL_Color{ 50, 25 ,50 }), resources->GetFontPack("SSP"), 5, 5);

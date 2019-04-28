@@ -7,7 +7,7 @@ class Graphic
 {
 public:
 	Graphic() {};
-	Graphic(SDL_Texture * texture, SDL_Color color, int x, int y, int offsetX, int offsetY, int width, int height);
+	Graphic(SDL_Texture * texture, SDL_Color color, int x, int y, int offsetX, int offsetY, int width, int height, int spriteX, int spriteY, int spriteWidth, int spriteHeight);
 	~Graphic() {};
 
 	SDL_Texture * Texture() { return m_texture; };
@@ -46,6 +46,7 @@ private:
 	int m_height;
 	int m_offsetX;
 	int m_offsetY;
+	int m_sX, m_sY, m_sWidth, m_sHeight;
 
 	SDL_Color m_color;
 

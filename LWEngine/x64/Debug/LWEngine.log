@@ -1,4 +1,4 @@
-﻿Build started 28/04/2019 21:08:23.
+﻿Build started 28/04/2019 22:36:09.
 Environment at start of build:
 ALLUSERSPROFILE = C:\ProgramData
 APPDATA = C:\Users\pixir\AppData\Roaming
@@ -56,8 +56,8 @@ VSLANG = 1033
 VSSKUEDITION = Community
 windir = C:\Windows
 
-21:08:23.973     1>Project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" on node 2 (Build target(s)).
-21:08:23.973     1>Initial Properties:
+22:36:09.340     1>Project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" on node 2 (Build target(s)).
+22:36:09.340     1>Initial Properties:
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1319,8 +1319,8 @@ windir = C:\Windows
                    VsInstallRoot = C:\Program Files (x86)\Microsoft Visual Studio\2017\Community
                    VSLANG = 1033
                    VSSKUEDITION = Community
-                   VSTEL_CurrentSolutionBuildID = 1232461875
-                   VSTEL_SolutionSessionID = {2EBBC6EC-D876-4762-9AB5-FDE1D3012B2A}
+                   VSTEL_CurrentSolutionBuildID = 1237726656
+                   VSTEL_SolutionSessionID = {D9206DD6-BC43-421C-A0F8-6EDC61E7E955}
                    VSVersion = $(VisualStudioVersion)
                    WDKBinRoot = C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0
                    WebBrowserDebuggerDebuggerType = Auto
@@ -1378,9 +1378,9 @@ windir = C:\Windows
                    XamlTemporaryAssemblyName = LWEngine
                    YieldDuringToolExecution = true
 
-21:08:23.973     1>Building with tools version "15.0".
+22:36:09.340     1>Building with tools version "15.0".
                    Target "EnableIntermediateOutputPathMismatchWarning" skipped, due to false condition; ('$(RestoreProjectStyle)' == 'PackageReference') was evaluated as ('' == 'PackageReference').
-21:08:23.973     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
+22:36:09.340     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'LWEngine.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='x64'.
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'LWEngine.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='x64'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
                    Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
@@ -1401,21 +1401,21 @@ windir = C:\Windows
                    Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('x64\Debug\' != '' and !HasTrailingSlash('x64\Debug\')).
                    Task "Error" skipped, due to false condition; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) was evaluated as ( 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\obj\' != '' And 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\obj\' != 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\obj\' ).
                    Task "Warning" skipped, due to false condition; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) was evaluated as ( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\obj\' ).
-21:08:23.977     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "LWEngine.vcxproj".: (TargetId:2)
+22:36:09.344     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "LWEngine.vcxproj".: (TargetId:2)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-21:08:23.977     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:09.344     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
                    Using "SetEnv" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "SetEnv" (TaskId:4)
                      Task Parameter:Name=VSTEL_SolutionSessionID (TaskId:4)
-                     Task Parameter:Value={2EBBC6EC-D876-4762-9AB5-FDE1D3012B2A} (TaskId:4)
+                     Task Parameter:Value={D9206DD6-BC43-421C-A0F8-6EDC61E7E955} (TaskId:4)
                      Task Parameter:Prefix=False (TaskId:4)
-                     VSTEL_SolutionSessionID={2EBBC6EC-D876-4762-9AB5-FDE1D3012B2A} (TaskId:4)
+                     VSTEL_SolutionSessionID={D9206DD6-BC43-421C-A0F8-6EDC61E7E955} (TaskId:4)
                    Done executing task "SetEnv". (TaskId:4)
                    Task "SetEnv" (TaskId:5)
                      Task Parameter:Name=VSTEL_CurrentSolutionBuildID (TaskId:5)
-                     Task Parameter:Value=1232461875 (TaskId:5)
+                     Task Parameter:Value=1237726656 (TaskId:5)
                      Task Parameter:Prefix=False (TaskId:5)
-                     VSTEL_CurrentSolutionBuildID=1232461875 (TaskId:5)
+                     VSTEL_CurrentSolutionBuildID=1237726656 (TaskId:5)
                    Done executing task "SetEnv". (TaskId:5)
                    Task "SetEnv" (TaskId:6)
                      Task Parameter:Name=VSTEL_ProjectID (TaskId:6)
@@ -1424,8 +1424,8 @@ windir = C:\Windows
                      VSTEL_ProjectID={226CEEFD-CA47-4B8F-ACDC-948D89FCB848} (TaskId:6)
                      Output Property: VSTEL_ProjectID={226CEEFD-CA47-4B8F-ACDC-948D89FCB848} (TaskId:6)
                    Done executing task "SetEnv". (TaskId:6)
-21:08:23.979     1>Done building target "SetTelemetryEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:3)
-21:08:23.979     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:09.346     1>Done building target "SetTelemetryEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:3)
+22:36:09.346     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
                    Set Property: BuildType=Build
                    Set Property: _BuildActionType=Build
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
@@ -1433,17 +1433,17 @@ windir = C:\Windows
                        CustomBuildStep=
                            LWEngine
                                    Message=Performing Custom Build Step
-21:08:23.979     1>Done building target "_PrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:4)
-21:08:23.979     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.346     1>Done building target "_PrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:4)
+22:36:09.346     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: TargetFrameworkMoniker=
                    Set Property: _FindDependencies=false
                    Set Property: AdditionalExplicitAssemblyReferences=
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-21:08:23.979     1>Done building target "_PrepareForReferenceResolution" in project "LWEngine.vcxproj".: (TargetId:5)
+22:36:09.346     1>Done building target "_PrepareForReferenceResolution" in project "LWEngine.vcxproj".: (TargetId:5)
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('..\Redistributable\JSONCPP\jsoncpp.cpp;source\ButtonElement.cpp;source\InputBox.cpp;source\InputHandler.cpp;source\main.cpp;source\ObjectManager.cpp;source\Panel.cpp;source\ProgressBarElement.cpp;source\ResourceManager.cpp;source\Graphic.cpp;source\SliderElement.cpp;source\TextElement.cpp;source\TextBox.cpp'!='' and 'false'=='true' and '' != 'false').
-21:08:23.980     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
-21:08:23.980     1>Done building target "BeforeResolveReferences" in project "LWEngine.vcxproj".: (TargetId:6)
-21:08:23.980     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.346     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.346     1>Done building target "BeforeResolveReferences" in project "LWEngine.vcxproj".: (TargetId:6)
+22:36:09.346     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: ShouldUnsetParentConfigurationAndPlatform=true
                    Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignProjectConfiguration" (TaskId:7)
@@ -1458,12 +1458,12 @@ windir = C:\Windows
                      Task Parameter:OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (TaskId:7)
                      Task Parameter:ShouldUnsetParentConfigurationAndPlatform=True (TaskId:7)
                    Done executing task "AssignProjectConfiguration". (TaskId:7)
-21:08:23.980     1>Done building target "AssignProjectConfiguration" in project "LWEngine.vcxproj".: (TargetId:7)
+22:36:09.347     1>Done building target "AssignProjectConfiguration" in project "LWEngine.vcxproj".: (TargetId:7)
                    Target "AssignProjectConfiguration" skipped. Previously built successfully.
-21:08:23.980     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareProjectReferences" depends on it):
+22:36:09.347     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
-21:08:23.981     1>Done building target "_SplitProjectReferencesByFileExistence" in project "LWEngine.vcxproj".: (TargetId:8)
-21:08:23.981     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareProjectReferences" depends on it):
+22:36:09.347     1>Done building target "_SplitProjectReferencesByFileExistence" in project "LWEngine.vcxproj".: (TargetId:8)
+22:36:09.347     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Set Property: ReferringTargetFrameworkForProjectReferences=.NETFramework,Version=v4.0
                    Using "MSBuild" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "MSBuild" (TaskId:8)
@@ -1473,23 +1473,23 @@ windir = C:\Windows
                      Task Parameter:SkipNonexistentTargets=True (TaskId:8)
                    Done executing task "MSBuild". (TaskId:8)
                    Task "GetReferenceNearestTargetFrameworkTask" skipped, due to false condition; ('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != '') was evaluated as ('0' != '0' and '.NETFramework,Version=v4.0' != '').
-21:08:23.983     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "LWEngine.vcxproj".: (TargetId:9)
-21:08:23.983     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveProjectReferences" depends on it):
-21:08:23.983     1>Done building target "PrepareProjectReferences" in project "LWEngine.vcxproj".: (TargetId:10)
+22:36:09.348     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "LWEngine.vcxproj".: (TargetId:9)
+22:36:09.348     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveProjectReferences" depends on it):
+22:36:09.348     1>Done building target "PrepareProjectReferences" in project "LWEngine.vcxproj".: (TargetId:10)
                    Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
-21:08:23.983     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.348     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' != '10.0' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' == '10.0' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
                    Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
-21:08:23.984     1>Done building target "ResolveProjectReferences" in project "LWEngine.vcxproj".: (TargetId:11)
+22:36:09.349     1>Done building target "ResolveProjectReferences" in project "LWEngine.vcxproj".: (TargetId:11)
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ResolveProjectReferences" skipped. Previously built successfully.
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
-21:08:23.984     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.355     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Added Item(s): _TargetFramework40DirectoryItem=C:\Windows\Microsoft.NET\Framework\v4.0.30319
                    Added Item(s): _TargetFramework35DirectoryItem=C:\Windows\Microsoft.NET\Framework\v3.5
                    Added Item(s): _TargetFramework30DirectoryItem=C:\Windows\Microsoft.NET\Framework\v3.0
@@ -1499,18 +1499,18 @@ windir = C:\Windows
                    Set Property: TargetFrameworkDirectory=C:\Windows\Microsoft.NET\Framework\v4.0.30319
                    Set Property: TargetFrameworkSDKDirectory=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    Added Item(s): _TargetFrameworkSDKDirectoryItem=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
-21:08:23.985     1>Done building target "GetFrameworkPaths" in project "LWEngine.vcxproj".: (TargetId:12)
+22:36:09.356     1>Done building target "GetFrameworkPaths" in project "LWEngine.vcxproj".: (TargetId:12)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
-21:08:23.985     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.356     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetFrameworkDirectory=
                    Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files (x86)\Windows Kits\10\References
                    Set Property: RemoveAssemblyFoldersIfNoTargetFramework=true
-21:08:23.986     1>Done building target "GetReferenceAssemblyPaths" in project "LWEngine.vcxproj".: (TargetId:13)
-21:08:23.986     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
+22:36:09.356     1>Done building target "GetReferenceAssemblyPaths" in project "LWEngine.vcxproj".: (TargetId:13)
+22:36:09.357     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:9)
                      Task Parameter:Name=PATH (TaskId:9)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\WorldPainter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\pixir\AppData\Local\Microsoft\WindowsApps;C:\Users\pixir\AppData\Local\GitHubDesktop\bin;C:\Users\pixir\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\pixir\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pixir\AppData\Roaming\npm;C:\Users\pixir\.dotnet\tools; (TaskId:9)
@@ -1539,10 +1539,10 @@ windir = C:\Windows
                      INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:12)
                      Output Property: INCLUDE=C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\atlmfc\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Auxiliary\VS\include%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\ucrt%3b%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\um%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\shared%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\winrt%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\cppwinrt%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.6.1\Include\um%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.6.1\Include\um%3b (TaskId:12)
                    Done executing task "SetEnv". (TaskId:12)
-21:08:23.987     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:14)
+22:36:09.358     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:14)
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
-21:08:23.988     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
+22:36:09.358     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
                    Added Item(s): 
                        Link=
                            tmp
@@ -1625,8 +1625,8 @@ windir = C:\Windows
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-21:08:23.988     1>Done building target "GetResolvedWinMD" in project "LWEngine.vcxproj".: (TargetId:15)
-21:08:23.988     1>Target "PlatformPrepareForBuild: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
+22:36:09.359     1>Done building target "GetResolvedWinMD" in project "LWEngine.vcxproj".: (TargetId:15)
+22:36:09.359     1>Target "PlatformPrepareForBuild: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
                    Set Property: ConfigurationPlatformExists=true
                    Set Property: _CurrentPlatformToolsetShortName=v141
                    Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
@@ -1635,8 +1635,8 @@ windir = C:\Windows
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v100').
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v90').
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v141' != 'v90' and 'v141' != 'v100' and 'v141' != 'v110').
-21:08:23.989     1>Done building target "PlatformPrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:16)
-21:08:23.989     1>Target "_CheckWindowsSDKInstalled: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
+22:36:09.359     1>Done building target "PlatformPrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:16)
+22:36:09.359     1>Target "_CheckWindowsSDKInstalled: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
                    Set Property: WindowsSDKInstalled=false
                    Set Property: WindowsSDK_UAP_Support=false
                    Set Property: WindowsSDK_Desktop_Support=false
@@ -1645,19 +1645,19 @@ windir = C:\Windows
                    Set Property: WindowsSDK_Desktop_Support=true
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKInstalled)' != 'true') was evaluated as ('true' != 'true').
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true) was evaluated as ('false' != 'true' and 'true' != true).
-21:08:23.989     1>Done building target "_CheckWindowsSDKInstalled" in project "LWEngine.vcxproj".: (TargetId:17)
+22:36:09.360     1>Done building target "_CheckWindowsSDKInstalled" in project "LWEngine.vcxproj".: (TargetId:17)
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
                    Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
                    Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
-21:08:23.989     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
+22:36:09.360     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:13)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:13)
                      Task Parameter:Name=CAExcludePath (TaskId:13)
                      Task Parameter:Prefix=False (TaskId:13)
                      CAExcludePath=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:13)
                    Done executing task "SetEnv". (TaskId:13)
-21:08:23.990     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:18)
-21:08:23.990     1>Target "PrepareForBuild: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.360     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "LWEngine.vcxproj".: (TargetId:18)
+22:36:09.360     1>Target "PrepareForBuild: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetDir=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\
                    Set Property: LocalDebuggerCommand=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe
                    Set Property: BuildProjectReferences=false
@@ -1687,22 +1687,22 @@ windir = C:\Windows
                              C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\
                              x64\Debug\LWEngine.tlog\ (TaskId:15)
                    Done executing task "MakeDir". (TaskId:15)
-21:08:23.994     1>Done building target "PrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:19)
+22:36:09.364     1>Done building target "PrepareForBuild" in project "LWEngine.vcxproj".: (TargetId:19)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('..\Redistributable\JSONCPP\jsoncpp.cpp;source\ButtonElement.cpp;source\InputBox.cpp;source\InputHandler.cpp;source\main.cpp;source\ObjectManager.cpp;source\Panel.cpp;source\ProgressBarElement.cpp;source\ResourceManager.cpp;source\Graphic.cpp;source\SliderElement.cpp;source\TextElement.cpp;source\TextBox.cpp'!='' and 'false'=='true' and '' != 'false').
                    Target "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
-21:08:23.994     1>Target "ResolveSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.365     1>Target "ResolveSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
-21:08:23.994     1>Done building target "ResolveSDKReferences" in project "LWEngine.vcxproj".: (TargetId:20)
+22:36:09.365     1>Done building target "ResolveSDKReferences" in project "LWEngine.vcxproj".: (TargetId:20)
                    Target "ResolveSDKReferences" skipped. Previously built successfully.
-21:08:23.994     1>Target "ExpandSDKReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.365     1>Target "ExpandSDKReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
-21:08:23.994     1>Done building target "ExpandSDKReferences" in project "LWEngine.vcxproj".: (TargetId:21)
+22:36:09.365     1>Done building target "ExpandSDKReferences" in project "LWEngine.vcxproj".: (TargetId:21)
                    Target "ResolveNuGetPackageAssets" skipped, due to false condition; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) was evaluated as ('true' == 'true' and exists('obj\project.assets.json')).
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
-21:08:23.994     1>Target "_HandlePackageFileConflicts: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\Microsoft.NET.Build.Extensions.ConflictResolution.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+22:36:09.365     1>Target "_HandlePackageFileConflicts: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\Microsoft.NET.Build.Extensions.ConflictResolution.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Using "ResolvePackageFileConflicts" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\\tools\net46\Microsoft.NET.Build.Extensions.Tasks.dll".
                    Task "ResolvePackageFileConflicts" (TaskId:16)
                      Task Parameter:
@@ -1928,8 +1928,8 @@ windir = C:\Windows
                             (TaskId:16)
                      Output Item(s): _ReferenceCopyLocalPathsWithoutConflicts= (TaskId:16)
                    Done executing task "ResolvePackageFileConflicts". (TaskId:16)
-21:08:23.995     1>Done building target "_HandlePackageFileConflicts" in project "LWEngine.vcxproj".: (TargetId:22)
-21:08:23.995     1>Target "ResolveAssemblyReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.366     1>Done building target "_HandlePackageFileConflicts" in project "LWEngine.vcxproj".: (TargetId:22)
+22:36:09.366     1>Target "ResolveAssemblyReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
                    Added Item(s): 
                        _ReferenceInstalledAssemblyDirectory=
                            C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
@@ -1939,20 +1939,20 @@ windir = C:\Windows
                    Set Property: ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch=Warning
                    Set Property: FindDependenciesOfExternallyResolvedReferences=false
                    Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
-21:08:23.996     1>Done building target "ResolveAssemblyReferences" in project "LWEngine.vcxproj".: (TargetId:23)
+22:36:09.366     1>Done building target "ResolveAssemblyReferences" in project "LWEngine.vcxproj".: (TargetId:23)
                    Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and 'true' == 'true').
                    Target "_RemoveZipFileSuggestedRedirect" skipped, due to false condition; ('$(_TargetFrameworkVersionWithoutV)' >= '4.7.1' And '$(AllowZipFileRedirect)' != 'true') was evaluated as ('4.0' >= '4.7.1' And '' != 'true').
                    Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and 'true' == 'true' and Exists('x64\Debug\LWEngine.exe.config')).
                    Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
-21:08:23.996     1>Target "AfterResolveReferences: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
-21:08:23.996     1>Done building target "AfterResolveReferences" in project "LWEngine.vcxproj".: (TargetId:24)
+22:36:09.367     1>Target "AfterResolveReferences: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ResolveReferences" depends on it):
+22:36:09.367     1>Done building target "AfterResolveReferences" in project "LWEngine.vcxproj".: (TargetId:24)
                    Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
-21:08:23.996     1>Target "ResolveReferences: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
-21:08:23.996     1>Done building target "ResolveReferences" in project "LWEngine.vcxproj".: (TargetId:25)
+22:36:09.367     1>Target "ResolveReferences: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:09.367     1>Done building target "ResolveReferences" in project "LWEngine.vcxproj".: (TargetId:25)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "PrepareForBuild" skipped. Previously built successfully.
-21:08:23.996     1>Target "InitializeBuildStatus: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:09.367     1>Target "InitializeBuildStatus: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
                    Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "ReadLinesFromFile" (TaskId:17)
                      Task Parameter:File=x64\Debug\LWEngine.tlog\LWEngine.lastbuildstate (TaskId:17)
@@ -1978,19 +1978,19 @@ windir = C:\Windows
                      Task Parameter:Files=x64\Debug\LWEngine.tlog\unsuccessfulbuild (TaskId:19)
                      Creating "x64\Debug\LWEngine.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified. (TaskId:19)
                    Done executing task "Touch". (TaskId:19)
-21:08:24.000     1>Done building target "InitializeBuildStatus" in project "LWEngine.vcxproj".: (TargetId:26)
+22:36:09.380     1>Done building target "InitializeBuildStatus" in project "LWEngine.vcxproj".: (TargetId:26)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-21:08:24.000     1>Target "BuildGenerateSourcesTraverse: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildGenerateSources" depends on it):
+22:36:09.380     1>Target "BuildGenerateSourcesTraverse: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildGenerateSources" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
-21:08:24.000     1>Done building target "BuildGenerateSourcesTraverse" in project "LWEngine.vcxproj".: (TargetId:27)
+22:36:09.380     1>Done building target "BuildGenerateSourcesTraverse" in project "LWEngine.vcxproj".: (TargetId:27)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-21:08:24.000     1>Target "BeforeBuildGenerateSources: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-21:08:24.000     1>Done building target "BeforeBuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:28)
-21:08:24.000     1>Target "PreBuildEvent: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.380     1>Target "BeforeBuildGenerateSources: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.380     1>Done building target "BeforeBuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:28)
+22:36:09.380     1>Target "PreBuildEvent: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
-21:08:24.000     1>Done building target "PreBuildEvent" in project "LWEngine.vcxproj".: (TargetId:29)
+22:36:09.380     1>Done building target "PreBuildEvent" in project "LWEngine.vcxproj".: (TargetId:29)
                    Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
@@ -1999,9 +1999,9 @@ windir = C:\Windows
                    Target "InitializeBuildStatus" skipped. Previously built successfully.
                    Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
-21:08:24.001     1>Target "_SelectedFiles: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFileToFolders" depends on it):
-21:08:24.001     1>Done building target "_SelectedFiles" in project "LWEngine.vcxproj".: (TargetId:30)
-21:08:24.001     1>Target "CopyFileToFolders: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.380     1>Target "_SelectedFiles: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFileToFolders" depends on it):
+22:36:09.380     1>Done building target "_SelectedFiles" in project "LWEngine.vcxproj".: (TargetId:30)
+22:36:09.380     1>Target "CopyFileToFolders: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Using "GetOutOfDateItems" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "GetOutOfDateItems" (TaskId:20)
                      Task Parameter:OutputsMetadataName=FullDestinationPath (TaskId:20)
@@ -2010,51 +2010,51 @@ windir = C:\Windows
                      Task Parameter:TLogNamePrefix=CopyFile (TaskId:20)
                    Done executing task "GetOutOfDateItems". (TaskId:20)
                    Task "Copy" skipped, due to false condition; ('@(_OutOfDateCopyFile)' != '') was evaluated as ('' != '').
-21:08:24.003     1>Done building target "CopyFileToFolders" in project "LWEngine.vcxproj".: (TargetId:31)
+22:36:09.381     1>Done building target "CopyFileToFolders" in project "LWEngine.vcxproj".: (TargetId:31)
                    Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
-21:08:24.003     1>Target "_Xsd: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-21:08:24.003     1>Done building target "_Xsd" in project "LWEngine.vcxproj".: (TargetId:32)
-21:08:24.003     1>Target "MakeDirsForMidl: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
+22:36:09.381     1>Target "_Xsd: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.381     1>Done building target "_Xsd" in project "LWEngine.vcxproj".: (TargetId:32)
+22:36:09.381     1>Target "MakeDirsForMidl: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
                    Task "Makedir" (TaskId:21)
                    Done executing task "Makedir". (TaskId:21)
-21:08:24.003     1>Done building target "MakeDirsForMidl" in project "LWEngine.vcxproj".: (TargetId:33)
+22:36:09.381     1>Done building target "MakeDirsForMidl" in project "LWEngine.vcxproj".: (TargetId:33)
                    Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
                    Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
-21:08:24.003     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
+22:36:09.381     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
-21:08:24.004     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "LWEngine.vcxproj".: (TargetId:34)
-21:08:24.004     1>Target "AfterMidl: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
-21:08:24.004     1>Done building target "AfterMidl" in project "LWEngine.vcxproj".: (TargetId:35)
-21:08:24.004     1>Target "_Midl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-21:08:24.004     1>Done building target "_Midl" in project "LWEngine.vcxproj".: (TargetId:36)
-21:08:24.004     1>Target "AfterBuildGenerateSources: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-21:08:24.004     1>Done building target "AfterBuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:37)
-21:08:24.005     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-21:08:24.005     1>Done building target "AfterBuildGenerateSourcesEvent" in project "LWEngine.vcxproj".: (TargetId:38)
-21:08:24.005     1>Target "_BuildGenerateSourcesAction: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildGenerateSources" depends on it):
-21:08:24.005     1>Done building target "_BuildGenerateSourcesAction" in project "LWEngine.vcxproj".: (TargetId:39)
-21:08:24.005     1>Target "BuildGenerateSources: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
-21:08:24.005     1>Done building target "BuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:40)
+22:36:09.381     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "LWEngine.vcxproj".: (TargetId:34)
+22:36:09.381     1>Target "AfterMidl: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Midl" depends on it):
+22:36:09.381     1>Done building target "AfterMidl" in project "LWEngine.vcxproj".: (TargetId:35)
+22:36:09.381     1>Target "_Midl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.381     1>Done building target "_Midl" in project "LWEngine.vcxproj".: (TargetId:36)
+22:36:09.381     1>Target "AfterBuildGenerateSources: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.381     1>Done building target "AfterBuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:37)
+22:36:09.381     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+22:36:09.381     1>Done building target "AfterBuildGenerateSourcesEvent" in project "LWEngine.vcxproj".: (TargetId:38)
+22:36:09.381     1>Target "_BuildGenerateSourcesAction: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildGenerateSources" depends on it):
+22:36:09.381     1>Done building target "_BuildGenerateSourcesAction" in project "LWEngine.vcxproj".: (TargetId:39)
+22:36:09.381     1>Target "BuildGenerateSources: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:09.381     1>Done building target "BuildGenerateSources" in project "LWEngine.vcxproj".: (TargetId:40)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-21:08:24.005     1>Target "BuildCompileTraverse: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildCompile" depends on it):
+22:36:09.382     1>Target "BuildCompileTraverse: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildCompile" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-21:08:24.005     1>Done building target "BuildCompileTraverse" in project "LWEngine.vcxproj".: (TargetId:41)
+22:36:09.382     1>Done building target "BuildCompileTraverse" in project "LWEngine.vcxproj".: (TargetId:41)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-21:08:24.005     1>Target "BeforeClCompile: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
-21:08:24.005     1>Done building target "BeforeClCompile" in project "LWEngine.vcxproj".: (TargetId:42)
+22:36:09.382     1>Target "BeforeClCompile: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.382     1>Done building target "BeforeClCompile" in project "LWEngine.vcxproj".: (TargetId:42)
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
-21:08:24.005     1>Target "ComputeCLInputPDBName: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
-21:08:24.005     1>Done building target "ComputeCLInputPDBName" in project "LWEngine.vcxproj".: (TargetId:43)
+22:36:09.382     1>Target "ComputeCLInputPDBName: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.383     1>Done building target "ComputeCLInputPDBName" in project "LWEngine.vcxproj".: (TargetId:43)
                    Target "ResolveReferences" skipped. Previously built successfully.
-21:08:24.005     1>Target "ComputeReferenceCLInput: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.383     1>Target "ComputeReferenceCLInput: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') was evaluated as ((''!='') and '' != 'true').
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-21:08:24.006     1>Done building target "ComputeReferenceCLInput" in project "LWEngine.vcxproj".: (TargetId:44)
-21:08:24.006     1>Target "WarnCompileDuplicatedFilename: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.384     1>Done building target "ComputeReferenceCLInput" in project "LWEngine.vcxproj".: (TargetId:44)
+22:36:09.384     1>Target "WarnCompileDuplicatedFilename: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'jsoncpp.cpp' != 'jsoncpp.cpp' and 'x64\Debug\' == 'x64\Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'ButtonElement.cpp' != 'ButtonElement.cpp' and 'x64\Debug\' == 'x64\Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'InputBox.cpp' != 'InputBox.cpp' and 'x64\Debug\' == 'x64\Debug\').
@@ -2068,10 +2068,10 @@ windir = C:\Windows
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'SliderElement.cpp' != 'SliderElement.cpp' and 'x64\Debug\' == 'x64\Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'TextElement.cpp' != 'TextElement.cpp' and 'x64\Debug\' == 'x64\Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'TextBox.cpp' != 'TextBox.cpp' and 'x64\Debug\' == 'x64\Debug\').
-21:08:24.010     1>Done building target "WarnCompileDuplicatedFilename" in project "LWEngine.vcxproj".: (TargetId:45)
-21:08:24.010     1>Target "FixupCLCompileOptions: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
-21:08:24.011     1>Done building target "FixupCLCompileOptions" in project "LWEngine.vcxproj".: (TargetId:46)
-21:08:24.011     1>Target "MakeDirsForCl: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.394     1>Done building target "WarnCompileDuplicatedFilename" in project "LWEngine.vcxproj".: (TargetId:45)
+22:36:09.394     1>Target "FixupCLCompileOptions: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.394     1>Done building target "FixupCLCompileOptions" in project "LWEngine.vcxproj".: (TargetId:46)
+22:36:09.394     1>Target "MakeDirsForCl: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
                    Added Item(s): ClDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                    Added Item(s): ClDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                    Added Item(s): ClDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
@@ -2090,7 +2090,7 @@ windir = C:\Windows
                            C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                            C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                            C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
-21:08:24.012     1>Done building target "MakeDirsForCl" in project "LWEngine.vcxproj".: (TargetId:47)
+22:36:09.395     1>Done building target "MakeDirsForCl" in project "LWEngine.vcxproj".: (TargetId:47)
                    Target "_SelectedFiles" skipped. Previously built successfully.
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
                    Target "ComputeCLInputPDBName" skipped. Previously built successfully.
@@ -2098,13 +2098,13 @@ windir = C:\Windows
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
                    Target "_SelectedFiles" skipped. Previously built successfully.
-21:08:24.012     1>Target "SelectCustomBuild: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "SelectClCompile" depends on it):
-21:08:24.012     1>Done building target "SelectCustomBuild" in project "LWEngine.vcxproj".: (TargetId:48)
-21:08:24.012     1>Target "SelectClCompile: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ClCompile" depends on it):
-21:08:24.012     1>Done building target "SelectClCompile" in project "LWEngine.vcxproj".: (TargetId:49)
+22:36:09.395     1>Target "SelectCustomBuild: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "SelectClCompile" depends on it):
+22:36:09.395     1>Done building target "SelectCustomBuild" in project "LWEngine.vcxproj".: (TargetId:48)
+22:36:09.395     1>Target "SelectClCompile: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ClCompile" depends on it):
+22:36:09.395     1>Done building target "SelectClCompile" in project "LWEngine.vcxproj".: (TargetId:49)
                    Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
                    Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\Redistributable\JSONCPP\jsoncpp.cpp;source\ButtonElement.cpp;source\InputBox.cpp;source\InputHandler.cpp;source\main.cpp;source\ObjectManager.cpp;source\Panel.cpp;source\ProgressBarElement.cpp;source\ResourceManager.cpp;source\Graphic.cpp;source\SliderElement.cpp;source\TextElement.cpp;source\TextBox.cpp' != '' and 'false' == 'True').
-21:08:24.012     1>Target "ClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:09.396     1>Target "ClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
                    Set Property: CLToolArchitecture=Native32Bit
                    Set Property: CLDeleteOutputOnExecute=true
                    Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'x64\Debug\vc141.pdb' != '' and !Exists(x64\Debug\vc141.pdb)).
@@ -3063,56 +3063,55 @@ windir = C:\Windows
                      	C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\SLIDERELEMENT.OBJ (TaskId:23)
                      	C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTELEMENT.OBJ (TaskId:23)
                      	C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTBOX.OBJ (TaskId:23)
-                     source\InputBox.cpp will be compiled because C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\source\InputBox.cpp was modified at 28/04/2019 21:08:22. (TaskId:23)
-                     Outputs for C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\SOURCE\INPUTBOX.CPP: (TaskId:23)
-                     	C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTBOX.OBJ (TaskId:23)
+                     source\Graphic.cpp will be compiled because C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\source\Graphic.cpp was modified at 28/04/2019 22:36:07. (TaskId:23)
+                     Outputs for C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\SOURCE\GRAPHIC.CPP: (TaskId:23)
+                     	C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\GRAPHIC.OBJ (TaskId:23)
                      Write Tracking Logs: (TaskId:23)
                      	x64\Debug\LWEngine.tlog\CL.write.1.tlog (TaskId:23)
                      Environment Variables passed to tool: (TaskId:23)
-                       VS_UNICODE_OUTPUT=1008 (TaskId:23)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /sdl /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"x64\Debug\\" /Fd"x64\Debug\vc141.pdb" /Gd /TP /FC /errorReport:prompt source\InputBox.cpp (TaskId:23)
+                       VS_UNICODE_OUTPUT=2968 (TaskId:23)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /sdl /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"x64\Debug\\" /Fd"x64\Debug\vc141.pdb" /Gd /TP /FC /errorReport:prompt source\Graphic.cpp (TaskId:23)
                      Tracking command: (TaskId:23)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.tlog /r C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\SOURCE\INPUTBOX.CPP /b MSBuildConsole_CancelEvent044b09a8ed214c589397c06d539dc8e4  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe"  /c /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /sdl /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"x64\Debug\\" /Fd"x64\Debug\vc141.pdb" /Gd /TP /FC /errorReport:prompt source\InputBox.cpp (TaskId:23)
-                     InputBox.cpp (TaskId:23)
-21:08:25.020     1>c:\users\pixir\desktop\lwsingleplayer\lwengine\source\inputbox.cpp(99): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.tlog /r C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\SOURCE\GRAPHIC.CPP /b MSBuildConsole_CancelEventb00abbe80102424a8c2b6bba4fe2f600  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe"  /c /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\include /IC:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /sdl /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"x64\Debug\\" /Fd"x64\Debug\vc141.pdb" /Gd /TP /FC /errorReport:prompt source\Graphic.cpp (TaskId:23)
+                     Graphic.cpp (TaskId:23)
                    Done executing task "CL". (TaskId:23)
-21:08:25.666     1>Done building target "ClCompile" in project "LWEngine.vcxproj".: (TargetId:50)
+22:36:11.610     1>Done building target "ClCompile" in project "LWEngine.vcxproj".: (TargetId:50)
                    Target "RunSelectedFileNativeCodeAnalysis" skipped, due to false condition; ('$(RunCppAnalysis)'=='true' and '$(SelectedFiles)'!='') was evaluated as ('false'=='true' and ''!='').
                    Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\Redistributable\JSONCPP\jsoncpp.cpp;source\ButtonElement.cpp;source\InputBox.cpp;source\InputHandler.cpp;source\main.cpp;source\ObjectManager.cpp;source\Panel.cpp;source\ProgressBarElement.cpp;source\ResourceManager.cpp;source\Graphic.cpp;source\SliderElement.cpp;source\TextElement.cpp;source\TextBox.cpp' != '' and 'false' == 'True').
-21:08:25.666     1>Target "AfterClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
-21:08:25.666     1>Done building target "AfterClCompile" in project "LWEngine.vcxproj".: (TargetId:51)
-21:08:25.666     1>Target "_ClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
-21:08:25.666     1>Done building target "_ClCompile" in project "LWEngine.vcxproj".: (TargetId:52)
+22:36:11.610     1>Target "AfterClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ClCompile" depends on it):
+22:36:11.610     1>Done building target "AfterClCompile" in project "LWEngine.vcxproj".: (TargetId:51)
+22:36:11.610     1>Target "_ClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
+22:36:11.610     1>Done building target "_ClCompile" in project "LWEngine.vcxproj".: (TargetId:52)
                    Target "_ResGen" skipped, due to false condition; ('@(EmbeddedResource)'!='') was evaluated as (''!='').
-21:08:25.667     1>Target "BeforeResourceCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
-21:08:25.667     1>Done building target "BeforeResourceCompile" in project "LWEngine.vcxproj".: (TargetId:53)
-21:08:25.667     1>Target "MakeDirsForResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
+22:36:11.610     1>Target "BeforeResourceCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
+22:36:11.610     1>Done building target "BeforeResourceCompile" in project "LWEngine.vcxproj".: (TargetId:53)
+22:36:11.610     1>Target "MakeDirsForResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
                    Added Item(s): RcDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                    Task "MakeDir" (TaskId:24)
                      Task Parameter:Directories=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug (TaskId:24)
                    Done executing task "MakeDir". (TaskId:24)
                    Removed Item(s): RcDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
-21:08:25.667     1>Done building target "MakeDirsForResourceCompile" in project "LWEngine.vcxproj".: (TargetId:54)
+22:36:11.611     1>Done building target "MakeDirsForResourceCompile" in project "LWEngine.vcxproj".: (TargetId:54)
                    Target "ResourceCompile" skipped, due to false condition; ('@(ResourceCompile)' != '') was evaluated as ('' != '').
-21:08:25.667     1>Target "AfterResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
-21:08:25.667     1>Done building target "AfterResourceCompile" in project "LWEngine.vcxproj".: (TargetId:55)
-21:08:25.667     1>Target "_ResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
-21:08:25.667     1>Done building target "_ResourceCompile" in project "LWEngine.vcxproj".: (TargetId:56)
+22:36:11.611     1>Target "AfterResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_ResourceCompile" depends on it):
+22:36:11.611     1>Done building target "AfterResourceCompile" in project "LWEngine.vcxproj".: (TargetId:55)
+22:36:11.611     1>Target "_ResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
+22:36:11.611     1>Done building target "_ResourceCompile" in project "LWEngine.vcxproj".: (TargetId:56)
                    Target "_ImpLib" skipped, due to false condition; ('$(ImpLibCompiled)' == 'true') was evaluated as ('' == 'true').
                    Target "_Lib" skipped, due to false condition; ('$(LibCompiled)' == 'true') was evaluated as ('' == 'true').
-21:08:25.667     1>Target "AfterBuildCompileEvent: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
-21:08:25.667     1>Done building target "AfterBuildCompileEvent" in project "LWEngine.vcxproj".: (TargetId:57)
-21:08:25.667     1>Target "_BuildCompileAction: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildCompile" depends on it):
-21:08:25.667     1>Done building target "_BuildCompileAction" in project "LWEngine.vcxproj".: (TargetId:58)
-21:08:25.667     1>Target "BuildCompile: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
-21:08:25.667     1>Done building target "BuildCompile" in project "LWEngine.vcxproj".: (TargetId:59)
+22:36:11.611     1>Target "AfterBuildCompileEvent: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildCompileAction" depends on it):
+22:36:11.611     1>Done building target "AfterBuildCompileEvent" in project "LWEngine.vcxproj".: (TargetId:57)
+22:36:11.611     1>Target "_BuildCompileAction: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildCompile" depends on it):
+22:36:11.611     1>Done building target "_BuildCompileAction" in project "LWEngine.vcxproj".: (TargetId:58)
+22:36:11.611     1>Target "BuildCompile: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:11.611     1>Done building target "BuildCompile" in project "LWEngine.vcxproj".: (TargetId:59)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-21:08:25.667     1>Target "BuildLinkTraverse: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildLink" depends on it):
+22:36:11.611     1>Target "BuildLinkTraverse: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildLink" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-21:08:25.667     1>Done building target "BuildLinkTraverse" in project "LWEngine.vcxproj".: (TargetId:60)
+22:36:11.611     1>Done building target "BuildLinkTraverse" in project "LWEngine.vcxproj".: (TargetId:60)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-21:08:25.667     1>Target "ComputeLegacyManifestEmbedding: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:11.612     1>Target "ComputeLegacyManifestEmbedding: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -3142,26 +3141,26 @@ windir = C:\Windows
                                    TrackerLogDirectory=x64\Debug\LWEngine.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-21:08:25.668     1>Done building target "ComputeLegacyManifestEmbedding" in project "LWEngine.vcxproj".: (TargetId:61)
-21:08:25.668     1>Target "BeforeLink: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:25.668     1>Done building target "BeforeLink" in project "LWEngine.vcxproj".: (TargetId:62)
-21:08:25.668     1>Target "ComputeRCOutputs: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
-21:08:25.668     1>Done building target "ComputeRCOutputs" in project "LWEngine.vcxproj".: (TargetId:63)
-21:08:25.668     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:25.668     1>Done building target "ComputeRCGeneratedLinkInputs" in project "LWEngine.vcxproj".: (TargetId:64)
-21:08:25.668     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:25.668     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "LWEngine.vcxproj".: (TargetId:65)
-21:08:25.668     1>Target "ComputeCustomBuildOutput: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.612     1>Done building target "ComputeLegacyManifestEmbedding" in project "LWEngine.vcxproj".: (TargetId:61)
+22:36:11.613     1>Target "BeforeLink: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.613     1>Done building target "BeforeLink" in project "LWEngine.vcxproj".: (TargetId:62)
+22:36:11.613     1>Target "ComputeRCOutputs: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
+22:36:11.613     1>Done building target "ComputeRCOutputs" in project "LWEngine.vcxproj".: (TargetId:63)
+22:36:11.613     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.613     1>Done building target "ComputeRCGeneratedLinkInputs" in project "LWEngine.vcxproj".: (TargetId:64)
+22:36:11.613     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.613     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "LWEngine.vcxproj".: (TargetId:65)
+22:36:11.613     1>Target "ComputeCustomBuildOutput: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuildOutputs.OutputItemType)'!='') was evaluated as (''!='').
                    Task "MakeDir" (TaskId:25)
                    Done executing task "MakeDir". (TaskId:25)
-21:08:25.669     1>Done building target "ComputeCustomBuildOutput" in project "LWEngine.vcxproj".: (TargetId:66)
+22:36:11.613     1>Done building target "ComputeCustomBuildOutput" in project "LWEngine.vcxproj".: (TargetId:66)
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
                    Target "ComputeCLInputPDBName" skipped. Previously built successfully.
                    Target "ComputeReferenceCLInput" skipped. Previously built successfully.
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
-21:08:25.669     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
+22:36:11.613     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
                    Added Item(s): 
                        Obj=
                            x64\Debug\jsoncpp.obj
@@ -4009,8 +4008,8 @@ windir = C:\Windows
                                    WholeProgramOptimization=false
                                    WinRTNoStdLib=false
                                    XMLDocumentationFileName=x64\Debug\
-21:08:25.677     1>Done building target "ComputeCLOutputs" in project "LWEngine.vcxproj".: (TargetId:67)
-21:08:25.677     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.623     1>Done building target "ComputeCLOutputs" in project "LWEngine.vcxproj".: (TargetId:67)
+22:36:11.623     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Link=
                            x64\Debug\jsoncpp.obj
@@ -4507,11 +4506,11 @@ windir = C:\Windows
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-21:08:25.680     1>Done building target "ComputeCLGeneratedLinkInputs" in project "LWEngine.vcxproj".: (TargetId:68)
-21:08:25.680     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:25.680     1>Done building target "ComputeLinkInputsFromProject" in project "LWEngine.vcxproj".: (TargetId:69)
+22:36:11.627     1>Done building target "ComputeCLGeneratedLinkInputs" in project "LWEngine.vcxproj".: (TargetId:68)
+22:36:11.627     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.627     1>Done building target "ComputeLinkInputsFromProject" in project "LWEngine.vcxproj".: (TargetId:69)
                    Target "ComputeReferenceLinkInputs" skipped, due to false condition; (@(ProjectReference) != '') was evaluated as ( != '').
-21:08:25.680     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.627     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -4542,10 +4541,10 @@ windir = C:\Windows
                                    TrackerLogDirectory=x64\Debug\LWEngine.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-21:08:25.690     1>Done building target "ComputeManifestInputsTargets" in project "LWEngine.vcxproj".: (TargetId:70)
+22:36:11.628     1>Done building target "ComputeManifestInputsTargets" in project "LWEngine.vcxproj".: (TargetId:70)
                    Target "ManifestResourceCompile" skipped, due to false condition; ('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '') was evaluated as ('LINK' == 'LINK' and '' != '').
                    Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
-21:08:25.691     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
+22:36:11.628     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
                    Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignTargetPath" (TaskId:26)
                      Task Parameter:RootFolder=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine (TaskId:26)
@@ -4560,9 +4559,9 @@ windir = C:\Windows
                      Task Parameter:RootFolder=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine (TaskId:29)
                    Done executing task "AssignTargetPath". (TaskId:29)
                    Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and ''=='.manifest').
-21:08:25.691     1>Done building target "AssignTargetPaths" in project "LWEngine.vcxproj".: (TargetId:71)
+22:36:11.628     1>Done building target "AssignTargetPaths" in project "LWEngine.vcxproj".: (TargetId:71)
                    Target "AssignTargetPaths" skipped. Previously built successfully.
-21:08:25.691     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
+22:36:11.628     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
@@ -4570,13 +4569,13 @@ windir = C:\Windows
                    Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignCulture" (TaskId:30)
                    Done executing task "AssignCulture". (TaskId:30)
-21:08:25.692     1>Done building target "SplitResourcesByCulture" in project "LWEngine.vcxproj".: (TargetId:72)
+22:36:11.629     1>Done building target "SplitResourcesByCulture" in project "LWEngine.vcxproj".: (TargetId:72)
                    Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
-21:08:25.692     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
-21:08:25.692     1>Done building target "CreateCustomManifestResourceNames" in project "LWEngine.vcxproj".: (TargetId:73)
-21:08:25.692     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:25.692     1>Done building target "PrepareResourceNames" in project "LWEngine.vcxproj".: (TargetId:74)
-21:08:25.692     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.630     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareResourceNames" depends on it):
+22:36:11.630     1>Done building target "CreateCustomManifestResourceNames" in project "LWEngine.vcxproj".: (TargetId:73)
+22:36:11.630     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.630     1>Done building target "PrepareResourceNames" in project "LWEngine.vcxproj".: (TargetId:74)
+22:36:11.630     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Set Property: _LinkImportLibrary=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib
                    Added Item(s): _LinkImportLibraryFile=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib
                    Added Item(s): LinkDirsToMake=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
@@ -4598,25 +4597,25 @@ windir = C:\Windows
                            C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug
                            C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\
                    Removed Item(s): _LinkImportLibraryFile=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib
-21:08:25.693     1>Done building target "MakeDirsForLink" in project "LWEngine.vcxproj".: (TargetId:75)
-21:08:25.693     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.632     1>Done building target "MakeDirsForLink" in project "LWEngine.vcxproj".: (TargetId:75)
+22:36:11.632     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Added Item(s): _OutputFileFromLink=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' == '') was evaluated as ('C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe' == '').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe' != '' and 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe' != 'C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe' != '' and '.exe' != '' and '.exe' != '.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe' != '' and 'LWEngine' != '' and 'LWEngine' != 'LWEngine').
                    Task "VCMessage" skipped, due to false condition; ('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet')) was evaluated as ('' != '' and ('' == '' or '' == 'NotSet')).
-21:08:25.694     1>Done building target "DoLinkOutputFilesMatch" in project "LWEngine.vcxproj".: (TargetId:76)
-21:08:25.694     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.634     1>Done building target "DoLinkOutputFilesMatch" in project "LWEngine.vcxproj".: (TargetId:76)
+22:36:11.634     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreLinkEvent.Command)' != '') was evaluated as ('' != '').
-21:08:25.694     1>Done building target "PreLinkEvent" in project "LWEngine.vcxproj".: (TargetId:77)
-21:08:25.694     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Link" depends on it):
+22:36:11.635     1>Done building target "PreLinkEvent" in project "LWEngine.vcxproj".: (TargetId:77)
+22:36:11.635     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Link" depends on it):
                    Set Property: Link_MinimalRebuildFromTracking=true
                    Set Property: LinkToolArchitecture=Native32Bit
                    Set Property: _GenerateWindowsMetadata=
-21:08:25.695     1>Done building target "ComputeLinkSwitches" in project "LWEngine.vcxproj".: (TargetId:78)
-21:08:25.695     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:11.635     1>Done building target "ComputeLinkSwitches" in project "LWEngine.vcxproj".: (TargetId:78)
+22:36:11.635     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Using "Link" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "Link" (TaskId:32)
                      Task Parameter:BuildingInIde=True (TaskId:32)
@@ -5308,10 +5307,9 @@ windir = C:\Windows
                      	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.16.27023\LIB\X64\OLDNAMES.LIB (TaskId:32)
                      	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.16.27023\LIB\X64\VCRUNTIMED.LIB (TaskId:32)
                      	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.17763.0\UCRT\X64\UCRTD.LIB (TaskId:32)
-                     	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\COMMUNITY\VC\TOOLS\MSVC\14.16.27023\BIN\HOSTX86\X86\MSPDBSRV.EXE (TaskId:32)
-                     Source compilation required: input C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTBOX.OBJ is newer than output C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\LWENGINE.PDB. (TaskId:32)
+                     Source compilation required: input C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\GRAPHIC.OBJ is newer than output C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\LWENGINE.PDB. (TaskId:32)
                      Environment Variables passed to tool: (TaskId:32)
-                       VS_UNICODE_OUTPUT=2432 (TaskId:32)
+                       VS_UNICODE_OUTPUT=2232 (TaskId:32)
                      C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\lib\x64 /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\source /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib" /MACHINE:X64 x64\Debug\jsoncpp.obj
                      x64\Debug\ButtonElement.obj
                      x64\Debug\InputBox.obj
@@ -5326,7 +5324,7 @@ windir = C:\Windows
                      x64\Debug\TextElement.obj
                      x64\Debug\TextBox.obj (TaskId:32)
                      Tracking command: (TaskId:32)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.tlog /r "C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\BUTTONELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\GRAPHIC.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTBOX.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTHANDLER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\JSONCPP.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\MAIN.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\OBJECTMANAGER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\PANEL.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\PROGRESSBARELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\RESOURCEMANAGER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\SLIDERELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTBOX.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTELEMENT.OBJ" /b MSBuildConsole_CancelEventb7aecd1c1e3f454d8c0805775bfbf080  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\lib\x64 /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\source /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib" /MACHINE:X64 x64\Debug\jsoncpp.obj
+                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.tlog /r "C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\BUTTONELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\GRAPHIC.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTBOX.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\INPUTHANDLER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\JSONCPP.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\MAIN.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\OBJECTMANAGER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\PANEL.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\PROGRESSBARELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\RESOURCEMANAGER.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\SLIDERELEMENT.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTBOX.OBJ|C:\USERS\PIXIR\DESKTOP\LWSINGLEPLAYER\LWENGINE\X64\DEBUG\TEXTELEMENT.OBJ" /b MSBuildConsole_CancelEventb7f5405231384ce7b27e43a172a5793d  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\SDL2\lib\x64 /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\source /LIBPATH:C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\\..\Redistributable\JSONCPP SDL2.lib SDL2main.lib SDL2_image.lib SDL2_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.lib" /MACHINE:X64 x64\Debug\jsoncpp.obj
                      x64\Debug\ButtonElement.obj
                      x64\Debug\InputBox.obj
                      x64\Debug\InputHandler.obj
@@ -5352,36 +5350,36 @@ windir = C:\Windows
                    Task "VCMessage" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
                                 %(Link.GenerateDebugInformation) == 'true' and %(Link.ProgramDataBaseFileName) != '') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
                                 DebugFastLink == 'true' and  != '').
-21:08:26.188     1>Done building target "Link" in project "LWEngine.vcxproj".: (TargetId:79)
+22:36:12.441     1>Done building target "Link" in project "LWEngine.vcxproj".: (TargetId:79)
                    Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
                    Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
                    Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
-21:08:26.188     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:12.441     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(_LinkSecondaryOutput)' != '') was evaluated as ('' != '').
-21:08:26.189     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "LWEngine.vcxproj".: (TargetId:80)
-21:08:26.189     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
-21:08:26.189     1>Done building target "AfterLink" in project "LWEngine.vcxproj".: (TargetId:81)
-21:08:26.189     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.189     1>Done building target "_Link" in project "LWEngine.vcxproj".: (TargetId:82)
-21:08:26.189     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.189     1>Done building target "_ALink" in project "LWEngine.vcxproj".: (TargetId:83)
+22:36:12.441     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "LWEngine.vcxproj".: (TargetId:80)
+22:36:12.442     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_Link" depends on it):
+22:36:12.442     1>Done building target "AfterLink" in project "LWEngine.vcxproj".: (TargetId:81)
+22:36:12.442     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.442     1>Done building target "_Link" in project "LWEngine.vcxproj".: (TargetId:82)
+22:36:12.442     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.442     1>Done building target "_ALink" in project "LWEngine.vcxproj".: (TargetId:83)
                    Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
-21:08:26.189     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.442     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
-21:08:26.189     1>Done building target "_Manifest" in project "LWEngine.vcxproj".: (TargetId:84)
-21:08:26.189     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.442     1>Done building target "_Manifest" in project "LWEngine.vcxproj".: (TargetId:84)
+22:36:12.442     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
                    Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
-21:08:26.190     1>Done building target "RegisterOutput" in project "LWEngine.vcxproj".: (TargetId:85)
+22:36:12.442     1>Done building target "RegisterOutput" in project "LWEngine.vcxproj".: (TargetId:85)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-21:08:26.190     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
+22:36:12.443     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
-21:08:26.190     1>Done building target "ResolvedXDCMake" in project "LWEngine.vcxproj".: (TargetId:86)
-21:08:26.190     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
+22:36:12.443     1>Done building target "ResolvedXDCMake" in project "LWEngine.vcxproj".: (TargetId:86)
+22:36:12.443     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
                    Added Item(s): 
                        XdcMake=
                            temp
@@ -5404,67 +5402,67 @@ windir = C:\Windows
                                    OutputFile=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\x64\Debug\LWEngine.xml
                                    SuppressStartupBanner=true
                                    TrackerLogDirectory=x64\Debug\LWEngine.tlog\
-21:08:26.191     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "LWEngine.vcxproj".: (TargetId:87)
-21:08:26.191     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
+22:36:12.443     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "LWEngine.vcxproj".: (TargetId:87)
+22:36:12.443     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_XdcMake" depends on it):
                    Task "MakeDir" (TaskId:34)
                    Done executing task "MakeDir". (TaskId:34)
-21:08:26.191     1>Done building target "MakeDirsForXdcMake" in project "LWEngine.vcxproj".: (TargetId:88)
+22:36:12.444     1>Done building target "MakeDirsForXdcMake" in project "LWEngine.vcxproj".: (TargetId:88)
                    Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
-21:08:26.191     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.191     1>Done building target "_XdcMake" in project "LWEngine.vcxproj".: (TargetId:89)
-21:08:26.191     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BscMake" depends on it):
-21:08:26.191     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "LWEngine.vcxproj".: (TargetId:90)
-21:08:26.191     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BscMake" depends on it):
+22:36:12.444     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.444     1>Done building target "_XdcMake" in project "LWEngine.vcxproj".: (TargetId:89)
+22:36:12.444     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BscMake" depends on it):
+22:36:12.444     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "LWEngine.vcxproj".: (TargetId:90)
+22:36:12.444     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BscMake" depends on it):
                    Task "MakeDir" (TaskId:35)
                    Done executing task "MakeDir". (TaskId:35)
-21:08:26.191     1>Done building target "MakeDirsForBscMake" in project "LWEngine.vcxproj".: (TargetId:91)
+22:36:12.444     1>Done building target "MakeDirsForBscMake" in project "LWEngine.vcxproj".: (TargetId:91)
                    Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-21:08:26.191     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.191     1>Done building target "_BscMake" in project "LWEngine.vcxproj".: (TargetId:92)
-21:08:26.191     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+22:36:12.444     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.444     1>Done building target "_BscMake" in project "LWEngine.vcxproj".: (TargetId:92)
+22:36:12.444     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
                    Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
-21:08:26.192     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "LWEngine.vcxproj".: (TargetId:93)
+22:36:12.444     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "LWEngine.vcxproj".: (TargetId:93)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
-21:08:26.192     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.192     1>Done building target "CreateSatelliteAssemblies" in project "LWEngine.vcxproj".: (TargetId:94)
-21:08:26.192     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.192     1>Done building target "_Appverifier" in project "LWEngine.vcxproj".: (TargetId:95)
-21:08:26.192     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.192     1>Done building target "_Deploy" in project "LWEngine.vcxproj".: (TargetId:96)
+22:36:12.444     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.444     1>Done building target "CreateSatelliteAssemblies" in project "LWEngine.vcxproj".: (TargetId:94)
+22:36:12.444     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.444     1>Done building target "_Appverifier" in project "LWEngine.vcxproj".: (TargetId:95)
+22:36:12.444     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.444     1>Done building target "_Deploy" in project "LWEngine.vcxproj".: (TargetId:96)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
                    Target "AssignTargetPaths" skipped. Previously built successfully.
                    Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
                    Target "_GetProjectReferenceTargetFrameworkProperties" skipped. Previously built successfully.
-21:08:26.192     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:97)" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+22:36:12.445     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:97)" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Task "AssignTargetPath" (TaskId:36)
                      Task Parameter:RootFolder=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine (TaskId:36)
                    Done executing task "AssignTargetPath". (TaskId:36)
-21:08:26.192     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "LWEngine.vcxproj".: (TargetId:97)
-21:08:26.192     1>Target "GetCopyToOutputDirectoryItems: (TargetId:98)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+22:36:12.445     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "LWEngine.vcxproj".: (TargetId:97)
+22:36:12.445     1>Target "GetCopyToOutputDirectoryItems: (TargetId:98)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
                    Set Property: _GCTODIKeepDuplicates=false
                    Set Property: _GCTODIKeepMetadata=CopyToOutputDirectory;TargetPath
                    Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
                    Task "AssignTargetPath" (TaskId:37)
                      Task Parameter:RootFolder=C:\Users\pixir\Desktop\LWSingleplayer\LWEngine (TaskId:37)
                    Done executing task "AssignTargetPath". (TaskId:37)
-21:08:26.193     1>Done building target "GetCopyToOutputDirectoryItems" in project "LWEngine.vcxproj".: (TargetId:98)
+22:36:12.445     1>Done building target "GetCopyToOutputDirectoryItems" in project "LWEngine.vcxproj".: (TargetId:98)
                    Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
-21:08:26.193     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
-21:08:26.193     1>Done building target "_CopySourceItemsToOutputDirectory" in project "LWEngine.vcxproj".: (TargetId:99)
+22:36:12.445     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+22:36:12.445     1>Done building target "_CopySourceItemsToOutputDirectory" in project "LWEngine.vcxproj".: (TargetId:99)
                    Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
-21:08:26.193     1>Target "_CheckForCompileOutputs: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+22:36:12.445     1>Target "_CheckForCompileOutputs: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
                    Added Item(s): FileWrites=x64\Debug\LWEngine.exe
                    Set Property: _DocumentationFileProduced=false
                    Added Item(s): FileWrites=x64\Debug\LWEngine.pdb
-21:08:26.193     1>Done building target "_CheckForCompileOutputs" in project "LWEngine.vcxproj".: (TargetId:100)
+22:36:12.446     1>Done building target "_CheckForCompileOutputs" in project "LWEngine.vcxproj".: (TargetId:100)
                    Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
-21:08:26.193     1>Target "CopyFilesToOutputDirectory: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForRun" depends on it):
+22:36:12.446     1>Target "CopyFilesToOutputDirectory: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "PrepareForRun" depends on it):
                    Set Property: CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: CopyBuildOutputToOutputDirectory=true
@@ -5493,21 +5491,21 @@ windir = C:\Windows
                    Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
                    Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
                    Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
-21:08:26.194     1>Done building target "CopyFilesToOutputDirectory" in project "LWEngine.vcxproj".: (TargetId:101)
-21:08:26.194     1>Target "PrepareForRun: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
-21:08:26.194     1>Done building target "PrepareForRun" in project "LWEngine.vcxproj".: (TargetId:102)
+22:36:12.447     1>Done building target "CopyFilesToOutputDirectory" in project "LWEngine.vcxproj".: (TargetId:101)
+22:36:12.447     1>Target "PrepareForRun: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.447     1>Done building target "PrepareForRun" in project "LWEngine.vcxproj".: (TargetId:102)
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-21:08:26.194     1>Target "PostBuildEvent: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
+22:36:12.447     1>Target "PostBuildEvent: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
-21:08:26.194     1>Done building target "PostBuildEvent" in project "LWEngine.vcxproj".: (TargetId:103)
-21:08:26.194     1>Target "_BuildLinkAction: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildLink" depends on it):
-21:08:26.194     1>Done building target "_BuildLinkAction" in project "LWEngine.vcxproj".: (TargetId:104)
-21:08:26.194     1>Target "BuildLink: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
-21:08:26.194     1>Done building target "BuildLink" in project "LWEngine.vcxproj".: (TargetId:105)
-21:08:26.194     1>Target "AfterBuild: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
-21:08:26.194     1>Done building target "AfterBuild" in project "LWEngine.vcxproj".: (TargetId:106)
-21:08:26.194     1>Target "FinalizeBuildStatus: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:12.447     1>Done building target "PostBuildEvent" in project "LWEngine.vcxproj".: (TargetId:103)
+22:36:12.447     1>Target "_BuildLinkAction: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "BuildLink" depends on it):
+22:36:12.447     1>Done building target "_BuildLinkAction" in project "LWEngine.vcxproj".: (TargetId:104)
+22:36:12.447     1>Target "BuildLink: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:12.447     1>Done building target "BuildLink" in project "LWEngine.vcxproj".: (TargetId:105)
+22:36:12.447     1>Target "AfterBuild: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
+22:36:12.447     1>Done building target "AfterBuild" in project "LWEngine.vcxproj".: (TargetId:106)
+22:36:12.447     1>Target "FinalizeBuildStatus: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (target "Build" depends on it):
                    Using "Delete" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "Delete" (TaskId:39)
                      Task Parameter:Files=x64\Debug\LWEngine.tlog\unsuccessfulbuild (TaskId:39)
@@ -5517,151 +5515,146 @@ windir = C:\Windows
                      Task Parameter:Files=x64\Debug\LWEngine.tlog\LWEngine.lastbuildstate (TaskId:40)
                      Touching "x64\Debug\LWEngine.tlog\LWEngine.lastbuildstate". (TaskId:40)
                    Done executing task "Touch". (TaskId:40)
-21:08:26.196     1>Done building target "FinalizeBuildStatus" in project "LWEngine.vcxproj".: (TargetId:107)
+22:36:12.448     1>Done building target "FinalizeBuildStatus" in project "LWEngine.vcxproj".: (TargetId:107)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-21:08:26.196     1>Target "Build: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (entry point):
-21:08:26.196     1>Done building target "Build" in project "LWEngine.vcxproj".: (TargetId:108)
-21:08:26.196     1>Done Building Project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (Build target(s)).
+22:36:12.448     1>Target "Build: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (entry point):
+22:36:12.449     1>Done building target "Build" in project "LWEngine.vcxproj".: (TargetId:108)
+22:36:12.449     1>Done Building Project "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (Build target(s)).
 
 Project Performance Summary:
-     2223 ms  C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj   1 calls
-               2223 ms  Build                                      1 calls
+     3110 ms  C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj   1 calls
+               3110 ms  Build                                      1 calls
 
 Target Performance Summary:
         0 ms  AfterResourceCompile                       1 calls
-        0 ms  PrepareResourceNames                       1 calls
-        0 ms  CreateCustomManifestResourceNames          1 calls
-        0 ms  AssignTargetPaths                          1 calls
-        0 ms  ComputeLinkInputsFromProject               1 calls
+        0 ms  _CopySourceItemsToOutputDirectory          1 calls
+        0 ms  ComputeCustomBuildOutput                   1 calls
         0 ms  ComputeManifestGeneratedLinkerInputs       1 calls
         0 ms  ComputeRCGeneratedLinkInputs               1 calls
         0 ms  ComputeRCOutputs                           1 calls
         0 ms  BeforeLink                                 1 calls
+        0 ms  ComputeLegacyManifestEmbedding             1 calls
         0 ms  BuildLinkTraverse                          1 calls
         0 ms  BuildCompile                               1 calls
         0 ms  _BuildCompileAction                        1 calls
         0 ms  AfterBuildCompileEvent                     1 calls
         0 ms  _ResourceCompile                           1 calls
-        0 ms  MakeDirsForResourceCompile                 1 calls
         0 ms  BeforeResourceCompile                      1 calls
         0 ms  _ClCompile                                 1 calls
         0 ms  AfterClCompile                             1 calls
-        0 ms  PreLinkEvent                               1 calls
-        0 ms  AfterLink                                  1 calls
-        0 ms  _Link                                      1 calls
-        0 ms  _ALink                                     1 calls
-        0 ms  AfterBuild                                 1 calls
-        0 ms  BuildLink                                  1 calls
-        0 ms  _BuildLinkAction                           1 calls
-        0 ms  PostBuildEvent                             1 calls
-        0 ms  PrepareForRun                              1 calls
-        0 ms  _CheckForCompileOutputs                    1 calls
-        0 ms  _CopySourceItemsToOutputDirectory          1 calls
-        0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
         0 ms  SelectClCompile                            1 calls
-        0 ms  _Deploy                                    1 calls
-        0 ms  CreateSatelliteAssemblies                  1 calls
+        0 ms  SelectCustomBuild                          1 calls
+        0 ms  GetCopyToOutputDirectoryItems              1 calls
         0 ms  _BscMake                                   1 calls
+        0 ms  ComputeLinkInputsFromProject               1 calls
+        0 ms  CreateCustomManifestResourceNames          1 calls
         0 ms  MakeDirsForBscMake                         1 calls
         0 ms  ComputeCLCompileGeneratedSbrFiles          1 calls
         0 ms  _XdcMake                                   1 calls
-        0 ms  MakeDirsForXdcMake                         1 calls
+        0 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
         0 ms  ResolvedXDCMake                            1 calls
+        0 ms  RegisterOutput                             1 calls
         0 ms  _Manifest                                  1 calls
+        0 ms  _ALink                                     1 calls
+        0 ms  _Link                                      1 calls
+        0 ms  AfterLink                                  1 calls
+        0 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
+        0 ms  CreateSatelliteAssemblies                  1 calls
+        0 ms  ComputeLinkSwitches                        1 calls
         0 ms  _Appverifier                               1 calls
-        0 ms  SelectCustomBuild                          1 calls
-        0 ms  Build                                      1 calls
-        0 ms  _Xsd                                       1 calls
+        0 ms  _Deploy                                    1 calls
+        0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
+        0 ms  PrepareResourceNames                       1 calls
+        0 ms  AssignTargetPaths                          1 calls
+        0 ms  FixupCLCompileOptions                      1 calls
+        0 ms  _GenerateSatelliteAssemblyInputs           1 calls
+        0 ms  ResolveAssemblyReferences                  1 calls
+        0 ms  BuildGenerateSourcesTraverse               1 calls
+        0 ms  BuildLink                                  1 calls
+        0 ms  ResolveReferences                          1 calls
         0 ms  AfterResolveReferences                     1 calls
+        0 ms  _PrepareForBuild                           1 calls
+        0 ms  _PrepareForReferenceResolution             1 calls
         0 ms  ExpandSDKReferences                        1 calls
         0 ms  ResolveSDKReferences                       1 calls
-        0 ms  ResolveReferences                          1 calls
-        0 ms  BeforeResolveReferences                    1 calls
-        0 ms  BuildGenerateSourcesTraverse               1 calls
-        0 ms  _PrepareForReferenceResolution             1 calls
-        0 ms  BeforeBuildGenerateSources                 1 calls
-        0 ms  _CheckWindowsSDKInstalled                  1 calls
-        0 ms  _PrepareForBuild                           1 calls
-        0 ms  PreBuildEvent                              1 calls
-        0 ms  _SelectedFiles                             1 calls
-        0 ms  GetResolvedWinMD                           1 calls
-        0 ms  MakeDirsForMidl                            1 calls
-        0 ms  AssignProjectConfiguration                 1 calls
-        0 ms  AfterMidl                                  1 calls
+        0 ms  PostBuildEvent                             1 calls
+        0 ms  SetCABuildNativeEnvironmentVariables       1 calls
+        0 ms  PlatformPrepareForBuild                    1 calls
+        0 ms  _BuildLinkAction                           1 calls
+        0 ms  GetReferenceAssemblyPaths                  1 calls
         0 ms  PrepareProjectReferences                   1 calls
-        0 ms  ComputeCLInputPDBName                      1 calls
-        0 ms  BeforeClCompile                            1 calls
-        0 ms  BuildCompileTraverse                       1 calls
+        0 ms  _SplitProjectReferencesByFileExistence     1 calls
+        0 ms  BeforeBuildGenerateSources                 1 calls
+        0 ms  PreBuildEvent                              1 calls
+        0 ms  PrepareForRun                              1 calls
+        0 ms  BeforeResolveReferences                    1 calls
         0 ms  _BuildGenerateSourcesAction                1 calls
+        0 ms  _SelectedFiles                             1 calls
         0 ms  AfterBuildGenerateSourcesEvent             1 calls
-        0 ms  BuildGenerateSources                       1 calls
         0 ms  AfterBuildGenerateSources                  1 calls
+        0 ms  BeforeClCompile                            1 calls
+        0 ms  BuildGenerateSources                       1 calls
         0 ms  _Midl                                      1 calls
-        1 ms  ResolveAssemblyReferences                  1 calls
-        1 ms  ComputeCustomBuildOutput                   1 calls
-        1 ms  ResolveProjectReferences                   1 calls
-        1 ms  FixupCLCompileOptions                      1 calls
-        1 ms  PlatformPrepareForBuild                    1 calls
-        1 ms  _SplitProjectReferencesByFileExistence     1 calls
-        1 ms  _GenerateSatelliteAssemblyInputs           1 calls
-        1 ms  RegisterOutput                             1 calls
-        1 ms  GetReferenceAssemblyPaths                  1 calls
-        1 ms  DoLinkOutputFilesMatch                     1 calls
+        0 ms  AfterBuild                                 1 calls
+        0 ms  AfterMidl                                  1 calls
+        0 ms  ComputeMIDLGeneratedCompileInputs          1 calls
+        0 ms  MakeDirsForMidl                            1 calls
+        0 ms  _Xsd                                       1 calls
+        0 ms  BuildCompileTraverse                       1 calls
+        1 ms  ComputeManifestInputsTargets               1 calls
+        1 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
+        1 ms  _CheckWindowsSDKInstalled                  1 calls
+        1 ms  _CheckForCompileOutputs                    1 calls
         1 ms  SplitResourcesByCulture                    1 calls
-        1 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
-        1 ms  ComputeReferenceCLInput                    1 calls
-        1 ms  CopyFilesToOutputDirectory                 1 calls
-        1 ms  ComputeLinkSwitches                        1 calls
-        1 ms  _HandlePackageFileConflicts                1 calls
-        1 ms  SetCABuildNativeEnvironmentVariables       1 calls
-        1 ms  MakeDirsForLink                            1 calls
         1 ms  SetBuildDefaultEnvironmentVariables        1 calls
+        1 ms  FinalizeBuildStatus                        1 calls
+        1 ms  CopyFileToFolders                          1 calls
+        1 ms  CopyFilesToOutputDirectory                 1 calls
+        1 ms  MakeDirsForXdcMake                         1 calls
         1 ms  GetFrameworkPaths                          1 calls
-        1 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
-        1 ms  GetCopyToOutputDirectoryItems              1 calls
-        1 ms  ComputeLegacyManifestEmbedding             1 calls
+        1 ms  ComputeReferenceCLInput                    1 calls
+        1 ms  ResolveProjectReferences                   1 calls
+        1 ms  ComputeCLInputPDBName                      1 calls
+        1 ms  _HandlePackageFileConflicts                1 calls
         1 ms  MakeDirsForCl                              1 calls
-        1 ms  ComputeMIDLGeneratedCompileInputs          1 calls
+        1 ms  MakeDirsForResourceCompile                 1 calls
+        1 ms  Build                                      1 calls
+        1 ms  PreLinkEvent                               1 calls
+        1 ms  GetResolvedWinMD                           1 calls
+        1 ms  AssignProjectConfiguration                 1 calls
+        2 ms  DoLinkOutputFilesMatch                     1 calls
         2 ms  SetTelemetryEnvironmentVariables           1 calls
-        2 ms  CopyFileToFolders                          1 calls
-        2 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
-        2 ms  FinalizeBuildStatus                        1 calls
-        3 ms  ComputeCLGeneratedLinkInputs               1 calls
-        4 ms  WarnCompileDuplicatedFilename              1 calls
-        4 ms  InitializeBuildStatus                      1 calls
+        2 ms  MakeDirsForLink                            1 calls
         4 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
         4 ms  PrepareForBuild                            1 calls
-        8 ms  ComputeCLOutputs                           1 calls
-       10 ms  ComputeManifestInputsTargets               1 calls
-      493 ms  Link                                       1 calls
-     1654 ms  ClCompile                                  1 calls
+        4 ms  ComputeCLGeneratedLinkInputs               1 calls
+       10 ms  WarnCompileDuplicatedFilename              1 calls
+       10 ms  ComputeCLOutputs                           1 calls
+       13 ms  InitializeBuildStatus                      1 calls
+      807 ms  Link                                       1 calls
+     2214 ms  ClCompile                                  1 calls
 
 Task Performance Summary:
-        0 ms  AssignProjectConfiguration                 1 calls
-        0 ms  GetOutOfDateItems                          1 calls
         0 ms  AssignTargetPath                           6 calls
         0 ms  AssignCulture                              1 calls
-        0 ms  Delete                                     1 calls
-        1 ms  ReadLinesFromFile                          1 calls
+        1 ms  MSBuild                                    1 calls
+        1 ms  GetOutOfDateItems                          1 calls
+        1 ms  Delete                                     1 calls
         1 ms  Copy                                       1 calls
+        1 ms  Message                                    3 calls
         1 ms  MakeDir                                    9 calls
         1 ms  ResolvePackageFileConflicts                1 calls
-        1 ms  MSBuild                                    1 calls
-        1 ms  Message                                    3 calls
-        2 ms  WriteLinesToFile                           1 calls
+        1 ms  AssignProjectConfiguration                 1 calls
+        2 ms  ReadLinesFromFile                          1 calls
+        2 ms  SetEnv                                     8 calls
         2 ms  Touch                                      2 calls
-        3 ms  SetEnv                                     8 calls
-      489 ms  Link                                       1 calls
-     1649 ms  CL                                         1 calls
+        4 ms  WriteLinesToFile                           1 calls
+      803 ms  Link                                       1 calls
+     2211 ms  CL                                         1 calls
 
 Build succeeded.
-
-                   "C:\Users\pixir\Desktop\LWSingleplayer\LWEngine\LWEngine.vcxproj" (Build target) (1) ->
-                   (ClCompile target) -> 
-                     c:\users\pixir\desktop\lwsingleplayer\lwengine\source\inputbox.cpp(99): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-
-    1 Warning(s)
+    0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.22
+Time Elapsed 00:00:03.11

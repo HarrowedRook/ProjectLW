@@ -1,10 +1,10 @@
 #include "SliderElement.h"
 
-SliderElement::SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow)
+SliderElement::SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * UI_Texture)
 {
 	m_panel = background;
-	m_upButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y(), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(upArrow, m_panel.MarginColor(), m_panel.X(), m_panel.Y(), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin() * 2), m_panel.Width() -(m_panel.Margin() * 2)));
-	m_downButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(downArrow, m_panel.MarginColor(), m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin()*2), m_panel.Width() -(m_panel.Margin() * 2)));
+	m_upButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y(), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(UI_Texture, m_panel.MarginColor(), m_panel.X(), m_panel.Y(), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin() * 2), m_panel.Width() -(m_panel.Margin() * 2), 3, 1, 8, 8));
+	m_downButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Width(), m_panel.Width(), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), Graphic(UI_Texture, m_panel.MarginColor(), m_panel.X(), m_panel.Y() + (m_panel.Height() - m_panel.Width()), m_panel.Margin(), m_panel.Margin(), m_panel.Width() - (m_panel.Margin()*2), m_panel.Width() -(m_panel.Margin() * 2), 4, 1, 8, 8));
 	m_sliderButton = ButtonElement(e, Panel(m_panel.X(), m_panel.Y() + m_panel.Width(), m_panel.Width(), m_panel.Height() - (m_panel.Width() * 2), m_panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()));
 	Uint8 rA = int(m_panel.BodyColor().r) - 15;
 	if (rA < 0) { rA = 0; }

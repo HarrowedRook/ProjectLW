@@ -6,7 +6,7 @@ class SliderElement
 {
 public:
 	SliderElement() {};
-	SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * downArrow, SDL_Texture * upArrow);
+	SliderElement(EventListener * e, int noOfLines, int noOfLinesPerPage, Panel background, SDL_Texture * UI_Texture);
 	~SliderElement();
 
 	int X() { return m_panel.X(); };

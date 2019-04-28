@@ -2,12 +2,12 @@
 
 
 
-TextBox::TextBox(EventListener * e, FontPack * font, Panel panel, SDL_Texture* uptexture, SDL_Texture* downtexture)
+TextBox::TextBox(EventListener * e, FontPack * font, Panel panel, SDL_Texture* UI_Texture)
 {
 	m_panel = panel;
 	m_color = SDL_Color{ 255,255,255,255 }; 
 	m_textElements.push_back(new TextElement(font, 18, true, 0, 0, 0, 0, m_color));
-	m_slider = SliderElement(e, 1, 1, Panel(m_panel.X() + (panel.Width() * 0.9), 0, panel.Width() / 10, panel.Height(), panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), uptexture, downtexture);
+	m_slider = SliderElement(e, 1, 1, Panel(m_panel.X() + (panel.Width() * 0.9), 0, panel.Width() / 10, panel.Height(), panel.Margin(), m_panel.BodyColor(), m_panel.MarginColor()), UI_Texture);
 }
 
 void TextBox::Update()

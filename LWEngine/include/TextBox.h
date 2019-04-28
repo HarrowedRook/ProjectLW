@@ -10,7 +10,7 @@
 class TextBox
 {
 public:
-	TextBox(EventListener* e, FontPack * font, Panel panel, SDL_Texture* uptexture, SDL_Texture* downtexture);
+	TextBox(EventListener* e, FontPack * font, Panel panel, SDL_Texture* UI_Texture);
 	~TextBox() {};
 
 	void Update();
